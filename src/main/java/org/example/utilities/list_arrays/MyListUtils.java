@@ -1,4 +1,4 @@
-package utilities;
+package org.example.utilities.list_arrays;
 
 
 import java.lang.reflect.Field;
@@ -8,7 +8,7 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class ListUtils {
+public class MyListUtils {
 
     public static OptionalDouble findMin(List<Double> list)  {
         return  list.stream().mapToDouble(Double::doubleValue)
@@ -28,7 +28,7 @@ public class ListUtils {
 
     public static OptionalDouble findAverageOfAbsolute(List<Double> list) {
         return list.stream()
-                .mapToDouble(a -> Math.abs(a))
+                .mapToDouble(Math::abs)
                 .average();
     }
 
@@ -39,7 +39,7 @@ public class ListUtils {
     }
 
     public static <T> Optional<T> findEnd(List<T> list) {
-        if (list.size()==0) {
+        if (list.isEmpty()) {
             return Optional.empty();
         }
         return Optional.of(list.get(list.size()-1));
@@ -50,7 +50,7 @@ public class ListUtils {
     //todo fix warning
     public static <T,V> List<V> getListOfField(List<T> list, String fieldName) throws NoSuchFieldException {
 
-        if (list.size()==0) {
+        if (list.isEmpty()) {
             return new ArrayList<>();
         }
 
@@ -69,7 +69,7 @@ public class ListUtils {
     public static List<Double> sumListElements(List<Double> listA, List<Double> listB) {
         return IntStream.range(0, listA.size())
                 .mapToObj(i -> listA.get(i) + listB.get(i))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public static Integer sumIntegerList(List<Integer> list) {
@@ -112,7 +112,7 @@ public class ListUtils {
         return new ArrayList<>(Collections.nCopies(len,value));
     }
 
-    public static List<Double> generateSequenceDoubleStream(double start, double end, double step) {
+    public static List<Double> generateSequenceFromStartToEnd(double start, double end, double step) {
         return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
                 .boxed()
                 .collect(Collectors.toList());
@@ -128,49 +128,8 @@ public class ListUtils {
         return list.stream().mapToDouble(Number::doubleValue).toArray();
     }
 
-    /**
-     *  list = [10 10 10], df=0.5 => listDf=[1*df^0 1*df^1 1*df^2] => dotProduct(list,listDf)=10+5+2.5
-     */
-    public static double discountedSum(List<Double> list, double discountFactor) {
-        List<Double> listDf = getDiscountList(list.size(), discountFactor);
-        return dotProduct(list,listDf);
-    }
 
-    /**
-     * 1d,10d,10d , df=0.5->  10d,5d,2.5d
-     */
-
-    public static List<Double> discountedElements(List<Double> list, double discountFactor) {
-        List<Double> listDf = getDiscountList(list.size(), discountFactor);
-        return elementProduct(list,listDf);
-    }
-
-    /**
-     * 1d,10d,10d , df=0.5->  0.25d,5d,10d
-     */
-
-    public static List<Double> discountedElementsReverse(List<Double> list, double discountFactor) {
-        List<Double> listDf = getDiscountList(list.size(), discountFactor);
-        Collections.reverse(listDf);
-        return elementProduct(list,listDf);
-    }
-
-    /**
-    rewards=[0,1,1] => returns=[2,2,1]
-    */
-
-    public static List<Double> getReturns(List<Double> rewards) {
-        double singleReturn = 0;
-        List<Double> returns = new ArrayList<>();
-        for (int i = rewards.size() - 1; i >= 0; i--) {
-            singleReturn = singleReturn + rewards.get(i);
-            returns.add(singleReturn);
-        }
-        Collections.reverse(returns);
-        return returns;
-    }
-
-    public static boolean isDoubleArraysEqual(double[] x, double[] y, double tol)
+    public static boolean areDoubleArraysEqual(double[] x, double[] y, double tol)
     {
         if (x.length!=y.length) {
             return false;
@@ -183,16 +142,6 @@ public class ListUtils {
             }
         }
         return true;
-    }
-
-    public static List<Double> getDiscountList(int len, double discountFactor) {
-        List<Double> listDf = new ArrayList<>();
-        double df = 1;
-        for (int i = 0; i < len; i++) {
-            listDf.add(df);
-            df = df * discountFactor;
-        }
-        return listDf;
     }
 
     public static<T> List<T> merge(List<T> list1, List<T> list2)
