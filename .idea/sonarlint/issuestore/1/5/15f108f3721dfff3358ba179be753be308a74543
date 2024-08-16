@@ -1,0 +1,9 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Ãú°Â
+@
+java:S1197I"*Move the array designators [] to the type.(ÿ‘Ó¾
+@
+java:S1197I"*Move the array designators [] to the type.(ÿ‘Ó¾
+h
+java:S6204Z"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹

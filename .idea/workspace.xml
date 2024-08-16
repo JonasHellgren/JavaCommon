@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/Array2ListConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/IndexFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/List2ArrayConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyArrayUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyRewardListUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/SubArrayExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/MyMathUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57466fbedc955468127ebae069ca2d6e334f1e44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89c8635748f070435f5008d063b56132dccd519d" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/random/RandUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0fd8dbe3efa554091596d6dc531800a57a490ee8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b8f8d87ce5b850fa2f898703301528b85c21699" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/7413c03872c5b25376d3cc8002803c9ab7c58b9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8ca067c3684aed49d60fe293e60f088cceffab6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b352f5c24bc0a2da539a0c464d6c1d8c6198a023" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b352f5c24bc0a2da539a0c464d6c1d8c6198a023" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/57466fbedc955468127ebae069ca2d6e334f1e44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/9/89c8635748f070435f5008d063b56132dccd519d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0fd8dbe3efa554091596d6dc531800a57a490ee8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/b/5b8f8d87ce5b850fa2f898703301528b85c21699" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/4/7413c03872c5b25376d3cc8002803c9ab7c58b9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/8/a8ca067c3684aed49d60fe293e60f088cceffab6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyListUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/d.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +50,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/JavaCode/JavaCommon/src/main/java/org/example/utilities"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JavaCode/JavaCommon/src/main/java/org/example/utilities&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\example\utilities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.utilities.random" />
       <recent name="org.example.utilities" />
       <recent name="utilities" />
     </key>
