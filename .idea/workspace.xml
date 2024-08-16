@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/random/RandUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0fd8dbe3efa554091596d6dc531800a57a490ee8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b8f8d87ce5b850fa2f898703301528b85c21699" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/7413c03872c5b25376d3cc8002803c9ab7c58b9e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8ca067c3684aed49d60fe293e60f088cceffab6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b352f5c24bc0a2da539a0c464d6c1d8c6198a023" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b352f5c24bc0a2da539a0c464d6c1d8c6198a023" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c729d9cb97d5b2f6951bcffdddb3b899d5a549cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/7/c729d9cb97d5b2f6951bcffdddb3b899d5a549cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/timer/CpuTimer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0fd8dbe3efa554091596d6dc531800a57a490ee8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/b/5b8f8d87ce5b850fa2f898703301528b85c21699" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/4/7413c03872c5b25376d3cc8002803c9ab7c58b9e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/8/a8ca067c3684aed49d60fe293e60f088cceffab6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -63,6 +56,7 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\example\utilities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.utilities.timer" />
       <recent name="org.example.utilities.random" />
       <recent name="org.example.utilities" />
       <recent name="utilities" />

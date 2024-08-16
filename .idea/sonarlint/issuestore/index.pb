@@ -15,3 +15,7 @@ v
 Fsrc/main/java/org/example/utilities/list_arrays/MyRewardListUtils.java,0\7\07e2ca48311697c72501750a82fcedf23cf0ce4e
 i
 9src/main/java/org/example/utilities/random/RandUtils.java,8\b\8b67b8eb5ca970dadcf6ea41eab50f3c94725b98
+g
+7src/main/java/org/example/utilities/timer/CpuTimer.java,c\7\c729d9cb97d5b2f6951bcffdddb3b899d5a549cc
+r
+Bsrc/main/java/org/example/utilities/conditionals/Conditionals.java,b\5\b5ad208c51933ac02fe53adb3481de6863b7a446
