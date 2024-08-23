@@ -15,7 +15,7 @@ import org.junit.jupiter.params.provider.CsvSource;
             "1000,100,0,10, 90",   ////zero interest rate -> a=(p-r)/n
             "1000,100,0.000001,10, 90",  //same as above
             "1000,0,0.1,10, 162",   // non zero interest rate -> a>p/n
-            "3650,0,0.1,3650, 162",   // non zero interest rate -> a>p/n
+            "3650,0,0.1,3650, 365",   // non zero interest rate -> a>p/n
             "1000,500,0.1,10, 131",   // smaller than above due to rest value
             "0,100,0,10, -10",   ////zero price but rest value -> a=(0-r)/n<0
             "20e3,0,0.05,10, 2590",   //https://www.cuemath.com/annuity-formula/
@@ -28,6 +28,8 @@ import org.junit.jupiter.params.provider.CsvSource;
         double i=arguments.getDouble(2);
         double lifeTimeInYears=arguments.getDouble(3);
         double expAnnuity=arguments.getDouble(4);
+
+
 
         AnnuityCalculator calculator= AnnuityCalculator.builder()
                 .price(price).restValue(restValue).i(i).lifeTimeInYears(lifeTimeInYears)

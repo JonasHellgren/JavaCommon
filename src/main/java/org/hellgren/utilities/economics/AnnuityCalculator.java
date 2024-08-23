@@ -1,5 +1,6 @@
 package org.hellgren.utilities.economics;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NonNull;
 import org.hellgren.utilities.math.MyMathUtils;
@@ -18,10 +19,20 @@ import org.hellgren.utilities.math.MyMathUtils;
  */
 
 @Builder
-public final class AnnuityCalculator {
+@AllArgsConstructor
+public  class AnnuityCalculator {
 
     @NonNull
-    private final Double price, restValue, i, lifeTimeInYears;
+    private Double price;
+
+    @NonNull
+    private Double restValue;
+
+    @NonNull
+    private Double i;
+
+    @NonNull
+    private Double lifeTimeInYears;
 
     public double annuity() {
 
