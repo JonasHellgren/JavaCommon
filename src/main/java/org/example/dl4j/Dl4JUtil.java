@@ -1,10 +1,10 @@
 package org.example.dl4j;
 
 import com.google.common.base.Preconditions;
-import common.list_arrays.ListUtils;
 import lombok.extern.java.Log;
 import org.apache.commons.math3.util.Pair;
 import org.deeplearning4j.datasets.iterator.utilty.ListDataSetIterator;
+import org.example.utilities.list_arrays.MyListUtils;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
@@ -52,12 +52,12 @@ public class Dl4JUtil {
 
 
     public static INDArray convertListToOneRow(List<Double> in) {  //todo fimpa nofInputs
-        return Nd4j.create(ListUtils.toArray(in), new int[]{1, in.size()});
+        return Nd4j.create(MyListUtils.toArray(in), new int[]{1, in.size()});
     }
 
 
     public static INDArray convertListToOneColumn(List<Double> in) {
-        return Nd4j.create(ListUtils.toArray(in), new int[]{in.size(), 1});
+        return Nd4j.create(MyListUtils.toArray(in), new int[]{in.size(), 1});
     }
 
     public static void replaceRow(INDArray original, INDArray toReplace, int rowIndex) {
@@ -98,7 +98,7 @@ public class Dl4JUtil {
     }
 
     public static List<Double> createListWithOneHotWithValue(int nofInputs, int hotIndex, double v) {
-        List<Double> onHot = ListUtils.createListWithEqualElementValues(nofInputs, 0d);
+        List<Double> onHot = MyListUtils.createListWithEqualElementValues(nofInputs, 0d);
         onHot.set(hotIndex, v);
         return onHot;
     }
@@ -120,8 +120,8 @@ public class Dl4JUtil {
         List<Double> minInList = minMaxList.stream().map(p -> p.getFirst()).toList();
         List<Double> maxInList = minMaxList.stream().map(p -> p.getSecond()).toList();
         normalizer.setFeatureStats(
-                Nd4j.create(ListUtils.toArray(minInList)),
-                Nd4j.create(ListUtils.toArray(maxInList)));
+                Nd4j.create(MyListUtils.toArray(minInList)),
+                Nd4j.create(MyListUtils.toArray(maxInList)));
 
         return normalizer;
     }
@@ -142,11 +142,11 @@ public class Dl4JUtil {
         List<Double> minOutList = outMinMax.stream().map(p -> p.getFirst()).toList();
         List<Double> maxOutList = outMinMax.stream().map(p -> p.getSecond()).toList();
         normalizer.setFeatureStats(
-                Nd4j.create(ListUtils.toArray(minInList)),
-                Nd4j.create(ListUtils.toArray(maxInList)));
+                Nd4j.create(MyListUtils.toArray(minInList)),
+                Nd4j.create(MyListUtils.toArray(maxInList)));
         normalizer.setLabelStats(
-                Nd4j.create(ListUtils.toArray(minOutList)),
-                Nd4j.create(ListUtils.toArray(maxOutList)));
+                Nd4j.create(MyListUtils.toArray(minOutList)),
+                Nd4j.create(MyListUtils.toArray(maxOutList)));
         return normalizer;
     }
 

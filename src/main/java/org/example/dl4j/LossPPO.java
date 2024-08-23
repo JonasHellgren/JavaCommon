@@ -12,7 +12,8 @@ import org.nd4j.linalg.lossfunctions.ILossFunction;
 import java.util.function.Function;
 import java.util.stream.IntStream;
 
-import static common.dl4j.FiniteDifferenceCalculator.calculateGradient;
+import static org.example.dl4j.FiniteDifferenceCalculator.calculateGradient;
+
 
 @AllArgsConstructor
 public class LossPPO implements ILossFunction  {

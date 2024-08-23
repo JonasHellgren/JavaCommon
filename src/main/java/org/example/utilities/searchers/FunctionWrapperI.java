@@ -1,4 +1,4 @@
-package org.example.utilities.math;
+package org.example.utilities.searchers;
 
 public interface FunctionWrapperI {
 

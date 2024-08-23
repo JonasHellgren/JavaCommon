@@ -1,5 +1,7 @@
 package org.example.utilities.list_arrays;
 
+import com.beust.jcommander.internal.Lists;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -62,5 +64,15 @@ public final class MyRewardListUtils {
             df = df * discountFactor;
         }
         return listDf;
+    }
+
+    public static List<Double> cumulativeSum(List<Double> values) {
+        double sum=0;
+        List<Double> accumValues= Lists.newArrayList();
+        for (Double value : values) {
+            sum += value;  // Update the running sum
+            accumValues.add(sum);  // Add the running sum to the accumValues list
+        }
+        return accumValues;
     }
 }

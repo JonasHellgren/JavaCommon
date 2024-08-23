@@ -28,6 +28,6 @@ public class SafeGradientClipper {
         double deltaValueMin=valueMin-value;
         double gMin= (value<=valueMin) ? 0 : Math.max(gradMin,deltaValueMin);
         double gMax= (value>=valueMax) ? 0 : Math.min(gradMax,deltaValueMax);
-        return MathUtils.clip(grad0, gMin,gMax);
+        return MyMathUtils.clip(grad0, gMin,gMax);
     }
 }

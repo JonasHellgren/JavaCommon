@@ -1,14 +1,13 @@
 package org.example.dl4j;
 
 import com.google.common.base.Preconditions;
-import common.math.MathUtils;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.extern.java.Log;
+import org.example.utilities.conditionals.Conditionals;
+import org.example.utilities.math.MyMathUtils;
 import org.nd4j.linalg.api.ndarray.INDArray;
-
-import static common.dl4j.LossPPO.*;
-import static common.other.Conditionals.executeIfTrue;
+import static org.example.dl4j.LossPPO.*;
 
 @AllArgsConstructor
 @Log
@@ -27,11 +26,11 @@ public class PPOScoreCalculatorDiscreteAction implements  PPOScoreCalculatorI {
         double probOld= label.getDouble(PROB_OLD_INDEX);
         double probNew= estProbabilities.getDouble((int) action);
         double probRatio=probNew/Math.max(probOld, SMALL);
-        double clippedProbRatio= MathUtils.clip(probRatio,1-epsilon,1+epsilon);
-        executeIfTrue(!MathUtils.isEqualDoubles(clippedProbRatio,probRatio,SMALL),
+        double clippedProbRatio= MyMathUtils.clip(probRatio,1-epsilon,1+epsilon);
+        Conditionals.executeIfTrue(!MyMathUtils.isEqualDoubles(clippedProbRatio,probRatio,SMALL),
                 () -> log.fine("Prob ratio is clipped, probRatio =" + probRatio+
                         ", clippedProbRatio = " + clippedProbRatio+", probOld="+probOld));
-        return MathUtils.isPos(adv)
+        return MyMathUtils.isPos(adv)
                 ? Math.min(probRatio*adv,clippedProbRatio*adv)
                 : Math.max(probRatio*adv,clippedProbRatio*adv);
     }

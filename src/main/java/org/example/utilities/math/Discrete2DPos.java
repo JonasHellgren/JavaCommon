@@ -25,8 +25,8 @@ public record Discrete2DPos(
 
     public Discrete2DPos clip(Discrete2DPos minPos, Discrete2DPos maxPos) {
         return  Discrete2DPos.of(
-                MathUtils.clip(x,minPos.x,maxPos.x),
-                MathUtils.clip(y,minPos.y,maxPos.y));
+                MyMathUtils.clip(x,minPos.x,maxPos.x),
+                MyMathUtils.clip(y,minPos.y,maxPos.y));
     }
 
     public Optional<Discrete2DPos> midPos(Discrete2DPos other) {

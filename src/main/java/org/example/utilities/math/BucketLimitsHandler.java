@@ -1,12 +1,10 @@
 package org.example.utilities.math;
 
-import common.list_arrays.ListUtils;
+import org.example.utilities.list_arrays.MyListUtils;
 import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static common.math.MathUtils.accumulatedSum;
+import static org.example.utilities.math.MyMathUtils.accumulatedSum;
 
 /****
  * In the agent method chooseAction() limits as follows are defined. In this example the limits are [0,0.5,0.75,1]
@@ -36,8 +34,8 @@ public class BucketLimitsHandler {
     }
 
     public static void throwIfBadLimits(List<Double> limits) {
-        if (ListUtils.findMin(limits).orElseThrow() < -Double.MIN_VALUE ||
-                ListUtils.findMin(limits).orElseThrow() > 1-Double.MIN_VALUE) {
+        if (MyListUtils.findMin(limits).orElseThrow() < -Double.MIN_VALUE ||
+                MyListUtils.findMin(limits).orElseThrow() > 1-Double.MIN_VALUE) {
             throw new ArithmeticException("Bad action probabilities");
         }
     }

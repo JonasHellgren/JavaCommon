@@ -29,6 +29,10 @@ public final class MyMathUtils {
         return (value==0);
     }
 
+    public static boolean isNonZero(double value) {
+        return !isZero(value);
+    }
+
     public static boolean isNeg(double value) {
         return value<-Double.MIN_VALUE;
     }
@@ -45,6 +49,10 @@ public final class MyMathUtils {
         return (value>=min && value<=max);
     }
 
+    public static boolean isEqualDoubles(double s1, double s2, double delta)
+    {
+        return (Math.abs(s1-s2)<delta);
+    }
 
     public static double setAsSmallIfZero(double value) {
         return (isZero(value)?Double.MIN_VALUE:value);

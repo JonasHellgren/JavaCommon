@@ -63,7 +63,7 @@ public class LinearFitter {
         double loss=0;
         for (int i = 0; i < nDim + 1; i++) {
             double x = i == nDim ? 1 : xArr[i];
-            double deltaTheta = MathUtils.clip(alphaLearning * e * x, -deltaThetaMax, deltaThetaMax);
+            double deltaTheta = MyMathUtils.clip(alphaLearning * e * x, -deltaThetaMax, deltaThetaMax);
             theta[i] = theta[i] + deltaTheta;
             loss+=Math.abs(deltaTheta);
         }

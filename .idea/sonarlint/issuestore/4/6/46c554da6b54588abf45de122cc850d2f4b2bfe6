@@ -1,0 +1,20 @@
+
+c
+java:S2095l"FUse try-with-resources or close this "INDArray" in a "finally" clause.(Ş³—8ã×åÒ•2
+P
+java:S1118":Add a private constructor to hide the implicit public one.(£À²Î
+P	java:S125'"<This block of commented-out lines of code should be removed.(¨õÔ
+H
+java:S11356"2Complete the task associated to this TODO comment.(™õµ
+V
+java:S1612x";Replace this lambda with method reference 'Pair::getFirst'.(™†î‹şÿÿÿÿ
+W
+java:S1612y"<Replace this lambda with method reference 'Pair::getSecond'.(…–šæúÿÿÿÿ
+W
+java:S1612Œ";Replace this lambda with method reference 'Pair::getFirst'.(„¥¾®øÿÿÿÿ
+S
+java:S1612"<Replace this lambda with method reference 'Pair::getSecond'.(·Ñ’Ş
+W
+java:S1612";Replace this lambda with method reference 'Pair::getFirst'.(ªèÏøÿÿÿÿ
+S
+java:S1612"<Replace this lambda with method reference 'Pair::getSecond'.(«º¼È

@@ -1,14 +1,14 @@
 package org.example.dl4j;
 
-import common.other.MyFunctions;
 import lombok.Builder;
 import org.deeplearning4j.nn.weights.WeightInit;
+import org.example.utilities.conditionals.MyFunctions;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.lossfunctions.ILossFunction;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 
-import static common.other.MyFunctions.defaultIfNullDouble;
-import static common.other.MyFunctions.defaultIfNullInteger;
+import static org.example.utilities.conditionals.MyFunctions.defaultIfNullDouble;
+import static org.example.utilities.conditionals.MyFunctions.defaultIfNullInteger;
 
 
 public record NetSettings(
@@ -56,23 +56,23 @@ public record NetSettings(
                        Integer absNoFit,
                        Boolean isNofFitsAbsolute,
                        Integer sizeBatch) {
-        this.learningRate = MyFunctions.defaultIfNullDouble.apply(learningRate,1e-1);
-        this.momentum = MyFunctions.defaultIfNullDouble.apply(momentum,0.9);
-        this.l2Value = MyFunctions.defaultIfNullDouble.apply(l2Value,0d);
-        this.nofFitsPerEpoch = MyFunctions.defaultIfNullInteger.apply(nofFitsPerEpoch, 1);
+        this.learningRate = defaultIfNullDouble.apply(learningRate,1e-1);
+        this.momentum = defaultIfNullDouble.apply(momentum,0.9);
+        this.l2Value = defaultIfNullDouble.apply(l2Value,0d);
+        this.nofFitsPerEpoch = defaultIfNullInteger.apply(nofFitsPerEpoch, 1);
         this.weightInit = (WeightInit) MyFunctions.defaultIfNullObject.apply(weightInit,WeightInit.XAVIER);
-        this.nHiddenLayers = MyFunctions.defaultIfNullInteger.apply(nHiddenLayers, 1);
-        this.nInput = MyFunctions.defaultIfNullInteger.apply(nInput, 1);
-        this.nHidden = MyFunctions.defaultIfNullInteger.apply(nHidden, N_HIDDEN);
-        this.nOutput = MyFunctions.defaultIfNullInteger.apply(nOutput, 1);
+        this.nHiddenLayers = defaultIfNullInteger.apply(nHiddenLayers, 1);
+        this.nInput = defaultIfNullInteger.apply(nInput, 1);
+        this.nHidden = defaultIfNullInteger.apply(nHidden, N_HIDDEN);
+        this.nOutput = defaultIfNullInteger.apply(nOutput, 1);
         this.activInLayer = (Activation) MyFunctions.defaultIfNullObject.apply(activInLayer, Activation.RELU);
         this.activHiddenLayer = (Activation) MyFunctions.defaultIfNullObject.apply(activHiddenLayer, Activation.RELU);
         this.activOutLayer = (Activation) MyFunctions.defaultIfNullObject.apply(activOutLayer, Activation.IDENTITY);
         this.lossFunction = (ILossFunction) MyFunctions.defaultIfNullObject.apply(lossFunction,LOSS_FCN);
-        this.seed = MyFunctions.defaultIfNullInteger.apply(seed,12345);
+        this.seed = defaultIfNullInteger.apply(seed,12345);
         this.relativeNofFitsPerBatch = defaultIfNullDouble.apply(relativeNofFitsPerBatch, RELATIVE_NOF_FITS_PER_EPOCH);
         this.isNofFitsAbsolute = (Boolean) MyFunctions.defaultIfNullObject.apply(isNofFitsAbsolute, IS_NFITS_ABS);
-        this.absNoFit=MyFunctions.defaultIfNullInteger.apply(absNoFit,1);
+        this.absNoFit= defaultIfNullInteger.apply(absNoFit,1);
         this.sizeBatch = defaultIfNullInteger.apply(sizeBatch, SIZE_BATCH);
     }
 

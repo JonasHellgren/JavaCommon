@@ -3,7 +3,7 @@ package org.example.utilities.math;
 import lombok.AllArgsConstructor;
 import org.apache.commons.math3.util.Pair;
 
-import static common.other.MyFunctions.sqr2;
+import static org.example.utilities.conditionals.MyFunctions.sqr2;
 
 @AllArgsConstructor
 public class NormalDistributionGradientCalculator {

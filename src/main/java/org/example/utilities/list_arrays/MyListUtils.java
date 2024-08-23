@@ -124,6 +124,11 @@ public class MyListUtils {
                 .toList();
     }
 
+    public static List<Double> doublesStartEndStep(double start, double end, double step) {
+        return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
+                .boxed().toList();
+    }
+
     public static double[] toArray(List<Double> list) {
         return list.stream().mapToDouble(Number::doubleValue).toArray();
     }

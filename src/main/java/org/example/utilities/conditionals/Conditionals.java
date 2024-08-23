@@ -17,4 +17,9 @@ public class Conditionals {
     public static void executeIfTrue(boolean condition, Runnable ifTrueMethod) {
         executeOneOfTwo(condition, ifTrueMethod, () -> {});
     }
+
+    public static void executeIfFalse(boolean condition, Runnable ifTrueMethod) {
+        executeOneOfTwo(!condition, ifTrueMethod, () -> {});
+    }
+
 }

@@ -14,4 +14,4 @@ java:S6204h"RReplace this usage of 'Stream.collect(Collectors.toList())' with '
 h
 java:S6204v"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή
 n
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(πέÿÿÿÿÿ
+java:S6204΅"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(πέÿÿÿÿÿ
