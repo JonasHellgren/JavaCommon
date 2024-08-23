@@ -13,7 +13,7 @@ import java.util.List;
  * A class to perform clustering on a set of points using the K-Means++ algorithm.
  */
 
-public class KMeansClusterer {
+public final class KMeansClusterer {
 
     public static final int N_ITER_MAX = 100;
     public static final EuclideanDistance DISTANCE_MEASURE = new EuclideanDistance();

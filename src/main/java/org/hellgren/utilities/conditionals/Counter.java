@@ -1,6 +1,6 @@
 package org.hellgren.utilities.conditionals;
 
-public class Counter {
+public final class Counter {
 
     private int count;
     private final int minCount;

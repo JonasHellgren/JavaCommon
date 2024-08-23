@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 @Builder
-public class SwingShowHeatMap {
+public final class SwingShowHeatMap {
 
     public static final int MIN_DARKNESS = 100;
     @Builder.Default

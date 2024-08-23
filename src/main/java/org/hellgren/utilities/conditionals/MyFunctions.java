@@ -4,7 +4,10 @@ import java.util.Objects;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-public class MyFunctions {
+public final class MyFunctions {
+
+    private MyFunctions() {
+    }
 
     public static BiFunction<String,String,String > defaultIfNullString=(v, d) -> Objects.isNull(v)?d:v;
     public static BiFunction<Integer,Integer,Integer> defaultIfNullInteger=(v, d) -> Objects.isNull(v)?d:v;

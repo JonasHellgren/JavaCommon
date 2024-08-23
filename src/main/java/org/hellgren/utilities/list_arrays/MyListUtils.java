@@ -1,7 +1,5 @@
 package org.hellgren.utilities.list_arrays;
 
-
-import java.lang.reflect.Field;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
@@ -9,6 +7,9 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MyListUtils {
+
+    private MyListUtils() {
+    }
 
     public static OptionalDouble findMin(List<Double> list)  {
         return  list.stream().mapToDouble(Double::doubleValue)
@@ -43,27 +44,6 @@ public class MyListUtils {
             return Optional.empty();
         }
         return Optional.of(list.get(list.size()-1));
-    }
-
-
-
-    //todo fix warning
-    public static <T,V> List<V> getListOfField(List<T> list, String fieldName) throws NoSuchFieldException {
-
-        if (list.isEmpty()) {
-            return new ArrayList<>();
-        }
-
-        Field field = list.get(0).getClass().getDeclaredField(fieldName);
-        return list.stream().map(e -> {
-            try {
-                return (V) field.get(e);
-            } catch (IllegalAccessException illegalAccessException) {
-                illegalAccessException.printStackTrace();
-            }
-            return null;
-
-        }).collect(Collectors.toList());
     }
 
     public static List<Double> sumListElements(List<Double> listA, List<Double> listB) {
@@ -133,7 +113,6 @@ public class MyListUtils {
         return list.stream().mapToDouble(Number::doubleValue).toArray();
     }
 
-
     public static boolean areDoubleArraysEqual(double[] x, double[] y, double tol)
     {
         if (x.length!=y.length) {
@@ -153,7 +132,6 @@ public class MyListUtils {
     {
         List<T> list = new ArrayList<>(list1);
         list.addAll(list2);
-
         return list;
     }
 

@@ -8,10 +8,8 @@ import org.apache.commons.math3.optim.nonlinear.scalar.ObjectiveFunctionGradient
  * https://en.wikipedia.org/wiki/Finite_difference
  */
 
-//todo fCenter needed?
-
 @Setter
-public class FiniteDiffGradientCalculator {
+public final class FiniteDiffGradientCalculator {
 
     public static final double ONE_DIV_TWO = 0.5;
     ObjectiveFunction objectiveFunction;

@@ -1,0 +1,79 @@
+
+f
+java:S1104"PMake w2kw a static final constant or non-public and provide accessors if needed.(êüÆ
+k
+java:S1104"UMake toPercent a static final constant or non-public and provide accessors if needed.(îÔ­×
+p
+java:S1104"UMake joule2kWh a static final constant or non-public and provide accessors if needed.(åúœøÿÿÿÿ
+p
+java:S1104"UMake kWh2joule a static final constant or non-public and provide accessors if needed.(É¹¸„şÿÿÿÿ
+z
+java:S1104"_Make europkwh2europjoule a static final constant or non-public and provide accessors if needed.(¯•ë‹üÿÿÿÿ
+t
+java:S1104"_Make europjoule2europkwh a static final constant or non-public and provide accessors if needed.(ÍÉ‡B
+p
+java:S1104"ZMake europKw2europw a static final constant or non-public and provide accessors if needed.(ô„¿Ë
+p
+java:S1104""ZMake persec2perHour a static final constant or non-public and provide accessors if needed.(ó Ïë
+p
+java:S1104#"ZMake perHour2perSec a static final constant or non-public and provide accessors if needed.(ŸØ«…
+t
+java:S1104%"YMake persec2perday a static final constant or non-public and provide accessors if needed.(·ßÂüøÿÿÿÿ
+@
+java:S1444"*Make this "public static w2kw" field final(êüÆ
+E
+java:S1444"/Make this "public static toPercent" field final(îÔ­×
+J
+java:S1444"/Make this "public static joule2kWh" field final(åúœøÿÿÿÿ
+J
+java:S1444"/Make this "public static kWh2joule" field final(É¹¸„şÿÿÿÿ
+T
+java:S1444"9Make this "public static europkwh2europjoule" field final(¯•ë‹üÿÿÿÿ
+N
+java:S1444"9Make this "public static europjoule2europkwh" field final(ÍÉ‡B
+J
+java:S1444"4Make this "public static europKw2europw" field final(ô„¿Ë
+J
+java:S1444""4Make this "public static persec2perHour" field final(ó Ïë
+J
+java:S1444#"4Make this "public static perHour2perSec" field final(ŸØ«…
+N
+java:S1444%"3Make this "public static persec2perday" field final(·ßÂüøÿÿÿÿ
+o
+java:S4276"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(êüÆ
+E
+java:S1611"/Remove the parentheses around the "p" parameter(êüÆ
+o
+java:S4276"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(îÔ­×
+E
+java:S1611"/Remove the parentheses around the "n" parameter(îÔ­×
+t
+java:S4276"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(åúœøÿÿÿÿ
+J
+java:S1611"/Remove the parentheses around the "e" parameter(åúœøÿÿÿÿ
+J
+java:S1611"/Remove the parentheses around the "e" parameter(É¹¸„şÿÿÿÿ
+t
+java:S4276"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(¯•ë‹üÿÿÿÿ
+J
+java:S1611"/Remove the parentheses around the "p" parameter(¯•ë‹üÿÿÿÿ
+n
+java:S4276"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(ÍÉ‡B
+D
+java:S1611"/Remove the parentheses around the "p" parameter(ÍÉ‡B
+o
+java:S4276"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(ô„¿Ë
+E
+java:S1611"/Remove the parentheses around the "p" parameter(ô„¿Ë
+o
+java:S4276""YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(ó Ïë
+E
+java:S1611""/Remove the parentheses around the "n" parameter(ó Ïë
+o
+java:S4276#"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(ŸØ«…
+E
+java:S1611#"/Remove the parentheses around the "n" parameter(ŸØ«…
+t
+java:S4276%"YRefactor this code to use the more specialised Functional Interface 'DoubleUnaryOperator'(·ßÂüøÿÿÿÿ
+J
+java:S1611%"/Remove the parentheses around the "n" parameter(·ßÂüøÿÿÿÿ

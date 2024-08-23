@@ -16,7 +16,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public class PlotterScatter {
+public final  class PlotterScatter {
     private static final int WIDTH_PANEL = 500, HEIGHT = 400;
     public static final String TITLE = "";
     public static final Color COLOR_POINTS = Color.BLACK;

@@ -18,7 +18,7 @@ import org.hellgren.utilities.math.MyMathUtils;
  */
 
 @Builder
-public class AnnuityCalculator {
+public final class AnnuityCalculator {
 
     @NonNull
     private final Double price, restValue, i, lifeTimeInYears;

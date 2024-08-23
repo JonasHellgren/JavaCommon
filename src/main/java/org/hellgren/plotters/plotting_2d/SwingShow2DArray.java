@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.stream.IntStream;
 
 @Builder
-public class SwingShow2DArray {
+public final class SwingShow2DArray {
 
     public static final int IMAGE_TYPE = BufferedImage.TYPE_INT_ARGB;
     public static final String FORMAT = "%.2f";

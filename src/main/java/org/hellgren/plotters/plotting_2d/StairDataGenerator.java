@@ -18,7 +18,7 @@ import java.util.List;
 
  */
 
-public class StairDataGenerator {
+public final class StairDataGenerator {
 
     private StairDataGenerator() {
     }

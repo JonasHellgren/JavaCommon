@@ -1,17 +1,0 @@
-
-P
-java:S1118":Add a private constructor to hide the implicit public one.(Ì”Å×
-H
-java:S11352"2Complete the task associated to this TODO comment.(äæ®Ô
-h
-java:S6204B"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(œçÖß
-h
-java:S6204V"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
-h
-java:S6204\"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
-h
-java:S6204h"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
-h
-java:S6204v"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
-n
-java:S6204¡"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ğİŠÿÿÿÿÿ

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Log
-public class PlotterMultiplePanelsTrajectory {
+public final class PlotterMultiplePanelsTrajectory {
 
     private static final int WIDTH_PANEL = 300;
     private static final int HEIGHT = 220;

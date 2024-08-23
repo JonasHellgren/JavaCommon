@@ -8,9 +8,6 @@ public class DataGenerator {
 
     /**
      * Generates a set of random walk data
-     *
-     * @param numPoints
-     * @return
      */
     public static double[] getRandomWalk(int numPoints) {
 

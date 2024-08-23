@@ -1,0 +1,25 @@
+
+k
+java:S1104"UMake powerCore a static final constant or non-public and provide accessors if needed.(ÁÎÀé
+q
+java:S1104"[Make voltageCellCore a static final constant or non-public and provide accessors if needed.(ÅôçË
+r
+java:S1104"WMake currentCore a static final constant or non-public and provide accessors if needed.(‰°¢¥ıÿÿÿÿ
+u
+java:S1104"ZMake powerLossOhmic a static final constant or non-public and provide accessors if needed.(ñ¶×Ğùÿÿÿÿ
+E
+java:S1444"/Make this "public static powerCore" field final(ÁÎÀé
+K
+java:S1444"5Make this "public static voltageCellCore" field final(ÅôçË
+L
+java:S1444"1Make this "public static currentCore" field final(‰°¢¥ıÿÿÿÿ
+O
+java:S1444"4Make this "public static powerLossOhmic" field final(ñ¶×Ğùÿÿÿÿ
+r
+java:S4276"\Refactor this code to use the more specialised Functional Interface 'BinaryOperator<Double>'(ÁÎÀé
+b
+java:S1612"LReplace this lambda with method reference 'BatteryCellCoreRelations::power'.(ÁÎÀé
+w
+java:S4276"\Refactor this code to use the more specialised Functional Interface 'BinaryOperator<Double>'(‰°¢¥ıÿÿÿÿ
+w
+java:S4276"\Refactor this code to use the more specialised Functional Interface 'BinaryOperator<Double>'(ñ¶×Ğùÿÿÿÿ

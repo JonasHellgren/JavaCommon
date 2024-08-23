@@ -20,7 +20,7 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlotterMultiplePanelsPairs {
+public final class PlotterMultiplePanelsPairs {
 
     public static final Color COLOR_POINTS = Color.BLACK;
     public static final int NOF_ROWS = 1;
