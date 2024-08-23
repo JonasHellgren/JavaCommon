@@ -98,4 +98,20 @@ public final class MyMathUtils {
                 .collect(Collectors.toList());
     }
 
+
+    public static double scale(double xNorm,double xMin,double xMax) {
+        return xMin+xNorm*(xMax-xMin);
+    }
+
+    public static boolean isInLimits(double value, int lower, int upper) {
+        return value >= lower && value <= upper;
+    }
+
+    public static boolean isInLimits(double value, double lower, double upper) {
+        return value >= lower && value <= upper;
+    }
+
+
+
+
 }

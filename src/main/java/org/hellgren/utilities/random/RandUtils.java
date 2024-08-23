@@ -8,6 +8,11 @@ public class RandUtils<T> {
         return list.get(getRandomIntNumber(0,list.size()));
     }
 
+    public static double doubleInInterval(double min, double max) {
+        return (Math.random() * (max - min)) + min;
+    }
+
+
     public  T getRandomItemFromList(List<T> list) {
         return list.get(getRandomIntNumber(0,list.size()));
     }

@@ -98,6 +98,12 @@ public class MyListUtils {
                 .collect(Collectors.toList());
     }
 
+    public static List<Double> generateDoublesLinSpace(double start, double end, double step) {
+        return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
+                .boxed()
+                .collect(Collectors.toList());
+    }
+
     public static List<Double> doublesStartStepNitems(double start, double step, int nItems) {
         return Stream.iterate(start, value -> value + step) // Start with 'start' and add 'step' for each subsequent element
                 .limit(nItems)                        // Limit the sequence to 'nItems' elements
@@ -138,5 +144,38 @@ public class MyListUtils {
     public static List<Double> arrayPrimitiveDoublesToList(double[] arr) {
         return DoubleStream.of(arr).boxed().collect(Collectors.toList());
     }
+
+    public static OptionalInt findMinInt(List<Integer> list)  {
+        return  list.stream().mapToInt(Integer::intValue)
+                .min();
+    }
+
+    public static OptionalInt findMaxInt(List<Integer> list)  {
+        return  list.stream().mapToInt(Integer::intValue)
+                .max();
+    }
+
+    public static OptionalDouble findAverageInt(List<Integer> list) {
+        return list.stream().mapToDouble(a -> a).average();
+    }
+
+    public static double[] doubleListToArray(List<Double> doubleList) {
+        return  doubleList.stream().mapToDouble(d -> d).toArray();
+    }
+
+    public static List<Double> absOfDoubles(List<Double> list) {
+        return list.stream().map(Math::abs).collect(Collectors.toList());
+    }
+
+    public static List<Double> diff(List<Double> list) {
+        return  IntStream.range(1, list.size())
+                .mapToObj(i -> list.get(i) - list.get(i - 1))
+                .toList();
+    }
+
+    public static List<Double> createEqualElementValues(int len, double value) {
+        return new ArrayList<>(Collections.nCopies(len,value));
+    }
+
 
 }

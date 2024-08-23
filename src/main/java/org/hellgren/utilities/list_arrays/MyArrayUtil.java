@@ -2,6 +2,8 @@ package org.hellgren.utilities.list_arrays;
 
 import org.apache.commons.math3.util.Pair;
 import org.hellgren.utilities.math.MyMathUtils;
+
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.DoubleStream;
 
@@ -80,4 +82,80 @@ public class MyArrayUtil {
         double[] yArray = yList.stream().mapToDouble(Double::doubleValue).toArray();
         return Pair.create(xArray, yArray);
     }
+
+    private static void throwIfZeroLength(int length) {
+        if (length == 0 ) {
+            throw new IllegalArgumentException("Length is zero");
+        }
+    }
+
+    private static void throwIfBadLength(int length) {
+        if (length <2) {
+            throw new IllegalArgumentException("Length must be larger than 1");
+        }
+    }
+    public static final double REST_TOL = 1e-3;
+
+    private static void throwIfLargeRest(double rest) {
+        if (Math.abs(rest)> REST_TOL) {
+            throw new IllegalArgumentException("start, end and increment gives a rest, rest="+rest);
+        }
+    }
+
+
+    public static double[] negate(double[] array) {
+        double[] negatedArray = new double[array.length];
+        for (int i = 0; i < array.length; i++) {
+            negatedArray[i] = -array[i];  // Negate each element
+        }
+        return negatedArray;
+    }
+
+
+    public static double[] createArrayFromStartAndEnd(int length, double start, double end) {
+        throwIfZeroLength(length);
+        double[] array = new double[length];
+
+        if (length==1) {
+            array[0]=start;
+            return array;
+        }
+
+        double increment=(end-start)/(length-1);
+        for (int i = 0; i < length; i++) {
+            array[i] = start + i * increment;
+        }
+        return array;
+    }
+
+
+    /***
+     *length=3, start=0, increment=0.5 => array = [0.0, 0.5, 1.0]
+     */
+
+    public static double[] createArrayFromIncrement(int length, double start, double increment) {
+        throwIfBadLength(length);
+        double[] array = new double[length];
+        for (int i = 0; i < length; i++) {
+            array[i] = start + i * increment;
+        }
+        return array;
+    }
+
+
+    /***
+     *start=0, end=1, increment=0.5 => array = [0.0, 0.5, 1.0]
+     */
+
+    public static double[] createArrayFromStartEndAndIncrement(double start, double end, double increment) {
+        int length= (int) ((end-start)/increment)+1;
+        //double rest=(end-start) % increment;
+
+        BigDecimal remainder = BigDecimal.valueOf(end-start).remainder(BigDecimal.valueOf(increment));
+        throwIfBadLength(length);
+        throwIfLargeRest(remainder.doubleValue());
+        return createArrayFromIncrement(length,start,increment);
+    }
+
+
 }

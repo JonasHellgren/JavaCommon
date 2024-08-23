@@ -6,11 +6,10 @@ import org.hellgren.dynamic_programming.domain.NodeDP;
 import org.hellgren.dynamic_programming.domain.ValueMemoryDP;
 import org.hellgren.dynamic_programming.helpers.ActionSelectorDP;
 import org.junit.jupiter.api.Assertions;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
- class TestActionSelector {
+class TestActionSelector {
 
      static final int X_MAX = 3, Y_MAX = 1;
     DirectedGraphDP graph;

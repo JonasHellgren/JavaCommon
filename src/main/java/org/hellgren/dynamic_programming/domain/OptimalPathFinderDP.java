@@ -1,7 +1,7 @@
 package org.hellgren.dynamic_programming.domain;
+
 import lombok.extern.java.Log;
 import org.hellgren.dynamic_programming.helpers.ActionSelectorDP;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
