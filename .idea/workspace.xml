@@ -5,158 +5,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/023aa8882dde8044ff9556433bd3221a044fcbad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03baa950703c869745eadcfc909b9c58d2ba79a3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0ad15e49fafac2d077979de272c2ad37f51df5ef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/1172728dd8f3e69e062d0cb79ed482432899bd6a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f24713604ee67fa1190a19fc1324f801f911711" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253b60fbe9bc0052cec7d3a95d32fe031fd77731" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30cba57755e93600886c62d3317f829c4d1fda7a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/316c99f8ae6afe2e0db81cefbadaab6add53e865" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/31f6ce07f955cf3174de304db754b4b45c5c79a6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41a6e6661fc80277045a8fd9d00a87be80a986a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/4321d2becf98e4e3c75cbde54f1ab441ccfae071" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/438591f0a1687d389e12ad5ee3dbade3c32b5b45" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/46c554da6b54588abf45de122cc850d2f4b2bfe6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/e/4eca4a4a78b43a8ef20e14710e53d6b86917416a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/5428dc05655f47df9453d1c1202800c219bab2e5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5bb80562b98e8d9c2cf4c7b4f70a576bc513f210" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/691ec7db95e18b6983c0d8f9f12204905d85c0b7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69bdd6e40af28994b0af60b2311a6a5ce3285c91" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75c9e6b4a099bb502a21d0ccebf4ab42ede7d80c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/79478853bb6e8c4a134a50e4e5311b9f84e66fe5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f0ef739f4dcc715e9dc9529fc458eae43366a4e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f3ad9c8a8917244e3933cf65183d392b814c9a7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/85ff560173305274f15e623db0c15f27506ea95f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/8771773ef92090399b6865e86dab2e3898e131d4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/878deb4f8e4a3357ebc1b44dffea1979fe337ac9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98bd955d7176aaa5f386b5ee624e0eb893b5473d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e2e0b9fb9bd6cf790c4a6187df8f3dfc58149cd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a24a359e2d6a3d78cd3c51628a0c80567ec62ec8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2dfa23ee87b7078021d1545b7bcf40ff90c86cb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5f00f90822602f5a4a8bc1f1817d34338eb774a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a603bedb053ef2f6624a25e0d9960349291f7353" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aad071bff9554a1f8e7083e365f6ec9604a440d7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8bda1980d13f954a60a342ef46454b63be89b38" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba0980657fd3ce00e6edc3292a55c1dc02eefe28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c6378ac2d2957207bde5a6d88de0da61b39ae419" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c6eba679f19257a972327940d992c54ea39cc62c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ceb79bbd9047be342733f8ecbe3661821d1a16fe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0fa7715c36a9a6b13a1a4086ebc18c77b2c8400" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2397f6b1a4f99273596077487826aa7576a6f1a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d92f9aadf8ac69bfb43adfda1a08f5aa93ba048e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db32c8a0f01ad528dfb1cc1850fae767873725fe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de8f96814e593d76c52af49782b1719b8798fa75" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e2ede3ecc6582b095283019754a4350c9485d5f8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/7/e75c44680e642f745205535fb2fadc555474142b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/eaf5926ea3899e5acf384e4e24f7434cda17e4dd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/ebb644b3f31666fcb6de23c8e790060fc49e2415" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f34a763961d45cb69a6d2b3dccd9551fc19e9b15" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/2/023aa8882dde8044ff9556433bd3221a044fcbad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/3/03baa950703c869745eadcfc909b9c58d2ba79a3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/a/0ad15e49fafac2d077979de272c2ad37f51df5ef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/1/1172728dd8f3e69e062d0cb79ed482432899bd6a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/f/1f24713604ee67fa1190a19fc1324f801f911711" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/5/253b60fbe9bc0052cec7d3a95d32fe031fd77731" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/0/30cba57755e93600886c62d3317f829c4d1fda7a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/1/316c99f8ae6afe2e0db81cefbadaab6add53e865" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/1/31f6ce07f955cf3174de304db754b4b45c5c79a6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/1/41a6e6661fc80277045a8fd9d00a87be80a986a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/3/4321d2becf98e4e3c75cbde54f1ab441ccfae071" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/3/438591f0a1687d389e12ad5ee3dbade3c32b5b45" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/6/46c554da6b54588abf45de122cc850d2f4b2bfe6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/e/4eca4a4a78b43a8ef20e14710e53d6b86917416a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/4/5428dc05655f47df9453d1c1202800c219bab2e5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/b/5bb80562b98e8d9c2cf4c7b4f70a576bc513f210" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/9/691ec7db95e18b6983c0d8f9f12204905d85c0b7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/9/69bdd6e40af28994b0af60b2311a6a5ce3285c91" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/5/75c9e6b4a099bb502a21d0ccebf4ab42ede7d80c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/9/79478853bb6e8c4a134a50e4e5311b9f84e66fe5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/f/7f0ef739f4dcc715e9dc9529fc458eae43366a4e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/f/7f3ad9c8a8917244e3933cf65183d392b814c9a7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/5/85ff560173305274f15e623db0c15f27506ea95f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/7/8771773ef92090399b6865e86dab2e3898e131d4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/7/878deb4f8e4a3357ebc1b44dffea1979fe337ac9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/8/98bd955d7176aaa5f386b5ee624e0eb893b5473d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/e/9e2e0b9fb9bd6cf790c4a6187df8f3dfc58149cd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/2/a24a359e2d6a3d78cd3c51628a0c80567ec62ec8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/2/a2dfa23ee87b7078021d1545b7bcf40ff90c86cb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/5/a5f00f90822602f5a4a8bc1f1817d34338eb774a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/6/a603bedb053ef2f6624a25e0d9960349291f7353" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aad071bff9554a1f8e7083e365f6ec9604a440d7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/8/b8bda1980d13f954a60a342ef46454b63be89b38" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/a/ba0980657fd3ce00e6edc3292a55c1dc02eefe28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/6/c6378ac2d2957207bde5a6d88de0da61b39ae419" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/6/c6eba679f19257a972327940d992c54ea39cc62c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/e/ceb79bbd9047be342733f8ecbe3661821d1a16fe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/0/d0fa7715c36a9a6b13a1a4086ebc18c77b2c8400" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/2/d2397f6b1a4f99273596077487826aa7576a6f1a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/9/d92f9aadf8ac69bfb43adfda1a08f5aa93ba048e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/b/db32c8a0f01ad528dfb1cc1850fae767873725fe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/e/de8f96814e593d76c52af49782b1719b8798fa75" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/2/e2ede3ecc6582b095283019754a4350c9485d5f8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/7/e75c44680e642f745205535fb2fadc555474142b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/a/eaf5926ea3899e5acf384e4e24f7434cda17e4dd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/b/ebb644b3f31666fcb6de23c8e790060fc49e2415" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/3/f34a763961d45cb69a6d2b3dccd9551fc19e9b15" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/DataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotterMultiplePanelsPairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotterMultiplePanelsTrajectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotterScatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/StairDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/SwingShow2DArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/SwingShowHeatMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/LineData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/NoiseToValuesInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/NormalizeLineData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/ParallelCoordinatesChartCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/FrameAndTableCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/RunnerShowTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableDataDouble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableDataI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableDataString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableFrameSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableShower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/XYAxisTicksCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_showertable1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/clusterer/KMeansClusterer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/clusterer/PointInCluster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/conditionals/Counter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/conditionals/MyFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/economics/AnnuityCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/formatting/NumberFormatterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/joptimizer/LowerBoundConstraint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/joptimizer/SumConstraint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/joptimizer/UpperBoundConstraint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/linear_regression_batch_fitting/DataSetCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/linear_regression_batch_fitting/LinearBatchFitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/NormDistributionSampler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/ProbabilityDistributionFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/searchers/SearchSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15f108f3721dfff3358ba179be753be308a74543" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15f108f3721dfff3358ba179be753be308a74543" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66066ea9955f91c96d94eda189a3bad935e19841" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66066ea9955f91c96d94eda189a3bad935e19841" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/Dl4JUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dl4j/Dl4JUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/LossPPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dl4j/LossPPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/NetSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dl4j/NetSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PPOScoreCalculatorContAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PPOScoreCalculatorContAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PPOScoreCalculatorDiscreteAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PPOScoreCalculatorDiscreteAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/conditionals/Conditionals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/conditionals/Conditionals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyListUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyRewardListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyRewardListUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/BucketLimitsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/BucketLimitsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/Discrete2DPos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/Discrete2DPos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/FunctionWrapperI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/searchers/FunctionWrapperI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/GoldenSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/searchers/GoldenSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/LinearFitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/LinearFitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/MyMathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/MyMathUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/NormalDistributionGradientCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/NormalDistributionGradientCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/SafeGradientClipper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/SafeGradientClipper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/CrossEntropyCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/CrossEntropyCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/Dl4JNetFitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/Dl4JNetFitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/Dl4JUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/Dl4JUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/EntropyCalculatorContActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/EntropyCalculatorContActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/EntropyCalculatorDiscreteActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/EntropyCalculatorDiscreteActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/EntropyCalculatorI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/EntropyCalculatorI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/FiniteDifferenceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/FiniteDifferenceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/LossCEM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/LossCEM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/LossPPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/LossPPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/MultiLayerNetworkCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/MultiLayerNetworkCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/NetSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/NetSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/NumericalGradCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/NumericalGradCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PPOScoreCalculatorContAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/PPOScoreCalculatorContAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PPOScoreCalculatorDiscreteAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/PPOScoreCalculatorDiscreteAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PPOScoreCalculatorI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/PPOScoreCalculatorI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PenaltyCalculatorCont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/PenaltyCalculatorCont.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PenaltyCalculatorDiscrete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/PenaltyCalculatorDiscrete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dl4j/PenaltyCalculatorI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/PenaltyCalculatorI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/DataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotterMultiplePanelsPairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterMultiplePanelsPairs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotterMultiplePanelsTrajectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterMultiplePanelsTrajectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/PlotterScatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterScatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/StairDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/StairDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/SwingShow2DArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingShow2DArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/SwingShowHeatMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingShowHeatMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/LineData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/LineData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/NoiseToValuesInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NoiseToValuesInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/NormalizeLineData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NormalizeLineData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/parallel_coordinates/ParallelCoordinatesChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/ParallelCoordinatesChartCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/FrameAndTableCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/FrameAndTableCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/RunnerShowTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/RunnerShowTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableDataDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/TableDataDouble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableDataI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/TableDataI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableDataString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/TableDataString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableFrameSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/TableFrameSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/TableSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/TableShower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/TableShower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_shower/XYAxisTicksCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/XYAxisTicksCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/plotters/table_showertable1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/clusterer/KMeansClusterer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/clusterer/KMeansClusterer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/clusterer/PointInCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/clusterer/PointInCluster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/conditionals/Conditionals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Conditionals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/conditionals/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/conditionals/MyFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/MyFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/economics/AnnuityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/economics/AnnuityCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/formatting/NumberFormatterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/formatting/NumberFormatterUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/joptimizer/LowerBoundConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/LowerBoundConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/joptimizer/SumConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/SumConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/joptimizer/UpperBoundConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/UpperBoundConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/linear_regression_batch_fitting/DataSetCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/DataSetCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/linear_regression_batch_fitting/LinearBatchFitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/LinearBatchFitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/Array2ListConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/Array2ListConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/IndexFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/IndexFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/List2ArrayConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/List2ArrayConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyArrayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyArrayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyListUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/MyRewardListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyRewardListUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/list_arrays/SubArrayExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/SubArrayExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/BestPairFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/BestPairFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/BucketLimitsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/BucketLimitsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/DifferenceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/DifferenceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/Discrete2DPos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/vector_algebra/Discrete2DPos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/Discrete2DVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/vector_algebra/Discrete2DVector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/FiniteDiffGradientCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/FiniteDiffGradientCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/Interpolator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/Interpolator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/LinearDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/LinearDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/LinearFitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/LinearFitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/LogarithmicDecay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/LogarithmicDecay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/MovingAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/MovingAverage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/MyMathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/MyMathUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/NormDistributionSampler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/normal_distribution/NormDistributionSampler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/NormalDistributionGradientCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/NormalDistributionGradientCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/NormalSampler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/normal_distribution/NormalSampler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/ProbabilityDistributionFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/normal_distribution/ProbabilityDistributionFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/SafeGradientClipper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/SafeGradientClipper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/ScalerLinear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/ScalerLinear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/math/SigmoidFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/math/SigmoidFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/random/RandUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/random/RandUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/searchers/FunctionWrapperI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/FunctionWrapperI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/searchers/GoldenSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/GoldenSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/searchers/SearchSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/SearchSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/timer/CpuTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/timer/CpuTimer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,14 +122,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/JavaCode/JavaCommon/src/main/java/org/example/utilities"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JavaCode/JavaCommon/src/main/java/org/example/utilities&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\example\utilities" />

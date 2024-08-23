@@ -1,0 +1,164 @@
+package org.hellgren.utilities.list_arrays;
+
+
+import java.lang.reflect.Field;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class MyListUtils {
+
+    public static OptionalDouble findMin(List<Double> list)  {
+        return  list.stream().mapToDouble(Double::doubleValue)
+                .min();
+    }
+
+    public static OptionalDouble findMax(List<Double> list)  {
+        return  list.stream().mapToDouble(Double::doubleValue)
+                .max();
+    }
+
+    public static OptionalDouble findAverage(List<Double> list) {
+        return list.stream()
+                .mapToDouble(a -> a)
+                .average();
+    }
+
+    public static OptionalDouble findAverageOfAbsolute(List<Double> list) {
+        return list.stream()
+                .mapToDouble(Math::abs)
+                .average();
+    }
+
+    public static double sumList(List<Double> list) {
+        return list.stream()
+                .mapToDouble(a -> a)
+                .sum();
+    }
+
+    public static <T> Optional<T> findEnd(List<T> list) {
+        if (list.isEmpty()) {
+            return Optional.empty();
+        }
+        return Optional.of(list.get(list.size()-1));
+    }
+
+
+
+    //todo fix warning
+    public static <T,V> List<V> getListOfField(List<T> list, String fieldName) throws NoSuchFieldException {
+
+        if (list.isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        Field field = list.get(0).getClass().getDeclaredField(fieldName);
+        return list.stream().map(e -> {
+            try {
+                return (V) field.get(e);
+            } catch (IllegalAccessException illegalAccessException) {
+                illegalAccessException.printStackTrace();
+            }
+            return null;
+
+        }).collect(Collectors.toList());
+    }
+
+    public static List<Double> sumListElements(List<Double> listA, List<Double> listB) {
+        return IntStream.range(0, listA.size())
+                .mapToObj(i -> listA.get(i) + listB.get(i))
+                .toList();
+    }
+
+    public static Integer sumIntegerList(List<Integer> list) {
+        return list.stream().mapToInt(Integer::intValue).sum();
+    }
+
+
+    public static Double sumDoubleList(List<Double> list) {
+        return list.stream().mapToDouble(Double::doubleValue).sum();
+    }
+
+    public static List<Double> addScalarToListElements(List<Double> listA, Double scalar) {
+        return listA.stream().map(num -> num + scalar)
+                .collect(Collectors.toList());
+    }
+
+    public static List<Double> multiplyListElements(List<Double> list, double scalar) {
+        return list.stream()
+                .map(num -> num * scalar)
+                .collect(Collectors.toList());
+    }
+
+    public static double dotProduct(List<Double> listA,List<Double> listB)  {
+        return IntStream.range(0, Math.min(listA.size(), listB.size()))
+                .mapToDouble(i -> listA.get(i) * listB.get(i))
+                .sum();
+    }
+
+    public static List<Double> elementProduct(List<Double> listA,List<Double> listB)  {
+        return IntStream.range(0, Math.min(listA.size(), listB.size()))
+                .mapToObj(i -> listA.get(i) * listB.get(i))
+                .collect(Collectors.toList());
+    }
+
+    public static List<Double> createListWithZeroElements(int len) {
+        return createListWithEqualElementValues(len,0);
+    }
+
+    public static List<Double> createListWithEqualElementValues(int len, double value) {
+        return new ArrayList<>(Collections.nCopies(len,value));
+    }
+
+    public static List<Double> generateSequenceFromStartToEnd(double start, double end, double step) {
+        return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
+                .boxed()
+                .collect(Collectors.toList());
+    }
+
+    public static List<Double> doublesStartStepNitems(double start, double step, int nItems) {
+        return Stream.iterate(start, value -> value + step) // Start with 'start' and add 'step' for each subsequent element
+                .limit(nItems)                        // Limit the sequence to 'nItems' elements
+                .toList();
+    }
+
+    public static List<Double> doublesStartEndStep(double start, double end, double step) {
+        return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
+                .boxed().toList();
+    }
+
+    public static double[] toArray(List<Double> list) {
+        return list.stream().mapToDouble(Number::doubleValue).toArray();
+    }
+
+
+    public static boolean areDoubleArraysEqual(double[] x, double[] y, double tol)
+    {
+        if (x.length!=y.length) {
+            return false;
+        }
+        for (int i = 0; i < x.length; i += 1)
+        {
+            if (Math.abs((y[i] - x[i])) > tol)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static<T> List<T> merge(List<T> list1, List<T> list2)
+    {
+        List<T> list = new ArrayList<>(list1);
+        list.addAll(list2);
+
+        return list;
+    }
+
+    public static List<Double> arrayPrimitiveDoublesToList(double[] arr) {
+        return DoubleStream.of(arr).boxed().collect(Collectors.toList());
+    }
+
+}
