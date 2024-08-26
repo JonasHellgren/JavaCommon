@@ -17,12 +17,24 @@ public class FirstDegreeSolver {
         this.b = b;
     }
 
+    /**
+     * Solves the first-degree equation a*x - b = 0.
+     *
+     * @return an Optional containing the solution to the equation, or an empty Optional if the equation has no solution.
+     */
     public Optional<Double> solve() {
+        if (isCoefficientZero(b)) {
+            return Optional.empty();
+        }
+        return Optional.of(getSolution());
+    }
 
-        return  (MyMathUtils.isZero(b))
-                ? Optional.empty()
-                : Optional.of(b/a);
+    private boolean isCoefficientZero(double coefficient) {
+        return MyMathUtils.isZero(coefficient);
+    }
 
+    private double getSolution() {
+        return b / a;
     }
 
 }

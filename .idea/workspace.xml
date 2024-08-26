@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingHeatMapPlotter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/HeatMapChartPlotterDouble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/HeatMapChartPlotterInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnerMultiplePanelsTrajectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnerPlotterMultiplePanelsRelation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnerScatterPlotter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnnerStairsChart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/ClusterWithScatterPlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestEquationsSolvers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterMultiplePanelsTrajectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterMultiplePanelsTrajectory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterScatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterScatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/StairDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/StairDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingShowHeatMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/ParallelCoordinatesPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plot_runners/ParallelCoordinatesPlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/equation_solvers/FirstDegreeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/equation_solvers/FirstDegreeSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/equation_solvers/SecondDegreeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/equation_solvers/SecondDegreeSolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +42,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ClusterWithScatterPlot.executor": "Run",
     "Application.HeatMapChartPlotterDouble.executor": "Run",
     "Application.HeatMapChartPlotterInt.executor": "Run",
     "Application.ParallelCoordinatesPlot.executor": "Run",
     "Application.RunnerMultiplePanelsTrajectory.executor": "Run",
     "Application.RunnerScatterPlotter.executor": "Run",
+    "Application.RunnerShowTable.executor": "Run",
     "Application.RunnnerStairsChart.executor": "Run",
     "Application.TestPlotterMultiplePanelsRelation.executor": "Run",
     "Application.TestScatterPlotter.executor": "Run",
     "JUnit.TestAnnuityCalculator.executor": "Run",
+    "JUnit.TestCounter.executor": "Run",
+    "JUnit.TestEquationsSolvers.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -78,42 +74,29 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\list_arrays" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="plot_runners" />
       <recent name="runner" />
       <recent name="utilities" />
       <recent name="org.hellgren.utilities.conditionals" />
       <recent name="org.hellgren.utilities.math" />
-      <recent name="org.hellgren.utilities.science" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunnerShowTable">
+  <component name="RunManager" selected="JUnit.TestEquationsSolvers">
+    <configuration name="ClusterWithScatterPlot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.ClusterWithScatterPlot" />
+      <module name="JavaCommon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plot_runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HeatMapChartPlotterDouble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="plot_runners.HeatMapChartPlotterDouble" />
-      <module name="JavaCommon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="plot_runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HeatMapChartPlotterInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="plot_runners.HeatMapChartPlotterInt" />
-      <module name="JavaCommon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="plot_runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunnerScatterPlotter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="plot_runners.RunnerScatterPlotter" />
       <module name="JavaCommon" />
       <extension name="coverage">
         <pattern>
@@ -138,15 +121,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunnnerStairsChart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="plot_runners.RunnnerStairsChart" />
+    <configuration name="TestCounter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="plot_runners.*" />
+          <option name="PATTERN" value="utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestCounter" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEquationsSolvers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestEquationsSolvers" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestEquationsSolvers" />
+        <item itemvalue="JUnit.TestCounter" />
+        <item itemvalue="Application.ClusterWithScatterPlot" />
         <item itemvalue="Application.RunnerShowTable" />
         <item itemvalue="Application.HeatMapChartPlotterDouble" />
-        <item itemvalue="Application.HeatMapChartPlotterInt" />
-        <item itemvalue="Application.RunnnerStairsChart" />
-        <item itemvalue="Application.RunnerScatterPlotter" />
       </list>
     </recent_temporary>
   </component>

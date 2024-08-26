@@ -17,12 +17,32 @@ public class SecondDegreeSolver {
     double b;
     double c;
 
-   public Optional<Pair<Double, Double>> solve() {
-        double d=Math.pow(b,2)-4*a*c;
-        return (MyMathUtils.isNeg(d))
+    /**
+     * Solves the quadratic equation ax^2 + bx + c = 0 and returns the roots.
+     *
+     * @return an Optional containing a Pair of Double roots if the equation has real roots,
+     *         otherwise an empty Optional
+     */
+    public Optional<Pair<Double, Double>> solve() {
+        double determinant = calculateDeterminant(a, b, c);
+        return isNegative(determinant)
                 ? Optional.empty()
-                : Optional.of(new Pair<>((-b+Math.sqrt(Math.abs(d)))/(2*a),(-b-Math.sqrt(Math.abs(d)))/(2*a)));
+                : Optional.of(calculateRoots(a, b, determinant));
     }
 
+    private double calculateDeterminant(double a, double b, double c) {
+        return Math.pow(b, 2) - 4 * a * c;
+    }
+
+    private boolean isNegative(double value) {
+        return MyMathUtils.isNeg(value);
+    }
+
+    private Pair<Double, Double> calculateRoots(double a, double b, double determinant) {
+        double sqrtDeterminant = Math.sqrt(Math.abs(determinant));
+        double root1 = (-b + sqrtDeterminant) / (2 * a);
+        double root2 = (-b - sqrtDeterminant) / (2 * a);
+        return new Pair<>(root1, root2);
+    }
 
 }

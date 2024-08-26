@@ -1,7 +1,10 @@
 package org.hellgren.utilities.conditionals;
 
+import lombok.Getter;
+
 public final class Counter {
 
+    @Getter
     private int count;
     private final int minCount;
     private final int maxCount;
@@ -24,9 +27,7 @@ public final class Counter {
         this.maxCount = maxCount;
     }
 
-    public int getCount() {
-        return count;
-    }
+    public static Counter empty()        { return new Counter(0,0); }
 
     public void increase() {
         count++;
