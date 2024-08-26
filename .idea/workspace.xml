@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/ParallelCoordinatesPlot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/economics/AnnuityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/economics/AnnuityCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestAnnuityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestAnnuityCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NoiseToValuesInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NoiseToValuesInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NormalizeLineData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NormalizeLineData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2kWQkh1C2r2MYFBgmj44euD5x1j" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,9 +39,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ParallelCoordinatesPlot.executor": "Run",
+    "JUnit.TestAnnuityCalculator.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.codeium.enabled": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/JavaCode/JavaCommon/src/test/java/utilities",
@@ -56,14 +60,27 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\equation_solver" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="runner" />
       <recent name="utilities" />
       <recent name="org.hellgren.utilities.conditionals" />
       <recent name="org.hellgren.utilities.math" />
       <recent name="org.hellgren.utilities.science" />
-      <recent name="org.example.utilities.searchers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAnnuityCalculator">
+  <component name="RunManager" selected="Application.ParallelCoordinatesPlot">
+    <configuration name="ParallelCoordinatesPlot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runner.ParallelCoordinatesPlot" />
+      <module name="JavaCommon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestAnnuityCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
@@ -122,10 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAnnuityCalculator" />
+        <item itemvalue="Application.ParallelCoordinatesPlot" />
         <item itemvalue="JUnit.utilities in JavaCommon" />
         <item itemvalue="JUnit.dynamic_programming in JavaCommon" />
         <item itemvalue="JUnit.TestUnitConverter" />
+        <item itemvalue="JUnit.TestAnnuityCalculator" />
       </list>
     </recent_temporary>
   </component>

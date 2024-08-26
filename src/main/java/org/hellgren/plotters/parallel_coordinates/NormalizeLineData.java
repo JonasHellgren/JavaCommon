@@ -6,38 +6,40 @@ public class NormalizeLineData {
 
     private NormalizeLineData() {
     }
-    public static List<LineData> normalize(List<LineData> dataList) {
-        int numInputs = dataList.get(0).valuesInput().size();
+    /**
+     * Normalizes a list of LineData objects by scaling their input values and output values to a common range.
+     *
+     * @param inputData	a list of LineData objects to be normalized
+     * @return         	a new list of LineData objects with normalized input and output values
+     */
+    public static List<LineData> normalize(List<LineData> inputData) {
+        int numInputVariables = inputData.get(0).valuesInput().size();
 
-        // Find min and max for each input variable
-        double[] minInputs = new double[numInputs];
-        double[] maxInputs = new double[numInputs];
-        initializeMinMaxArrays(minInputs, maxInputs);
+        double[] minInputValues = new double[numInputVariables];
+        double[] maxInputValues = new double[numInputVariables];
+        initializeMinMaxArrays(minInputValues, maxInputValues);
 
-        // Find min and max for valueOutput
-        double minOutput = Double.MAX_VALUE;
-        double maxOutput = Double.MIN_VALUE;
+        double minOutputValue = Double.MAX_VALUE;
+        double maxOutputValue = Double.MIN_VALUE;
 
-        // Calculate min and max values for each input and output
-        for (LineData lineData : dataList) {
-            for (int i = 0; i < numInputs; i++) {
-                double value = lineData.valuesInput().get(i);
-                minInputs[i] = Math.min(minInputs[i], value);
-                maxInputs[i] = Math.max(maxInputs[i], value);
+        for (LineData data : inputData) {
+            for (int i = 0; i < numInputVariables; i++) {
+                double inputValue = data.valuesInput().get(i);
+                minInputValues[i] = Math.min(minInputValues[i], inputValue);
+                maxInputValues[i] = Math.max(maxInputValues[i], inputValue);
             }
-            double outputValue = lineData.valueOutput();
-            minOutput = Math.min(minOutput, outputValue);
-            maxOutput = Math.max(maxOutput, outputValue);
+            double outputValue = data.valueOutput();
+            minOutputValue = Math.min(minOutputValue, outputValue);
+            maxOutputValue = Math.max(maxOutputValue, outputValue);
         }
 
-        // Normalize the data
-        double finalMinOutput = minOutput;
-        double finalMaxOutput = maxOutput;
-        return dataList.stream()
-                .map(lineData -> new LineData(
-                        normalizeValues(lineData.valuesInput(), minInputs, maxInputs),
-                        normalizeValue(lineData.valueOutput(), finalMinOutput, finalMaxOutput),
-                        lineData.category()
+        double finalMinOutputValue = minOutputValue;
+        double finalMaxOutputValue = maxOutputValue;
+        return inputData.stream()
+                .map(data -> new LineData(
+                        normalizeValues(data.valuesInput(), minInputValues, maxInputValues),
+                        normalizeValue(data.valueOutput(), finalMinOutputValue, finalMaxOutputValue),
+                        data.category()
                 ))
                 .toList();
     }

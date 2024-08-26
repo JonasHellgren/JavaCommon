@@ -12,6 +12,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
+/***
+ * This Java code creates a parallel coordinates plot using the XChart library.
+ *
+ * Here's a succinct explanation:
+ *
+ * The ParallelCoordinatesChartCreator class is a builder that takes in input names, output name, and data
+ * (a list of LineData objects).
+ * The create() method creates a new parallel coordinates plot with the specified width, height, and title.
+ * The fillChart() method populates the chart with data from the LineData objects, where each object represents
+ * a line in the plot. The line color is determined by the category of the LineData object.
+ * The styleChart() method customizes the chart's appearance, including hiding the plot grid lines and legend,
+ * and setting the x-axis tick labels to the input and output names.
+ * The plot is designed to visualize relationships between multiple variables, where each line represents a
+ * single data point and the x-axis represents the different variables.
+ */
+
 @Builder
 public class ParallelCoordinatesChartCreator {
 
@@ -33,6 +49,11 @@ public class ParallelCoordinatesChartCreator {
     @Builder.Default
     float lineWidth = 0.5f;
 
+    /**
+     * Creates a new parallel coordinates plot with the specified width, height, and title.
+     *
+     * @return The created XYChart object representing the parallel coordinates plot.
+     */
     public XYChart create() {
         XYChart chart = createChart();
         fillChart(chart);
