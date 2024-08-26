@@ -22,13 +22,26 @@ public final class StairDataGenerator {
 
     private StairDataGenerator() {
     }
-
+    /**
+     * Generates stair data with an end step.
+     *
+     * @param xyData input data
+     * @return stair data
+     */
     public static Pair<List<Double>, List<Double>> generateWithEndStep(Pair<double[], double[]> xyData) {
         var xyStairData = generate(xyData);
         addEndStep(xyStairData.getFirst(), xyStairData.getSecond(), xyData);
         return Pair.create(xyStairData.getFirst(), xyStairData.getSecond());
     }
 
+
+
+    /**
+     * Generates stair data. No end step
+     *
+     * @param xyData input data
+     * @return stair data
+     */
     public static Pair<List<Double>, List<Double>> generate(Pair<double[], double[]> xyData) {
         List<Double> xStairData = Lists.newArrayList();
         List<Double> yStairData = Lists.newArrayList();

@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/ParallelCoordinatesPlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingHeatMapPlotter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/HeatMapChartPlotterDouble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/HeatMapChartPlotterInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnerMultiplePanelsTrajectory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnerPlotterMultiplePanelsRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnerScatterPlotter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plot_runners/RunnnerStairsChart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NoiseToValuesInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NoiseToValuesInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NormalizeLineData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/NormalizeLineData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/DataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterMultiplePanelsTrajectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterMultiplePanelsTrajectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterScatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterScatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/StairDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/StairDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingShowHeatMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/ParallelCoordinatesPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plot_runners/ParallelCoordinatesPlot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +50,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HeatMapChartPlotterDouble.executor": "Run",
+    "Application.HeatMapChartPlotterInt.executor": "Run",
     "Application.ParallelCoordinatesPlot.executor": "Run",
+    "Application.RunnerMultiplePanelsTrajectory.executor": "Run",
+    "Application.RunnerScatterPlotter.executor": "Run",
+    "Application.RunnnerStairsChart.executor": "Run",
+    "Application.TestPlotterMultiplePanelsRelation.executor": "Run",
+    "Application.TestScatterPlotter.executor": "Run",
     "JUnit.TestAnnuityCalculator.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -47,17 +65,17 @@
     "com.codeium.enabled": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/JavaCode/JavaCommon/src/test/java/utilities",
+    "last_opened_file_path": "C:/JavaCode/JavaCommon/src/test/java/runner",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\JavaCode\JavaCommon\src\test\java\runner" />
       <recent name="C:\JavaCode\JavaCommon\src\test\java\utilities" />
       <recent name="C:\JavaCode\JavaCommon\src\test\java" />
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren" />
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\list_arrays" />
-      <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\equation_solver" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="runner" />
@@ -67,13 +85,13 @@
       <recent name="org.hellgren.utilities.science" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParallelCoordinatesPlot">
-    <configuration name="ParallelCoordinatesPlot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="runner.ParallelCoordinatesPlot" />
+  <component name="RunManager" selected="Application.RunnerShowTable">
+    <configuration name="HeatMapChartPlotterDouble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.HeatMapChartPlotterDouble" />
       <module name="JavaCommon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.*" />
+          <option name="PATTERN" value="plot_runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,33 +99,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAnnuityCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeatMapChartPlotterInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.HeatMapChartPlotterInt" />
       <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="plot_runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestAnnuityCalculator" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUnitConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RunnerScatterPlotter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.RunnerScatterPlotter" />
       <module name="JavaCommon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="plot_runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestUnitConverter" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunnerShowTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.RunnerShowTable" />
+      <module name="JavaCommon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plot_runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunnnerStairsChart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.RunnnerStairsChart" />
+      <module name="JavaCommon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plot_runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,31 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dynamic_programming in JavaCommon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/dynamic_programming" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="utilities in JavaCommon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/utilities" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ParallelCoordinatesPlot" />
-        <item itemvalue="JUnit.utilities in JavaCommon" />
-        <item itemvalue="JUnit.dynamic_programming in JavaCommon" />
-        <item itemvalue="JUnit.TestUnitConverter" />
-        <item itemvalue="JUnit.TestAnnuityCalculator" />
+        <item itemvalue="Application.RunnerShowTable" />
+        <item itemvalue="Application.HeatMapChartPlotterDouble" />
+        <item itemvalue="Application.HeatMapChartPlotterInt" />
+        <item itemvalue="Application.RunnnerStairsChart" />
+        <item itemvalue="Application.RunnerScatterPlotter" />
       </list>
     </recent_temporary>
   </component>

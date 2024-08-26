@@ -1,4 +1,4 @@
-package runner;
+package plot_runners;
 
 import org.hellgren.plotters.parallel_coordinates.LineData;
 import org.hellgren.plotters.parallel_coordinates.NormalizeLineData;

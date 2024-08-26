@@ -25,7 +25,6 @@ public class PlotPanel extends JPanel  {
         this.title=title;
         this.xlabel=xlabel;
         this.ylabel=ylabel;
-
         this.dataset = new XYSeriesCollection();
         addChart(this.dataset);
     }

@@ -1,13 +1,17 @@
-package org.hellgren.plotters.table_shower;
+package plot_runners;
 
 import lombok.SneakyThrows;
+import org.hellgren.plotters.table_shower.TableDataDouble;
+import org.hellgren.plotters.table_shower.TableDataString;
+import org.hellgren.plotters.table_shower.TableSettings;
+import org.hellgren.plotters.table_shower.TableShower;
 
 import javax.swing.*;
 import java.util.Optional;
 
 public class RunnerShowTable {
 
-    public static final String CHART_DIR = "src/main/java/common/plotters/table_shower";
+   // public static final String CHART_DIR = "src/main/java/common/plotters/table_shower";
 
     @SneakyThrows
     public static void main(String[] args) {
@@ -30,7 +34,7 @@ public class RunnerShowTable {
         SwingUtilities.invokeLater(() -> tableShower3.showTable(tableDataString));
 
         var frame = tableShower1.createTableFrame(tableDataDouble);
-        tableShower1.saveTableFrame(frame, CHART_DIR, "table1.png");
+      //  tableShower1.saveTableFrame(frame, CHART_DIR, "table1.png");
     }
 
     static Double[][] createDoubleTableData(int nX, int nY) {

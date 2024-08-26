@@ -1,7 +1,6 @@
 package org.hellgren.plotters.plotting_2d;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.jetbrains.annotations.NotNull;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -11,60 +10,62 @@ import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public final  class PlotterScatter {
-    private static final int WIDTH_PANEL = 500, HEIGHT = 400;
-    public static final String TITLE = "";
-    public static final Color COLOR_POINTS = Color.BLACK;
-    String xAxisTitle,  yAxisTitle;
-    JFrame frame;
+public final class PlotterScatter {
+    private static final int DEFAULT_WIDTH = 500;
+    private static final int DEFAULT_HEIGHT = 400;
+    private static final String DEFAULT_TITLE = "";
+    private static final Color DEFAULT_COLOR = Color.BLACK;
 
-    public PlotterScatter(String xAxisTitle, String yAxisTitle) {
+    private final String xAxisLabel;
+    private final String yAxisLabel;
+    private final JFrame frame;
 
-        this.xAxisTitle=xAxisTitle; this.yAxisTitle=yAxisTitle;
-        frame = new JFrame("");
+    public PlotterScatter(String xAxisLabel, String yAxisLabel) {
+        this.xAxisLabel = xAxisLabel;
+        this.yAxisLabel = yAxisLabel;
+        this.frame = new JFrame(DEFAULT_TITLE);
     }
 
-    public void plot(List<Pair<Double,Double>> dataPairs) {
-        JFreeChart chart = getjFreeChart(dataPairs);
-        setColorDataPoints(chart);
-        setChartInFrame(chart, frame);
+    public void plot(List<Pair<Double, Double>> dataPoints) {
+        JFreeChart chart = createScatterPlot(dataPoints);
+        customizeChart(chart);
+        displayChart(chart);
     }
 
-    private static void setColorDataPoints(JFreeChart chart) {
+    private void customizeChart(JFreeChart chart) {
         XYPlot plot = chart.getXYPlot();
         XYItemRenderer renderer = plot.getRenderer();
-        renderer.setSeriesPaint(0, COLOR_POINTS);
+        renderer.setSeriesPaint(0, DEFAULT_COLOR);
     }
 
-    @NotNull
-    private  JFreeChart getjFreeChart(List<Pair<Double,Double>> dataPairs) {
-        XYSeries series = new XYSeries(TITLE);
-        for (Pair<Double,Double> pair:dataPairs) {
-            series.add(pair.getLeft(),pair.getRight());
-        }
+    private JFreeChart createScatterPlot(List<Pair<Double, Double>> dataPoints) {
+        XYSeries series = new XYSeries(DEFAULT_TITLE);
+        dataPoints.forEach(pair -> series.add(pair.getLeft(), pair.getRight()));
 
         XYDataset dataset = new XYSeriesCollection(series);
 
         return ChartFactory.createScatterPlot(
-                "",
-                xAxisTitle,yAxisTitle,
+                DEFAULT_TITLE,
+                xAxisLabel,
+                yAxisLabel,
                 dataset,
                 PlotOrientation.VERTICAL,
-                true, true, false
+                true,
+                true,
+                false
         );
     }
 
-    private static void setChartInFrame(JFreeChart chart, JFrame frame) {
+    private void displayChart(JFreeChart chart) {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(new ChartPanel(chart));
         frame.pack();
-        frame.setSize(WIDTH_PANEL, HEIGHT);
+        frame.setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
