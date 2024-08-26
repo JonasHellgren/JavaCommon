@@ -24,11 +24,19 @@ public class SafeGradientClipper {
     @Builder.Default
     Double gradMin=-Double.MAX_VALUE;
 
-    public double modify(double grad0, double value) {
-        double deltaValueMax=valueMax-value;
-        double deltaValueMin=valueMin-value;
-        double gMin= (value<=valueMin) ? 0 : Math.max(gradMin,deltaValueMin);
-        double gMax= (value>=valueMax) ? 0 : Math.min(gradMax,deltaValueMax);
-        return MyMathUtils.clip(grad0, gMin,gMax);
+    /**
+     * This method modifies a gradient value based on the current value and the clipper's settings.
+     *
+     * @param originalGradient The original gradient value.
+     * @param currentValue The current value.
+     * @return The modified gradient value.
+     */
+
+    public double modify(double originalGradient, double currentValue) {
+        double maxValueDelta = valueMax - currentValue;
+        double minValueDelta = valueMin - currentValue;
+        double minGradient = (currentValue <= valueMin) ? 0 : Math.max(gradMin, minValueDelta);
+        double maxGradient = (currentValue >= valueMax) ? 0 : Math.min(gradMax, maxValueDelta);
+        return MyMathUtils.clip(originalGradient, minGradient, maxGradient);
     }
 }

@@ -12,6 +12,7 @@ import org.apache.commons.math3.optim.nonlinear.scalar.ObjectiveFunctionGradient
 public final class FiniteDiffGradientCalculator {
 
     public static final double ONE_DIV_TWO = 0.5;
+    public static final double EPS = 1e-6;
     ObjectiveFunction objectiveFunction;
     double eps;
 
@@ -19,6 +20,10 @@ public final class FiniteDiffGradientCalculator {
         this.objectiveFunction = objectiveFunction;
         this.eps = eps;
     }
+
+        public static FiniteDiffGradientCalculator of(ObjectiveFunction function)   {
+            return new FiniteDiffGradientCalculator(function, EPS);
+        }
 
     public ObjectiveFunctionGradient getFiniteDiffGradient() {
         return new ObjectiveFunctionGradient(point -> {

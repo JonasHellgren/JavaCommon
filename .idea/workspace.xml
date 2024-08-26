@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="" />
+    <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestFiniteDiffGradientCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/FiniteDiffGradientCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/FiniteDiffGradientCalculator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +51,8 @@
     "JUnit.TestAnnuityCalculator.executor": "Run",
     "JUnit.TestCounter.executor": "Run",
     "JUnit.TestEquationsSolvers.executor": "Run",
+    "JUnit.TestFiniteDiffGradientCalculator.executor": "Run",
+    "JUnit.TestNumberFormatterUtil.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -66,40 +72,14 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\list_arrays" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utilities" />
       <recent name="plot_runners" />
       <recent name="runner" />
-      <recent name="utilities" />
       <recent name="org.hellgren.utilities.conditionals" />
       <recent name="org.hellgren.utilities.math" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestNumberFormatterUtil">
-    <configuration name="ClusterWithScatterPlot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="plot_runners.ClusterWithScatterPlot" />
-      <module name="JavaCommon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="plot_runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunnerShowTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="plot_runners.RunnerShowTable" />
-      <module name="JavaCommon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="plot_runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestSafeGradientClipper">
     <configuration name="TestCounter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
@@ -132,6 +112,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestFiniteDiffGradientCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestFiniteDiffGradientCalculator" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestNumberFormatterUtil" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
@@ -148,6 +144,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestSafeGradientClipper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestSafeGradientClipper" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <shortenClasspath name="ARGS_FILE" />
       <option name="TEST_OBJECT" value="class" />
@@ -157,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestSafeGradientClipper" />
+        <item itemvalue="JUnit.TestFiniteDiffGradientCalculator" />
         <item itemvalue="JUnit.TestNumberFormatterUtil" />
         <item itemvalue="JUnit.TestEquationsSolvers" />
         <item itemvalue="JUnit.TestCounter" />
-        <item itemvalue="Application.ClusterWithScatterPlot" />
-        <item itemvalue="Application.RunnerShowTable" />
       </list>
     </recent_temporary>
   </component>
