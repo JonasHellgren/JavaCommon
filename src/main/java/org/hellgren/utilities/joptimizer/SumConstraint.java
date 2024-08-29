@@ -12,6 +12,12 @@ import lombok.NonNull;
 import java.util.Arrays;
 
 @Builder
+
+/**
+ * Constraints the sum of the variables. The sum can be limited either to be below a certain limit or
+ * above a certain limit. The constraint is linear and the Hessian is zero.
+ */
+
 public class SumConstraint implements ConvexMultivariateRealFunction {
 
     @NonNull Integer nDim;
@@ -31,7 +37,7 @@ public class SumConstraint implements ConvexMultivariateRealFunction {
     }
 
     @Override
-    public DoubleMatrix1D gradient(DoubleMatrix1D dm) {
+    public DoubleMatrix1D gradient(DoubleMatrix1D input) {
         double[] arr = new double[nDim];
         double gradElem=Boolean.TRUE.equals(isSumMaxLimited)?1:-1;
         Arrays.fill(arr, gradElem);
@@ -39,7 +45,7 @@ public class SumConstraint implements ConvexMultivariateRealFunction {
     }
 
     @Override
-    public DoubleMatrix2D hessian(DoubleMatrix1D dm) {
+    public DoubleMatrix2D hessian(DoubleMatrix1D input) {
         return new DenseDoubleMatrix2D(new double[nDim][nDim]);
     }
 

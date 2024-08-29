@@ -13,7 +13,7 @@ import org.hellgren.utilities.math.MyMathUtils;
  */
 
 @Builder
-public class SafeGradientClipper {
+public final class SafeGradientClipper {
 
     @Builder.Default
     Double valueMax=Double.MAX_VALUE;
@@ -32,7 +32,7 @@ public class SafeGradientClipper {
      * @return The modified gradient value.
      */
 
-    public double modify(double originalGradient, double currentValue) {
+    public final double modify(double originalGradient, double currentValue) {
         double maxValueDelta = valueMax - currentValue;
         double minValueDelta = valueMin - currentValue;
         double minGradient = (currentValue <= valueMin) ? 0 : Math.max(gradMin, minValueDelta);

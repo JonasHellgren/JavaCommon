@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestFiniteDiffGradientCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerLinearBatchFitter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestDataSetCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/FiniteDiffGradientCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/FiniteDiffGradientCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/SafeGradientClipper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/SafeGradientClipper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/LowerBoundConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/LowerBoundConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/SumConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/SumConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/UpperBoundConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/joptimizer/UpperBoundConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/DataSetCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/DataSetCreator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,7 @@
     "Application.HeatMapChartPlotterDouble.executor": "Run",
     "Application.HeatMapChartPlotterInt.executor": "Run",
     "Application.ParallelCoordinatesPlot.executor": "Run",
+    "Application.RunnerLinearBatchFitter.executor": "Run",
     "Application.RunnerMultiplePanelsTrajectory.executor": "Run",
     "Application.RunnerScatterPlotter.executor": "Run",
     "Application.RunnerShowTable.executor": "Run",
@@ -50,9 +56,11 @@
     "Application.TestScatterPlotter.executor": "Run",
     "JUnit.TestAnnuityCalculator.executor": "Run",
     "JUnit.TestCounter.executor": "Run",
+    "JUnit.TestDataSetCreator.executor": "Run",
     "JUnit.TestEquationsSolvers.executor": "Run",
     "JUnit.TestFiniteDiffGradientCalculator.executor": "Run",
     "JUnit.TestNumberFormatterUtil.executor": "Run",
+    "JUnit.TestSafeGradientClipper.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -72,31 +80,28 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\list_arrays" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="runners" />
       <recent name="utilities" />
       <recent name="plot_runners" />
       <recent name="runner" />
       <recent name="org.hellgren.utilities.conditionals" />
-      <recent name="org.hellgren.utilities.math" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestSafeGradientClipper">
-    <configuration name="TestCounter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestDataSetCreator">
+    <configuration name="RunnerLinearBatchFitter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners.RunnerLinearBatchFitter" />
       <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestCounter" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestEquationsSolvers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDataSetCreator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -106,7 +111,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestEquationsSolvers" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestDataSetCreator" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestDataSetCreator" />
+        <item itemvalue="Application.RunnerLinearBatchFitter" />
         <item itemvalue="JUnit.TestSafeGradientClipper" />
         <item itemvalue="JUnit.TestFiniteDiffGradientCalculator" />
         <item itemvalue="JUnit.TestNumberFormatterUtil" />
-        <item itemvalue="JUnit.TestEquationsSolvers" />
-        <item itemvalue="JUnit.TestCounter" />
       </list>
     </recent_temporary>
   </component>
