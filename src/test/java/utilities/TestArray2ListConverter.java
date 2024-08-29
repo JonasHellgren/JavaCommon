@@ -8,11 +8,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestArra2ListConverter {
+class TestArray2ListConverter {
 
 
     @Test
-    public void testConvertDoubleArrToList() {
+    void testConvertDoubleArrToList() {
         double[] inputArray = {1.0, 2.0, 3.0};
         List<Double> expectedList = Arrays.asList(1.0, 2.0, 3.0);
         List<Double> actualList = Array2ListConverter.arrayToList(inputArray);
@@ -20,7 +20,7 @@ public class TestArra2ListConverter {
     }
 
     @Test
-    public void testConvertDoubleArrToList_EmptyArray() {
+    void testConvertDoubleArrToList_EmptyArray() {
         double[] inputArray = {};
         List<Double> expectedList = List.of();
         List<Double> actualList = Array2ListConverter.arrayToList(inputArray);
@@ -28,7 +28,7 @@ public class TestArra2ListConverter {
     }
 
     @Test
-    public void testConvertDoubleMatToListOfLists() {
+    void testConvertDoubleMatToListOfLists() {
         double[][] inputMatrix = {{1.0, 2.0}, {3.0, 4.0}};
         List<List<Double>> expectedList = Arrays.asList(
                 Arrays.asList(1.0, 2.0),
@@ -39,7 +39,7 @@ public class TestArra2ListConverter {
     }
 
     @Test
-    public void testConvertDoubleMatToListOfLists_EmptyMatrix() {
+    void testConvertDoubleMatToListOfLists_EmptyMatrix() {
         double[][] inputMatrix = {};
         List<List<Double>> expectedList = List.of();
         List<List<Double>> actualList = Array2ListConverter.matrixToListOfLists(inputMatrix);

@@ -9,7 +9,7 @@ import java.util.List;
 public class TestListTransposer {
 
     @Test
-    void whenTranspoeList_thenCorrect() {
+    void whenTransposeList_thenCorrect() {
 
         var listOfList= List.of(List.of(1d, 2d, 3d),List.of(1d, 2d, 3d));
         var newListOfList= ListTransposer.transpose(listOfList);

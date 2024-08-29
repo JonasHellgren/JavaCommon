@@ -16,7 +16,7 @@ public class SubArrayExtractor {
     int nofThetasPerChunk;
 
     public double[] arrayWithZeroExceptAtSubArray(int subArrayIndex, double[] thetasInSubArray) {
-        double[] gradLogAllStates = MyArrayUtil.createArrayWithSameDoubleNumber(thetaLength, 0);
+        double[] gradLogAllStates = ArrayCreator.createArrayWithSameDoubleNumber(thetaLength, 0);
         int indexSource = 0;
         int indexFirstTheta = getIndexFirstThetaForSubArray(subArrayIndex);
         arraycopy(thetasInSubArray, indexSource, gradLogAllStates, indexFirstTheta, nofThetasPerChunk);

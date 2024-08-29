@@ -7,13 +7,27 @@ import java.util.Arrays;
 @Log
 public class IndexFinder {
 
+
+    /**
+     * Finds the index of a target value in a sorted integer array.
+     *
+     * @param arr the sorted integer array to search
+     * @param t the target value to find
+     * @return the index of the target value, or -1 if not found
+     */
     public static int findIndex(int[] arr, int t)
     {
         int index = Arrays.binarySearch(arr, t);
-
-        System.out.println("index = " + index);
         return (index < 0) ? -1 : index;
     }
+
+    /**
+     * Finds the bucket that a given value falls into in a sorted double array.
+     *
+     * @param array the sorted double array to search
+     * @param value the value to find the bucket for
+     * @return the index of the bucket that the value falls into, or -1 if the value is below the first bucket
+     */
 
     public static int findBucket(double[] array, double value) {
 

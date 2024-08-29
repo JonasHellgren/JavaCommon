@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestArra2ListConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/Array2ListConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/Array2ListConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ArrayCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestArrayCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestArrayUtilsOld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestIndexFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestList2ArrayConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/IndexFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/IndexFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ListTransposer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ListTransposer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyArrayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyArrayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/SubArrayExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/SubArrayExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestArra2ListConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestArray2ListConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestArrayUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestListTransposer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestListTransposer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +61,14 @@
     "Application.TestScatterPlotter.executor": "Run",
     "JUnit.TestAnnuityCalculator.executor": "Run",
     "JUnit.TestArra2ListConverter.executor": "Run",
+    "JUnit.TestArrayCreator.executor": "Run",
+    "JUnit.TestArrayUtilsOld.executor": "Run",
     "JUnit.TestCounter.executor": "Run",
     "JUnit.TestDataSetCreator.executor": "Run",
     "JUnit.TestEquationsSolvers.executor": "Run",
     "JUnit.TestFiniteDiffGradientCalculator.executor": "Run",
+    "JUnit.TestListInverter.executor": "Run",
+    "JUnit.TestListTransposer.executor": "Run",
     "JUnit.TestNumberFormatterUtil.executor": "Run",
     "JUnit.TestSafeGradientClipper.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -75,28 +90,15 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\list_arrays" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="runners" />
       <recent name="utilities" />
+      <recent name="runners" />
       <recent name="plot_runners" />
       <recent name="runner" />
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestArra2ListConverter">
-    <configuration name="RunnerLinearBatchFitter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="runners.RunnerLinearBatchFitter" />
-      <module name="JavaCommon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestArra2ListConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestArrayCreator">
+    <configuration name="TestArray2ListConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -106,13 +108,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestArra2ListConverter" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestArray2ListConverter" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDataSetCreator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestArrayCreator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -122,13 +124,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestDataSetCreator" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestArrayCreator" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFiniteDiffGradientCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestArrayUtilsOld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -138,13 +140,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestFiniteDiffGradientCalculator" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestArrayUtilsOld" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSafeGradientClipper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestListInverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -154,7 +156,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestSafeGradientClipper" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestListInverter" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestListTransposer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestListTransposer" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestArra2ListConverter" />
-        <item itemvalue="JUnit.TestDataSetCreator" />
-        <item itemvalue="Application.RunnerLinearBatchFitter" />
-        <item itemvalue="JUnit.TestSafeGradientClipper" />
-        <item itemvalue="JUnit.TestFiniteDiffGradientCalculator" />
+        <item itemvalue="JUnit.TestArrayCreator" />
+        <item itemvalue="JUnit.TestArrayUtilsOld" />
+        <item itemvalue="JUnit.TestListTransposer" />
+        <item itemvalue="JUnit.TestListInverter" />
+        <item itemvalue="JUnit.TestArray2ListConverter" />
       </list>
     </recent_temporary>
   </component>
