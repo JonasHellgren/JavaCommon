@@ -2,8 +2,8 @@ package org.hellgren.utilities.list_arrays;
 
 import org.apache.commons.math3.util.Pair;
 import org.hellgren.utilities.math.MyMathUtils;
+import org.nd4j.shade.guava.base.Preconditions;
 
-import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.DoubleStream;
 
@@ -15,6 +15,35 @@ public class MyArrayUtil {
     public static double sum(double[] array) {
         return Arrays.stream(array).sum();
     }
+
+    public static double average(double[] array) {
+        Preconditions.checkArgument(array != null && array.length > 0,
+                "Array must not be null or empty");
+
+        double sum = 0.0;
+        for (double num : array) {
+            sum += num;
+        }
+
+        return sum / array.length;
+    }
+
+    public static Double findMin(Double[][] data) {
+        return Arrays.stream(data)
+                .flatMap(Arrays::stream)
+                .filter(n -> !Objects.isNull(n))
+                .min(Double::compareTo)
+                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
+    }
+
+    public static Double findMax(Double[][] data) {
+        return Arrays.stream(data)
+                .flatMap(Arrays::stream)
+                .filter(n -> !Objects.isNull(n))
+                .max(Double::compareTo)
+                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
+    }
+
 
     public static double[] clip(double[] x, double min, double max) {
         for (int i = 0; i < x.length; i += 1) {
@@ -36,27 +65,21 @@ public class MyArrayUtil {
     }
 
 
-    public static double[] multWithValue(double[] x, double multiplier) {
+    public static double[] multiplyWithValue(double[] x, double multiplier) {
         return DoubleStream.of(x)
                 .map(v -> v * multiplier)
                 .toArray();
     }
 
-    public static Double findMin(Double[][] data) {
-        return Arrays.stream(data)
-                .flatMap(Arrays::stream)
-                .filter(n -> !Objects.isNull(n))
-                .min(Double::compareTo)
-                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
+    public static double[] negate(double[] array) {
+        double[] negatedArray = new double[array.length];
+        for (int i = 0; i < array.length; i++) {
+            negatedArray[i] = -array[i];  // Negate each element
+        }
+        return negatedArray;
     }
 
-    public static Double findMax(Double[][] data) {
-        return Arrays.stream(data)
-                .flatMap(Arrays::stream)
-                .filter(n -> !Objects.isNull(n))
-                .max(Double::compareTo)
-                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
-    }
+
 
     public static Pair<double[], double[]> convertMapToArrays(Map<Double, Double> map) {
         List<Double> xList = new ArrayList<>(map.keySet());
@@ -72,27 +95,6 @@ public class MyArrayUtil {
         return Pair.create(xArray, yArray);
     }
 
-    private static void throwIfZeroLength(int length) {
-        if (length == 0) {
-            throw new IllegalArgumentException("Length is zero");
-        }
-    }
-
-    private static void throwIfBadLength(int length) {
-        if (length < 2) {
-            throw new IllegalArgumentException("Length must be larger than 1");
-        }
-    }
-
-
-
-    public static double[] negate(double[] array) {
-        double[] negatedArray = new double[array.length];
-        for (int i = 0; i < array.length; i++) {
-            negatedArray[i] = -array[i];  // Negate each element
-        }
-        return negatedArray;
-    }
 
 
 }
