@@ -8,25 +8,35 @@ public class Array2ListConverter {
     private Array2ListConverter() {
     }
 
-    public static List<Double> convertDoubleArrToList(double[] inVec) {
-        List<Double> outList = new ArrayList<>(inVec.length);
-        for (double val : inVec) {
-            outList.add(val);
+    /**
+     * Converts a double array to a list of doubles.
+     *
+     * @param inputArray the input array to convert
+     * @return a list of doubles
+     */
+    public static List<Double> arrayToList(double[] inputArray) {
+        List<Double> outputList = new ArrayList<>(inputArray.length);
+        for (double value : inputArray) {
+            outputList.add(value);
         }
-        return outList;
+        return outputList;
     }
 
-    public static List<List<Double>> convertDoubleMatToListOfLists(double[][] inMat) {
-        List<List<Double>> outList = new ArrayList<>();
-        for (double[] row : inMat) {
+    /**
+     * Converts a 2D double array to a list of lists of doubles.
+     *
+     * @param inputMatrix the input matrix to convert
+     * @return a list of lists of doubles
+     */
+    public static List<List<Double>> matrixToListOfLists(double[][] inputMatrix) {
+        List<List<Double>> outputList = new ArrayList<>();
+        for (double[] row : inputMatrix) {
             List<Double> innerList = new ArrayList<>();
-            for (double val : row) {
-                innerList.add(val);
+            for (double value : row) {
+                innerList.add(value);
             }
-            outList.add(innerList);
+            outputList.add(innerList);
         }
-        return outList;
+        return outputList;
     }
-
-
 }
