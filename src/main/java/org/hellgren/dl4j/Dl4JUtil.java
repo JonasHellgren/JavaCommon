@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 import lombok.extern.java.Log;
 import org.apache.commons.math3.util.Pair;
 import org.deeplearning4j.datasets.iterator.utilty.ListDataSetIterator;
+import org.hellgren.utilities.list_arrays.ListCreator;
 import org.hellgren.utilities.list_arrays.MyListUtils;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
@@ -98,7 +99,7 @@ public class Dl4JUtil {
     }
 
     public static List<Double> createListWithOneHotWithValue(int nofInputs, int hotIndex, double v) {
-        List<Double> onHot = MyListUtils.createListWithEqualElementValues(nofInputs, 0d);
+        List<Double> onHot = ListCreator.createListWithEqualElementValues(nofInputs, 0d);
         onHot.set(hotIndex, v);
         return onHot;
     }

@@ -84,31 +84,7 @@ public class MyListUtils {
                 .collect(Collectors.toList());
     }
 
-    public static List<Double> createListWithZeroElements(int len) {
-        return createListWithEqualElementValues(len,0);
-    }
 
-    public static List<Double> createListWithEqualElementValues(int len, double value) {
-        return new ArrayList<>(Collections.nCopies(len,value));
-    }
-
-    public static List<Double> generateSequenceFromStartToEnd(double start, double end, double step) {
-        return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
-                .boxed()
-                .collect(Collectors.toList());
-    }
-
-    public static List<Double> generateDoublesLinSpace(double start, double end, double step) {
-        return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
-                .boxed()
-                .collect(Collectors.toList());
-    }
-
-    public static List<Double> doublesStartStepNitems(double start, double step, int nItems) {
-        return Stream.iterate(start, value -> value + step) // Start with 'start' and add 'step' for each subsequent element
-                .limit(nItems)                        // Limit the sequence to 'nItems' elements
-                .toList();
-    }
 
     public static List<Double> doublesStartEndStep(double start, double end, double step) {
         return DoubleStream.iterate(start, d -> d <= end, d -> d + step)

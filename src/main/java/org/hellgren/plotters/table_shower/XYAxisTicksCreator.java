@@ -3,7 +3,7 @@ package org.hellgren.plotters.table_shower;
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
 import org.hellgren.utilities.conditionals.Conditionals;
-import org.hellgren.utilities.list_arrays.MyListUtils;
+import org.hellgren.utilities.list_arrays.ListCreator;
 
 import java.util.Arrays;
 import java.util.List;
@@ -33,12 +33,12 @@ public class XYAxisTicksCreator {
         Preconditions.checkArgument(s.isNofRowNamesOk(),"Bad nof row names");
         return s.colNames().isPresent()
                 ? s.rowNames().orElseThrow()
-                : double2String(MyListUtils.doublesStartStepNitems(
+                : double2String(ListCreator.createFromStartWithStepWithNofItems(
                         s.nYstart(), s.nYstep(), s.nY()));
     }
 
     List<String> getNumbersAsStringList() {
-        var xSpace = MyListUtils.doublesStartStepNitems(s.nXstart(), s.nXstep(), s.nX());
+        var xSpace = ListCreator.createFromStartWithStepWithNofItems(s.nXstart(), s.nXstep(), s.nX());
         return xSpace.stream().map(n -> String.format(s.formatTicks(), n)).toList();
     }
 
