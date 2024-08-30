@@ -5,6 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
 import org.apache.commons.math3.util.Pair;
 import org.hellgren.utilities.conditionals.Conditionals;
+import org.hellgren.utilities.list_arrays.MyListUtils;
+
+import java.util.List;
+
+import static org.hellgren.utilities.list_arrays.MyListUtils.findMax;
+import static org.hellgren.utilities.list_arrays.MyListUtils.findMin;
 
 /**
  * https://en.wikipedia.org/wiki/Golden-section_search
@@ -44,22 +50,45 @@ public class GoldenSearcher {
     FunctionWrapperI function;
     SearchSettings settings;
 
+    /**
+     * Searches for the minimum value of the function within the given interval.
+     *
+     * @return the x-value that corresponds to the minimum function value
+     */
     public double searchMin() {
+        // Delegate to the goldenSectionSearch method with isMinSearch set to true
         return goldenSectionSearch(true).getFirst();
     }
 
+    /**
+     * Searches for the maximum value of the function within the given interval.
+     *
+     * @return the x-value that corresponds to the maximum function value
+     */
     public double searchMax() {
+        // Delegate to the goldenSectionSearch method with isMinSearch set to false
         return goldenSectionSearch(false).getFirst();
     }
 
-    public Pair<Double,Double> searchMinWithFunctionValue() {
+    /**
+     * Searches for the minimum value of the function within the given interval and returns both the x-value and the corresponding function value.
+     *
+     * @return a pair containing the x-value and the minimum function value
+     */
+    public Pair<Double, Double> searchMinWithFunctionValue() {
+        // Delegate to the goldenSectionSearch method with isMinSearch set to true
         return goldenSectionSearch(true);
     }
 
-    public Pair<Double,Double> searchMaxWithFunctionValue() {
+    /**
+     * Searches for the maximum value of the function within the given interval and returns both the x-value and the corresponding function value.
+     *
+     * @return a pair containing the x-value and the maximum function value
+     */
+    public Pair<Double, Double> searchMaxWithFunctionValue() {
+        // Delegate to the goldenSectionSearch method with isMinSearch set to false
         return goldenSectionSearch(false);
     }
-
 
     Pair<Double, Double> goldenSectionSearch(boolean isMinSearch) {
         double fBest=isMinSearch ? Double.MAX_VALUE: -Double.MAX_VALUE;
@@ -87,7 +116,9 @@ public class GoldenSearcher {
             c = calcC(a, b);
             d = calcD(a, b);
             i++;
-            fBest=isMinSearch?Math.min(fBest,Math.min(fC0,fD0)):Math.max(fBest,Math.max(fC0,fD0));
+            fBest=isMinSearch
+                    ? findMin(List.of(fBest,fC0,fC1)).orElseThrow() //Math.min(fBest,Math.min(fC0,fD0))
+                    : findMax(List.of(fBest,fC0,fC1)).orElseThrow();  //Math.max(fBest,Math.max(fC0,fD0));
         }
 
         log.info("Gold search finished in "+i+" iterations");

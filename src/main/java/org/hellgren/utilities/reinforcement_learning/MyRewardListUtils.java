@@ -1,34 +1,35 @@
-package org.hellgren.utilities.list_arrays;
+package org.hellgren.utilities.reinforcement_learning;
 
 import com.beust.jcommander.internal.Lists;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import static org.hellgren.utilities.list_arrays.MyListUtils.dotProduct;
 import static org.hellgren.utilities.list_arrays.MyListUtils.elementProduct;
 
 public final class MyRewardListUtils {
 
-    private MyRewardListUtils()
-    {}
+    private MyRewardListUtils() {
+    }
 
     /**
-     *  list = [10 10 10], df=0.5 => listDf=[1*df^0 1*df^1 1*df^2] => dotProduct(list,listDf)=10+5+2.5
+     * list = [10 10 10], df=0.5 => listDf=[1*df^0 1*df^1 1*df^2] => dotProduct(list,listDf)=10+5+2.5
      */
     public static double discountedSum(List<Double> list, double discountFactor) {
-        List<Double> listDf = getDiscountList(list.size(), discountFactor);
-        return dotProduct(list,listDf);
+        var listDf = getDiscountList(list.size(), discountFactor);
+        return dotProduct(list, listDf);
     }
 
 
     /**
-     * 1d,10d,10d , df=0.5->  10d,5d,2.5d
+     * 1d,10d,10d , df=0.5->  1d,5d,2.5d
      */
 
     public static List<Double> discountedElements(List<Double> list, double discountFactor) {
-        List<Double> listDf = getDiscountList(list.size(), discountFactor);
-        return elementProduct(list,listDf);
+        var listDf = getDiscountList(list.size(), discountFactor);
+        return elementProduct(list, listDf);
     }
 
     /**
@@ -36,13 +37,13 @@ public final class MyRewardListUtils {
      */
 
     public static List<Double> discountedElementsReverse(List<Double> list, double discountFactor) {
-        List<Double> listDf = getDiscountList(list.size(), discountFactor);
+        var listDf = getDiscountList(list.size(), discountFactor);
         Collections.reverse(listDf);
-        return elementProduct(list,listDf);
+        return elementProduct(list, listDf);
     }
 
     /**
-     rewards=[0,1,1] => returns=[2,2,1]
+     * rewards=[0,1,1] => returns=[2,2,1]
      */
 
     public static List<Double> getReturns(List<Double> rewards) {
@@ -56,6 +57,15 @@ public final class MyRewardListUtils {
         return returns;
     }
 
+    /**
+     * Returns a list of discount factors to be used for calculating the discounted sum or
+     * discounted elements of a list.
+     *
+     * @param len            the length of the list to create discount factors for
+     * @param discountFactor the discount factor, e.g. 0.5
+     * @return a list of discount factors
+     */
+
     public static List<Double> getDiscountList(int len, double discountFactor) {
         List<Double> listDf = new ArrayList<>();
         double df = 1;
@@ -66,13 +76,22 @@ public final class MyRewardListUtils {
         return listDf;
     }
 
+    /**
+     * Calculates the cumulative sum of a list of values.
+     *
+     * @param values the list of values to calculate the cumulative sum for
+     * @return a list of cumulative sums
+     */
+
     public static List<Double> cumulativeSum(List<Double> values) {
-        double sum=0;
-        List<Double> accumValues= Lists.newArrayList();
+        double sum = 0; // running sum
+        List<Double> accumValues = Lists.newArrayList(); // list of running sums
         for (Double value : values) {
             sum += value;  // Update the running sum
             accumValues.add(sum);  // Add the running sum to the accumValues list
         }
         return accumValues;
     }
+
+
 }

@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ListCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestListCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBatteryCellCoreRelations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestGoldenSearcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestMyRewardListUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/Dl4JUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/dl4j/Dl4JUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/XYAxisTicksCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_shower/XYAxisTicksCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyListUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestArrayUtilsOld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyRewardListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/reinforcement_learning/MyRewardListUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/science/BatteryCellCoreRelations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/science/BatteryCellCoreRelations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/GoldenSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/GoldenSearcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,16 +57,20 @@
     "JUnit.TestArra2ListConverter.executor": "Run",
     "JUnit.TestArrayCreator.executor": "Run",
     "JUnit.TestArrayUtilsOld.executor": "Run",
+    "JUnit.TestBatteryCellCoreRelations.testPowerCore.executor": "Run",
     "JUnit.TestCounter.executor": "Run",
     "JUnit.TestDataSetCreator.executor": "Run",
     "JUnit.TestEquationsSolvers.executor": "Run",
     "JUnit.TestFiniteDiffGradientCalculator.executor": "Run",
+    "JUnit.TestGoldenSearcher.executor": "Run",
     "JUnit.TestListCreator.executor": "Run",
     "JUnit.TestListCreator.testCreateListWithZeroElements.executor": "Run",
     "JUnit.TestListInverter.executor": "Run",
     "JUnit.TestListTransposer.executor": "Run",
     "JUnit.TestMyArrayUtil.executor": "Run",
     "JUnit.TestMyArrayUtil.testConvertMapToArrays.executor": "Run",
+    "JUnit.TestMyRewardListUtils.executor": "Run",
+    "JUnit.TestMyRewardListUtils.testDiscountedElements.executor": "Run",
     "JUnit.TestNumberFormatterUtil.executor": "Run",
     "JUnit.TestSafeGradientClipper.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -95,8 +99,8 @@
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestListCreator">
-    <configuration name="TestArrayCreator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestGoldenSearcher">
+    <configuration name="TestBatteryCellCoreRelations.testPowerCore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -106,7 +110,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestArrayCreator" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestBatteryCellCoreRelations" />
+      <option name="METHOD_NAME" value="testPowerCore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGoldenSearcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestGoldenSearcher" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestListCreator.testCreateListWithZeroElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMyRewardListUtils" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -138,30 +159,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestListCreator" />
-      <option name="METHOD_NAME" value="testCreateListWithZeroElements" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMyArrayUtil" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyArrayUtil" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestMyRewardListUtils" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyArrayUtil.testConvertMapToArrays" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMyRewardListUtils.testDiscountedElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -171,8 +175,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyArrayUtil" />
-      <option name="METHOD_NAME" value="testConvertMapToArrays" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestMyRewardListUtils" />
+      <option name="METHOD_NAME" value="testDiscountedElements" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -187,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestGoldenSearcher" />
+        <item itemvalue="JUnit.TestBatteryCellCoreRelations.testPowerCore" />
+        <item itemvalue="JUnit.TestMyRewardListUtils" />
+        <item itemvalue="JUnit.TestMyRewardListUtils.testDiscountedElements" />
         <item itemvalue="JUnit.TestListCreator" />
-        <item itemvalue="JUnit.TestListCreator.testCreateListWithZeroElements" />
-        <item itemvalue="JUnit.TestMyArrayUtil" />
-        <item itemvalue="JUnit.TestMyArrayUtil.testConvertMapToArrays" />
-        <item itemvalue="JUnit.TestArrayCreator" />
       </list>
     </recent_temporary>
   </component>
