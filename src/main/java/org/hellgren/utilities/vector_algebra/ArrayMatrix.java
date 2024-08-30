@@ -6,7 +6,12 @@ public class ArrayMatrix {
 
     private ArrayMatrix() {
     }
-
+    /**
+     * Transposes a given 2D matrix.
+     *
+     * @param matrix the input matrix to be transposed
+     * @return the transposed matrix
+     */
     public static int[][] transposeMatrix(int[][] matrix) {
         if (matrix.length == 0 || matrix[0].length == 0) {
             return new int[0][0];
@@ -22,7 +27,12 @@ public class ArrayMatrix {
         return transposedMatrix;
     }
 
-
+    /**
+     * Returns the dimensions of a given 2D matrix.
+     *
+     * @param data the input matrix
+     * @return a Pair containing the number of rows and columns in the matrix
+     */
     public static Pair<Integer, Integer> getDimensions(int[][] data) {
         // Check for a null or empty array to avoid NullPointerException
         if (data == null || data.length == 0 || data[0].length == 0) {

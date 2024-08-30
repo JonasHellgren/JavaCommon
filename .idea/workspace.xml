@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestMyUnitConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestArrayMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestDiscrete2DPos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/DefaultIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/DefaultIf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/GoldenSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/GoldenSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/timer/CpuTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/timer/CpuTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/unit_converter/MyUnitConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/unit_converter/MyUnitConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestSetUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestSetUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/vector_algebra/ArrayMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/vector_algebra/ArrayMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/vector_algebra/Discrete2DPos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/vector_algebra/Discrete2DPos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +54,15 @@
     "JUnit.TestAnnuityCalculator.executor": "Run",
     "JUnit.TestArra2ListConverter.executor": "Run",
     "JUnit.TestArrayCreator.executor": "Run",
+    "JUnit.TestArrayMatrix.executor": "Run",
+    "JUnit.TestArrayMatrix.testTransposeMatrix_EmptyMatrix.executor": "Run",
     "JUnit.TestArrayUtilsOld.executor": "Run",
     "JUnit.TestBatteryCellCoreRelations.testPowerCore.executor": "Run",
     "JUnit.TestCounter.executor": "Run",
     "JUnit.TestDataSetCreator.executor": "Run",
+    "JUnit.TestDiscrete2DPos.executor": "Run",
+    "JUnit.TestDiscrete2DPos.testClip.executor": "Run",
+    "JUnit.TestDiscrete2DPos.testGetDy.executor": "Run",
     "JUnit.TestEquationsSolvers.executor": "Run",
     "JUnit.TestFiniteDiffGradientCalculator.executor": "Run",
     "JUnit.TestGoldenSearcher.executor": "Run",
@@ -73,6 +75,7 @@
     "JUnit.TestMyRewardListUtils.executor": "Run",
     "JUnit.TestMyRewardListUtils.testDiscountedElements.executor": "Run",
     "JUnit.TestMyUnitConverter.executor": "Run",
+    "JUnit.TestMyUnitConverter.testConvertEnergy_JouleToKilojoule.executor": "Run",
     "JUnit.TestMyUnitConverter.testConvertEnergy_KilojouleToJoule.executor": "Run",
     "JUnit.TestMyUnitConverter.testEuropJoule2EuropKWH.executor": "Run",
     "JUnit.TestMyUnitConverter.testEuropKW2EuropW.executor": "Run",
@@ -85,6 +88,7 @@
     "JUnit.TestSafeGradientClipper.executor": "Run",
     "JUnit.TestSetUtils.executor": "Run",
     "JUnit.TestSetUtils.testDifference.executor": "Run",
+    "JUnit.java in JavaCommon.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -111,8 +115,8 @@
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestMyUnitConverter">
-    <configuration name="TestMyUnitConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.java in JavaCommon">
+    <configuration name="TestArrayMatrix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -122,13 +126,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestArrayMatrix" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyUnitConverter.testConvertEnergy_JouleToKilojoule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDiscrete2DPos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -138,14 +142,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
-      <option name="METHOD_NAME" value="testConvertEnergy_JouleToKilojoule" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestDiscrete2DPos" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDiscrete2DPos.testClip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestDiscrete2DPos" />
+      <option name="METHOD_NAME" value="testClip" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyUnitConverter.testConvertEnergy_KilojouleToJoule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDiscrete2DPos.testGetDy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -155,42 +175,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
-      <option name="METHOD_NAME" value="testConvertEnergy_KilojouleToJoule" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMyUnitConverter.testPerHour2PerSec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
-      <option name="METHOD_NAME" value="testPerHour2PerSec" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMyUnitConverter.testPerSec2PerDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
-      <option name="METHOD_NAME" value="testPerSec2PerDay" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestDiscrete2DPos" />
+      <option name="METHOD_NAME" value="testGetDy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -203,13 +189,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in JavaCommon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestMyUnitConverter" />
-        <item itemvalue="JUnit.TestMyUnitConverter.testConvertEnergy_JouleToKilojoule" />
-        <item itemvalue="JUnit.TestMyUnitConverter.testConvertEnergy_KilojouleToJoule" />
-        <item itemvalue="JUnit.TestMyUnitConverter.testPerSec2PerDay" />
-        <item itemvalue="JUnit.TestMyUnitConverter.testPerHour2PerSec" />
+        <item itemvalue="JUnit.java in JavaCommon" />
+        <item itemvalue="JUnit.TestDiscrete2DPos" />
+        <item itemvalue="JUnit.TestDiscrete2DPos.testClip" />
+        <item itemvalue="JUnit.TestDiscrete2DPos.testGetDy" />
+        <item itemvalue="JUnit.TestArrayMatrix" />
       </list>
     </recent_temporary>
   </component>
