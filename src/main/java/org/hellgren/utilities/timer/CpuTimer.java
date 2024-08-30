@@ -4,10 +4,18 @@ import lombok.Getter;
 
 import java.util.logging.Logger;
 
+
+/**
+ * A simple timer class to measure CPU time.
+ *
+ * This class provides methods to start, stop, and reset the timer, as well as to check if a time budget has been exceeded.
+ *
+
+ */
+
 @Getter
 public class CpuTimer {
 
-    static final Logger logger = Logger.getLogger(CpuTimer.class.getName());
     long startTimeMillis;  //starting time, long <=> minimum value of 0
     protected long timeBudgetMillis;
 

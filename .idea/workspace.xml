@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBatteryCellCoreRelations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestGoldenSearcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestMyRewardListUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestMyUnitConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyRewardListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/reinforcement_learning/MyRewardListUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/science/BatteryCellCoreRelations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/science/BatteryCellCoreRelations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/DefaultIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/DefaultIf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/GoldenSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/searchers/GoldenSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/timer/CpuTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/timer/CpuTimer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/unit_converter/MyUnitConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/unit_converter/MyUnitConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestSetUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestSetUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +72,19 @@
     "JUnit.TestMyArrayUtil.testConvertMapToArrays.executor": "Run",
     "JUnit.TestMyRewardListUtils.executor": "Run",
     "JUnit.TestMyRewardListUtils.testDiscountedElements.executor": "Run",
+    "JUnit.TestMyUnitConverter.executor": "Run",
+    "JUnit.TestMyUnitConverter.testConvertEnergy_KilojouleToJoule.executor": "Run",
+    "JUnit.TestMyUnitConverter.testEuropJoule2EuropKWH.executor": "Run",
+    "JUnit.TestMyUnitConverter.testEuropKW2EuropW.executor": "Run",
+    "JUnit.TestMyUnitConverter.testEuropKWH2EuropJoule.executor": "Run",
+    "JUnit.TestMyUnitConverter.testPerHour2PerSec.executor": "Run",
+    "JUnit.TestMyUnitConverter.testPerSec2PerDay.executor": "Run",
+    "JUnit.TestMyUnitConverter.testPerSec2PerHour.executor": "Run",
+    "JUnit.TestMyUnitConverter.testW2KW.executor": "Run",
     "JUnit.TestNumberFormatterUtil.executor": "Run",
     "JUnit.TestSafeGradientClipper.executor": "Run",
+    "JUnit.TestSetUtils.executor": "Run",
+    "JUnit.TestSetUtils.testDifference.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -99,8 +111,8 @@
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestGoldenSearcher">
-    <configuration name="TestBatteryCellCoreRelations.testPowerCore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestMyUnitConverter">
+    <configuration name="TestMyUnitConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -110,14 +122,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestBatteryCellCoreRelations" />
-      <option name="METHOD_NAME" value="testPowerCore" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyUnitConverter.testConvertEnergy_JouleToKilojoule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
+      <option name="METHOD_NAME" value="testConvertEnergy_JouleToKilojoule" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGoldenSearcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMyUnitConverter.testConvertEnergy_KilojouleToJoule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -127,13 +155,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestGoldenSearcher" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
+      <option name="METHOD_NAME" value="testConvertEnergy_KilojouleToJoule" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestListCreator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMyUnitConverter.testPerHour2PerSec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -143,13 +172,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestListCreator" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
+      <option name="METHOD_NAME" value="testPerHour2PerSec" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyRewardListUtils" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMyUnitConverter.testPerSec2PerDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -159,24 +189,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyRewardListUtils" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMyRewardListUtils.testDiscountedElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyRewardListUtils" />
-      <option name="METHOD_NAME" value="testDiscountedElements" />
+      <option name="MAIN_CLASS_NAME" value="utilities.TestMyUnitConverter" />
+      <option name="METHOD_NAME" value="testPerSec2PerDay" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestGoldenSearcher" />
-        <item itemvalue="JUnit.TestBatteryCellCoreRelations.testPowerCore" />
-        <item itemvalue="JUnit.TestMyRewardListUtils" />
-        <item itemvalue="JUnit.TestMyRewardListUtils.testDiscountedElements" />
-        <item itemvalue="JUnit.TestListCreator" />
+        <item itemvalue="JUnit.TestMyUnitConverter" />
+        <item itemvalue="JUnit.TestMyUnitConverter.testConvertEnergy_JouleToKilojoule" />
+        <item itemvalue="JUnit.TestMyUnitConverter.testConvertEnergy_KilojouleToJoule" />
+        <item itemvalue="JUnit.TestMyUnitConverter.testPerSec2PerDay" />
+        <item itemvalue="JUnit.TestMyUnitConverter.testPerHour2PerSec" />
       </list>
     </recent_temporary>
   </component>

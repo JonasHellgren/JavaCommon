@@ -1,6 +1,6 @@
 package org.hellgren.utilities.conditionals;
 
-import org.apache.commons.lang3.function.TriFunction;
+//import org.apache.commons.lang3.function.TriFunction;
 
 import java.util.ArrayList;
 import java.util.List;

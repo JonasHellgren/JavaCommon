@@ -43,7 +43,7 @@ import static org.hellgren.utilities.list_arrays.MyListUtils.findMin;
 
 @Log
 @AllArgsConstructor
-public class GoldenSearcher {
+public final class GoldenSearcher {
     private static final double PHI = (1 + Math.sqrt(5)) / 2;
     private static final double INVPHI = 1/PHI;
 
@@ -116,9 +116,11 @@ public class GoldenSearcher {
             c = calcC(a, b);
             d = calcD(a, b);
             i++;
+            var list=List.of(fBest,fC0,fD0);
             fBest=isMinSearch
-                    ? findMin(List.of(fBest,fC0,fC1)).orElseThrow() //Math.min(fBest,Math.min(fC0,fD0))
-                    : findMax(List.of(fBest,fC0,fC1)).orElseThrow();  //Math.max(fBest,Math.max(fC0,fD0));
+                    ? findMin(list).orElseThrow()
+                    : findMax(list).orElseThrow();
+
         }
 
         log.info("Gold search finished in "+i+" iterations");
