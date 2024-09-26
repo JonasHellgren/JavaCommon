@@ -116,13 +116,11 @@ public class TestMyUnitConverter {
     }
 
     @Test
-    public void testConvertPower_KilowattToWatt() {
-        double value = 1; // 1 Kilowatt
-        Unit<Power> unitIn = NonSIUnits.KILO_WATT;
-        Unit<Power> unitOut = Units.WATT;
-        double expected = 1000; // 1000 Watts
-        double actual = MyUnitConverter.convertPower(value, unitIn, unitOut);
-        assertEquals(expected, actual, 0.01); // delta 0.01 for floating point comparison
+    public void testKw2w_Conversion() {
+        double powerInKw = 1.0; // 1 kilowatt
+        double expectedPowerInW = 1000.0; // 1000 watts
+        double actualPowerInW = MyUnitConverter.kw2w.apply(powerInKw);
+        assertEquals(expectedPowerInW, actualPowerInW, 0.01); // delta 0.01 for floating point comparison
     }
 
     @Test

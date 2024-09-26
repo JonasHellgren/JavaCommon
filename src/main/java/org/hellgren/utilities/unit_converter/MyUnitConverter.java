@@ -25,6 +25,17 @@ public class MyUnitConverter {
     public static Function<Double, Double> w2kw = (p) ->
             MyUnitConverter.convertPower(p, Units.WATT, NonSIUnits.KILO_WATT);
 
+
+    /**
+     * Converts kilowatts to watts.
+     *
+     * @param p the power value in kilowatts
+     * @return the power value in  watts
+     */
+    public static Function<Double, Double> kw2w = (p) ->
+            MyUnitConverter.convertPower(p, NonSIUnits.KILO_WATT,Units.WATT);
+
+
     /**
      * Converts a value to a percentage.
      *
@@ -106,6 +117,14 @@ public class MyUnitConverter {
      * @return the value per day
      */
     public static Function<Double, Double> persec2perday = (n) -> n * (Math.pow(60, 2) * 24);
+
+    public static double min2sec(double timeInMin) {
+        return MyUnitConverter.convertTime(timeInMin, Units.MINUTE, Units.SECOND);
+    }
+
+    public static double sec2min(double timeInSec) {
+        return MyUnitConverter.convertTime(timeInSec, Units.SECOND, Units.MINUTE);
+    }
 
     /**
      * Converts a time value from one unit to another.

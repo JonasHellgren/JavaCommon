@@ -54,6 +54,10 @@ public final class MyMathUtils {
         return (Math.abs(s1-s2)<delta);
     }
 
+    public static boolean isEven(int value) {
+        return (value%2==0);
+    }
+
     public static double setAsSmallIfZero(double value) {
         return (isZero(value)?Double.MIN_VALUE:value);
     }
