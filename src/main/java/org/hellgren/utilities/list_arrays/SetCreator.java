@@ -41,12 +41,33 @@ public class SetCreator {
         return new HashSet<>(ListCreator.createFromStartWithStepWithNofItems(start, step, nItems));
     }
 
+    /**
+     * Creates a set of integers starting from the specified start value, incrementing by the specified step,
+     * and containing the specified number of elements.
+     *
+     * @param start    the starting value of the set
+     * @param step     the increment between each element
+     * @param nItems   the number of elements to generate
+     * @return a set of integers starting from the specified start value, incrementing by the specified step,
+     * and containing the specified number of elements
+     */
     public static Set<Integer> createFromStartWithStepWithNofItems(int start, int step, int nItems) {
+        // Use ListCreator to generate the list of integers and then convert it to a set
         return new HashSet<>(ListCreator.createFromStartWithStepWithNofItems(start, step, nItems));
     }
 
-
+    /**
+     * Creates a set of doubles starting from the specified start value, ending at the specified end value,
+     * and containing the specified number of elements.
+     *
+     * @param start    the starting value of the set
+     * @param end      the ending value of the set (inclusive)
+     * @param nItems   the number of elements to generate
+     * @return a set of doubles starting from the specified start value, ending at the specified end value,
+     * and containing the specified number of elements
+     */
     public static Set<Double> createFromStartToEndWithNofTimes(double start, double end, int nItems) {
+        // Use ListCreator to generate the list of doubles and then convert it to a set
         return new HashSet<>(ListCreator.createFromStartToEndWithNofItems(start, end, nItems));
     }
 

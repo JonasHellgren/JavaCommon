@@ -102,6 +102,16 @@ public class ListCreator {
         return createFromStartToEndWithStep(start, end, step);
     }
 
+    /**
+     * Creates a list of integers starting from the specified start value, incrementing by the specified step,
+     * and containing the specified number of elements.
+     *
+     * @param start    the starting value of the list
+     * @param step     the increment between each element
+     * @param nItems   the number of elements to generate
+     * @return a list of integers starting from the specified start value, incrementing by the specified step,
+     *         and containing the specified number of elements
+     */
     public static List<Integer> createFromStartWithStepWithNofItems(int start, int step, int nItems) {
         if (nItems == 0) {
             return Collections.emptyList();
