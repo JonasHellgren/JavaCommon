@@ -32,6 +32,7 @@ public class LowerBoundConstraint implements ConvexMultivariateRealFunction {
                 .build();
     }
 
+
     @Override
     public double value(DoubleMatrix1D input) {
         nIter++;

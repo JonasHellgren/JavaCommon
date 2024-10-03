@@ -158,4 +158,33 @@ public class MyArrayUtil {
         double[] yArray = yList.stream().mapToDouble(Double::doubleValue).toArray();
         return Pair.create(xArray, yArray);
     }
+
+    /**
+     * Finds the minimum value in a primitive double array.
+     *
+     * @param minInputValues the input array of double values
+     * @return the minimum value in the array
+     * @throws IllegalArgumentException if the input array is null or empty
+     */
+    public static double findMinInPrimitiveArray(double[] minInputValues) {
+        if (minInputValues == null || minInputValues.length == 0) {
+            throw new IllegalArgumentException("Input array is null or empty");
+        }
+        return Arrays.stream(minInputValues).min().getAsDouble();
+    }
+
+    /**
+     * Finds the maximum value in a primitive double array.
+     *
+     * @param minInputValues the input array of double values
+     * @return the maximum value in the array
+     * @throws IllegalArgumentException if the input array is null or empty
+     */
+    public static double findMaxInPrimitiveArray(double[] minInputValues) {
+        if (minInputValues == null || minInputValues.length == 0) {
+            throw new IllegalArgumentException("Input array is null or empty");
+        }
+        return Arrays.stream(minInputValues).max().getAsDouble();
+    }
+
 }

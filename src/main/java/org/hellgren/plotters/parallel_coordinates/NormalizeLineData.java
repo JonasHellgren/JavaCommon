@@ -1,4 +1,7 @@
 package org.hellgren.plotters.parallel_coordinates;
+import org.apache.commons.lang3.ArrayUtils;
+import org.hellgren.utilities.list_arrays.MyArrayUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +22,7 @@ public class NormalizeLineData {
         double[] maxInputValues = new double[numInputVariables];
         initializeMinMaxArrays(minInputValues, maxInputValues);
 
-        double minOutputValue = Double.MAX_VALUE;
-        double maxOutputValue = Double.MIN_VALUE;
-
+        double[] outputValues = new double[inputData.size()];
         for (LineData data : inputData) {
             for (int i = 0; i < numInputVariables; i++) {
                 double inputValue = data.valuesInput().get(i);
@@ -29,16 +30,15 @@ public class NormalizeLineData {
                 maxInputValues[i] = Math.max(maxInputValues[i], inputValue);
             }
             double outputValue = data.valueOutput();
-            minOutputValue = Math.min(minOutputValue, outputValue);
-            maxOutputValue = Math.max(maxOutputValue, outputValue);
+            outputValues[inputData.indexOf(data)]=outputValue;
         }
+        double minOutputValue= MyArrayUtil.findMinInPrimitiveArray(outputValues);
+        double maxOutputValue= MyArrayUtil.findMaxInPrimitiveArray(outputValues);
 
-        double finalMinOutputValue = minOutputValue;
-        double finalMaxOutputValue = maxOutputValue;
         return inputData.stream()
                 .map(data -> new LineData(
                         normalizeValues(data.valuesInput(), minInputValues, maxInputValues),
-                        normalizeValue(data.valueOutput(), finalMinOutputValue, finalMaxOutputValue),
+                        normalizeValue(data.valueOutput(), minOutputValue, maxOutputValue),
                         data.category()
                 ))
                 .toList();

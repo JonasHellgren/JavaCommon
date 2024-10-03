@@ -18,7 +18,6 @@ public class XlsReadAndWrite {
                 .forEach(i -> row.createCell(i).setCellValue(values.get(i)));
     }
 
-
     public static void writeToFile(Workbook workbook, String resPath, String resultFile) {
         String filePath = new File(resPath, resultFile).getAbsolutePath();
         try (FileOutputStream fileOut = new FileOutputStream(filePath)) {
