@@ -45,7 +45,7 @@ public class ParallelCoordinatesChartCreator {
     @Builder.Default
     int width = 600;
     @Builder.Default
-    int height = 400;
+    int height = 300;
     @Builder.Default
     float lineWidth = 0.5f;
 

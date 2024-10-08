@@ -1,6 +1,7 @@
 package org.hellgren.plotters.parallel_coordinates;
 import org.apache.commons.lang3.ArrayUtils;
 import org.hellgren.utilities.list_arrays.MyArrayUtil;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,14 @@ public class NormalizeLineData {
         }
         double minOutputValue= MyArrayUtil.findMinInPrimitiveArray(outputValues);
         double maxOutputValue= MyArrayUtil.findMaxInPrimitiveArray(outputValues);
+        return normalize(inputData, minInputValues, maxInputValues, minOutputValue, maxOutputValue);
+    }
 
+    public static List<LineData> normalize(List<LineData> inputData,
+                                           double[] minInputValues,
+                                           double[] maxInputValues,
+                                           double minOutputValue,
+                                           double maxOutputValue) {
         return inputData.stream()
                 .map(data -> new LineData(
                         normalizeValues(data.valuesInput(), minInputValues, maxInputValues),

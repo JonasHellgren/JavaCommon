@@ -6,6 +6,11 @@ public record PathAndFile(
         String fileType
 ) {
 
+    public static PathAndFile of(String path, String name) {
+        return new PathAndFile(path,name,"");
+    }
+
+
     public static PathAndFile xlsxOf(String path, String name) {
         return new PathAndFile(path,name,"xlsx");
     }
