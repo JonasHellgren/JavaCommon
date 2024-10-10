@@ -20,8 +20,8 @@ class TestListInverter {
     void givenList_thenReversing_thenCorrect() {
         List<Double> list = List.of(0.2, 0.5, 0.3);
         ArrayList<Double> listMutable = new ArrayList<>(list);
-        List<Double> listReversed = ListInverter.invert(listMutable);
-        double[] arrReversed = ListInverter.invert(MyListUtils.doubleListToArray(list));
+        List<Double> listReversed = ListInverter.invertAndNormalize(listMutable);
+        double[] arrReversed = ListInverter.invertAndNormalize(MyListUtils.doubleListToArray(list));
 
         logging(listReversed, arrReversed);
 
@@ -38,8 +38,8 @@ class TestListInverter {
     void givenListNotUniqueElements_thenReversing_thenCorrect() {
         List<Double> list = List.of(0.2, 0.6, 0.2);
         ArrayList<Double> listMutable = new ArrayList<>(list);
-        List<Double> listReversed = ListInverter.invert(listMutable);
-        double[] arrReversed = ListInverter.invert(MyListUtils.doubleListToArray(list));
+        List<Double> listReversed = ListInverter.invertAndNormalize(listMutable);
+        double[] arrReversed = ListInverter.invertAndNormalize(MyListUtils.doubleListToArray(list));
 
         logging(listReversed, arrReversed);
 
@@ -53,8 +53,8 @@ class TestListInverter {
     @Test
     void givenListOneElement_thenReversing_thenCorrect() {
         List<Double> list = List.of(1d);
-        List<Double> listReversed = ListInverter.invert(list);
-        double[] arrReversed = ListInverter.invert(MyListUtils.doubleListToArray(list));
+        List<Double> listReversed = ListInverter.invertAndNormalize(list);
+        double[] arrReversed = ListInverter.invertAndNormalize(MyListUtils.doubleListToArray(list));
 
         logging(listReversed, arrReversed);
 
@@ -67,8 +67,8 @@ class TestListInverter {
     @Test
     void givenListAgain_thenReversing_thenCorrect() {
         List<Double> list = List.of(0.1, 0.2, 0.3, 0.9);
-        List<Double> listReversed = ListInverter.invert(list);
-        double[] arrReversed = ListInverter.invert(MyListUtils.doubleListToArray(list));
+        List<Double> listReversed = ListInverter.invertAndNormalize(list);
+        double[] arrReversed = ListInverter.invertAndNormalize(MyListUtils.doubleListToArray(list));
 
         logging(listReversed, arrReversed);
 

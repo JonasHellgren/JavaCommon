@@ -19,11 +19,11 @@ public class ListInverter {
      * @return A new list with magnitudes reversed based on the inversion and normalization process.
      */
 
-    public static List<Double> invert(List<Double> list) {
-        return invert(list,SMALL);
+    public static List<Double> invertAndNormalize(List<Double> list) {
+        return invertAndNormalize(list, SMALL);
     }
 
-    public static List<Double> invert(List<Double> list, double small) {
+    public static List<Double> invertAndNormalize(List<Double> list, double small) {
         List<Double> invertedValues = new ArrayList<>();
         for (Double value : list) {
             double inverted = 1.0 / Math.max(value, small);
@@ -41,13 +41,13 @@ public class ListInverter {
      * @return A new array with magnitudes reversed based on the inversion and normalization process.
      */
 
-    public static double[] invert(double[] array) {
-        return invert(array,SMALL);
+    public static double[] invertAndNormalize(double[] array) {
+        return invertAndNormalize(array, SMALL);
     }
 
-        public static double[] invert(double[] array, double small) {
+    public static double[] invertAndNormalize(double[] array, double small) {
         int len = array.length;
-        double[] invertedValues = getInvertedValues(array, len,small);
+        double[] invertedValues = getInvertedValues(array, len, small);
         double sum = MyArrayUtil.sum(invertedValues);
         return getNormalizedValues(len, invertedValues, sum);
     }
@@ -60,7 +60,16 @@ public class ListInverter {
         return normalizedValues;
     }
 
-    static double[] getInvertedValues(double[] array, int len, double small) {
+    /**
+     * Reverses the magnitudes of elements in the array, no normalization.
+     */
+
+    public static double[] getInvertedValues(double[] array, double small) {
+        int len=array.length;
+        return getInvertedValues(array, len, small);
+    }
+
+   private static double[] getInvertedValues(double[] array, int len, double small) {
         double[] invertedValues = new double[len];
         for (int i = 0; i < len; i++) {
             double inverted = 1.0 / Math.max(array[i], small);
