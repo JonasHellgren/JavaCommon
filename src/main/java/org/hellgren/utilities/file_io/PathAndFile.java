@@ -19,6 +19,10 @@ public record PathAndFile(
         return new PathAndFile(path,name,"xls");
     }
 
+    public static PathAndFile csvOf(String path, String name) {
+        return new PathAndFile(path,name,"csv");
+    }
+
     public String fullName() {
         return path+name+"."+fileType;
     }

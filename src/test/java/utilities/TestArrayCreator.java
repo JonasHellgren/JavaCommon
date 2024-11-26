@@ -3,6 +3,7 @@ package utilities;
 import org.hellgren.utilities.list_arrays.ArrayCreator;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
  class TestArrayCreator {
@@ -65,6 +66,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
             assertEquals(18.0, array[4], 0.0);
             assertEquals(20.0, array[5], 0.0);
         }
+
+
+     @Test
+     public void testDuplicateArray() {
+         double[] arr = {1.0, 2.0, 3.0};
+         int n = 2;
+         double[] expected = {1.0, 2.0, 3.0, 1.0, 2.0, 3.0};
+         double[] actual = ArrayCreator.duplicate(arr, n);
+         assertArrayEquals(expected, actual, 1e-6);
+     }
 
 
 }

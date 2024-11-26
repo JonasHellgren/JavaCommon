@@ -28,6 +28,7 @@ public class MyArrayUtil {
         return Arrays.stream(array).sum();
     }
 
+
     /**
      * Calculate the average of all elements in the array.
      *

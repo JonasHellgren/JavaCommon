@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyMatrixArrayUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/TestMyMatrixArrayUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ListInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ListInverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestListInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestListInverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_saver/TableToImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pics/table.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/runners/RunnerSaveTableAsFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/ParallelCoordinatesChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/ParallelCoordinatesChartCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/file_io/PathAndFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/file_io/PathAndFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/NormalDistributionGradientCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/NormalDistributionGradientCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/LinearBatchFitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/LinearBatchFitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyArrayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyArrayUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +66,7 @@
     "Application.ParallelCoordinatesPlot.executor": "Run",
     "Application.RunnerLinearBatchFitter.executor": "Run",
     "Application.RunnerMultiplePanelsTrajectory.executor": "Run",
+    "Application.RunnerSaveTableAsFigure.executor": "Run",
     "Application.RunnerScatterPlotter.executor": "Run",
     "Application.RunnerShowTable.executor": "Run",
     "Application.RunnnerStairsChart.executor": "Run",
@@ -115,6 +122,9 @@
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/JavaCode/JavaCommon/src/test/java/runner",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -126,6 +136,9 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren" />
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\list_arrays" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="runners" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utilities" />
       <recent name="runners" />
@@ -134,19 +147,16 @@
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestMyMatrixArrayUtils">
-    <configuration name="TestMovingAverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.RunnerSaveTableAsFigure">
+    <configuration name="RunnerSaveTableAsFigure" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners.RunnerSaveTableAsFigure" />
       <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMovingAverage" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -226,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunnerSaveTableAsFigure" />
         <item itemvalue="JUnit.TestMyMatrixArrayUtils" />
         <item itemvalue="JUnit.TestMyMatrixArrayUtils.testCreateDiagonalMatrix_LargerMatrix" />
         <item itemvalue="JUnit.TestPropertiesReader" />
         <item itemvalue="JUnit.TestPropertiesReader.testGetProperties_HappyPath" />
-        <item itemvalue="JUnit.TestMovingAverage" />
       </list>
     </recent_temporary>
   </component>

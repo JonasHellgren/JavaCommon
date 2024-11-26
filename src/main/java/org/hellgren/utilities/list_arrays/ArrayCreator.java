@@ -110,4 +110,18 @@ public class ArrayCreator {
         }
     }
 
+    /**
+     * Creates a new array by duplicating the input array 'n' times.
+     *
+     * @param arr the input array to be duplicated
+     * @param n   the number of times to duplicate the array
+     * @return a new array with the input array duplicated 'n' times
+     */
+    public static double[] duplicate(double[] arr, int n) {
+        double[] result = new double[arr.length * n];
+        for (int i = 0; i < n; i++) {
+            System.arraycopy(arr, 0, result, i * arr.length, arr.length);
+        }
+        return result;
+    }
 }

@@ -1,5 +1,6 @@
 package org.hellgren.utilities.list_arrays;
 
+import org.apache.commons.math3.linear.RealVector;
 import org.hellgren.utilities.math.MyMathUtils;
 
 import java.util.ArrayList;
@@ -126,4 +127,20 @@ public class ListCreator {
         return result;
     }
 
+    /**
+     * Creates a mutable list containing 'n' copies of the specified element.
+     *
+     * @param <T> the type of the element to be copied
+     * @param x   the element to be copied
+     * @param n   the number of copies to create
+     * @return a mutable list containing 'n' copies of the specified element
+     */
+
+    public static <T> List<T> nCopiesMutable(T x, int n) {
+        List<T> result = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            result.add(x);
+        }
+        return result;
+    }
 }

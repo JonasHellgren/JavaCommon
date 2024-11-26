@@ -29,6 +29,10 @@ public final class Counter {
 
     public static Counter empty()        { return new Counter(0,0); }
 
+    public static Counter ofMaxCount(Integer maxCount) {
+        return  new Counter(0, maxCount);
+    }
+
     public void increase() {
         count++;
     }

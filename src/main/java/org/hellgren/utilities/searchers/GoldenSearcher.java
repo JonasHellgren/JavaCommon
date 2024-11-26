@@ -99,6 +99,7 @@ public final class GoldenSearcher {
         double c = calcC(a, b);
         double d = calcD(a, b);
 
+        log.info("Starting search");
         int i=0;
         while (isTolViolated(a, b, tol) && isNofIterationsNotExceeded(i)) {
             double fC0 = function.f(c);
@@ -106,7 +107,7 @@ public final class GoldenSearcher {
             double fD0 = function.f(d);
             double fD1 = isMinSearch? fD0 :-fD0;
             log.fine("Interval, (c,d)=" + "(" + c + "," + d + ")");
-            log.fine("Function values, (fC,fD)=" + "(" + fC0 + "," + fD0 + ")");
+            log.info("Function values, (fC,fD)=" + "(" + fC0 + "," + fD0 + ")");
             if (fC1 < fD1) {
                 b = d;
             } else {
@@ -123,9 +124,11 @@ public final class GoldenSearcher {
 
         }
 
-        log.info("Gold search finished in "+i+" iterations");
+        double sol = (b + a) / 2;
+        fBest=(i==0) ? function.f(sol) : fBest;
+        log.info("Gold search finished in "+i+" iterations"+", fBest="+fBest+", solution="+sol);
         Conditionals.executeIfTrue(isTolViolated(a, b, tol), () -> log.warning("Tolerance not fulfilled"));
-        return Pair.create((b + a) / 2,fBest);
+        return Pair.create(sol,fBest);
     }
 
     private static boolean isTolViolated(double a, double b, double tol) {

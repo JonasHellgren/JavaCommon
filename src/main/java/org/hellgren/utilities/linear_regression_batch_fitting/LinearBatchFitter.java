@@ -29,7 +29,11 @@ public class LinearBatchFitter {
     double learningRate;
 
     public LinearBatchFitter() {
-        this.learningRate = LEARNING_RATE;
+        this(LEARNING_RATE);
+    }
+
+    public static LinearBatchFitter of(double learningRate) {
+        return new LinearBatchFitter(learningRate);
     }
 
     /**

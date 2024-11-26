@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import lombok.Builder;
 import org.knowm.xchart.XYChart;
 import org.knowm.xchart.XYChartBuilder;
+import org.knowm.xchart.style.XYStyler;
 import org.knowm.xchart.style.lines.SeriesLines;
 import org.knowm.xchart.style.markers.None;
 
@@ -32,10 +33,12 @@ import java.util.stream.Stream;
 public class ParallelCoordinatesChartCreator {
 
     private static final Map<Integer, Color> COLOR_MAP = Map.of(
-            1, Color.RED,
+            1, Color.RED.brighter(),
             2, Color.ORANGE,
-            3, Color.GREEN
+            3, Color.GREEN.darker()
     );
+    public static final boolean IS_GRID_LINES = true;
+
 
     String[] inputNames;
     String outputName;
@@ -48,6 +51,10 @@ public class ParallelCoordinatesChartCreator {
     int height = 300;
     @Builder.Default
     float lineWidth = 0.5f;
+    @Builder.Default
+    boolean isPlotGridLinesVisible = IS_GRID_LINES;
+    @Builder.Default
+    private Color backgroundColor=Color.WHITE;
 
     /**
      * Creates a new parallel coordinates plot with the specified width, height, and title.
@@ -91,10 +98,14 @@ public class ParallelCoordinatesChartCreator {
     }
 
     private void styleChart(XYChart chart) {
-        chart.getStyler().setPlotGridLinesVisible(false);
-        chart.getStyler().setLegendVisible(false);
+        XYStyler styler = chart.getStyler();
+        styler.setPlotGridLinesVisible(false);
+        styler.setLegendVisible(false);
+        styler.setPlotGridLinesVisible(isPlotGridLinesVisible);
+        styler.setPlotBackgroundColor(backgroundColor);
+        styler.setChartBackgroundColor(backgroundColor);
         String[] allNames=mergeArrays(inputNames,new String[]{outputName});
-        chart.getStyler().setxAxisTickLabelsFormattingFunction(x -> allNames[x.intValue()]);
+        styler.setxAxisTickLabelsFormattingFunction(x -> allNames[x.intValue()]);
     }
 
     private  Color getCategoryColor(int category) {
