@@ -6,6 +6,7 @@ import tec.units.ri.unit.Units;
 import javax.measure.Quantity;
 import javax.measure.Unit;
 import javax.measure.quantity.Energy;
+import javax.measure.quantity.Force;
 import javax.measure.quantity.Power;
 import javax.measure.quantity.Time;
 import java.util.function.DoubleUnaryOperator;
@@ -166,6 +167,20 @@ public class MyUnitConverter {
         Quantity<Energy> energyMeasure;
         energyMeasure = Quantities.getQuantity(value, unitIn);
         return (double) energyMeasure.to(unitOut).getValue();
+    }
+
+    /**
+     * Converts a power value from one unit to another.
+     *
+     * @param value the power value to convert
+     * @param unitIn the unit of the input value
+     * @param unitOut the unit to convert to
+     * @return the converted Force value
+     */
+    public static double convertForce(double value, Unit<Force> unitIn, Unit<Force> unitOut) {
+        Quantity<Force> powerMeasure;
+        powerMeasure = Quantities.getQuantity(value, unitIn);
+        return (double) powerMeasure.to(unitOut).getValue();
     }
 
 }

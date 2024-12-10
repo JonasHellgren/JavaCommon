@@ -1,6 +1,5 @@
 package org.hellgren.utilities.list_arrays;
 
-import org.apache.commons.math3.linear.RealVector;
 import org.hellgren.utilities.math.MyMathUtils;
 
 import java.util.ArrayList;
@@ -14,6 +13,8 @@ import java.util.stream.Stream;
  * A utility class for creating lists of doubles with various properties.
  */
 public class ListCreator {
+
+    public static final double TOL = 1e-10;
 
     private ListCreator() {
     }
@@ -47,15 +48,16 @@ public class ListCreator {
      *
      * @param start the starting value of the list
      * @param end   the ending value of the list (inclusive)
-     * @param step  the increment between each element
+     * @param step0  the increment between each element
      * @return a list of doubles starting from the specified start value, incrementing by the specified step,
      * and ending at or below the specified end value
      */
-    public static List<Double> createFromStartToEndWithStep(double start, double end, double step) {
+    public static List<Double> createFromStartToEndWithStep(double start, double end, double step0) {
         // Use DoubleStream.iterate to generate the sequence of values
-        return DoubleStream.iterate(start, d -> step > 0 ? d <= end : d >= end, d -> d + step)
+        double step= (step0>0) ? step0 -TOL : step0+TOL;
+        return  DoubleStream.iterate(start, d -> step > 0 ? d <= end : d >= end, d -> d + step)
                 .boxed()
-                .collect(Collectors.toList());
+                .toList();
     }
 
     /**
@@ -143,4 +145,7 @@ public class ListCreator {
         }
         return result;
     }
+
+
+
 }

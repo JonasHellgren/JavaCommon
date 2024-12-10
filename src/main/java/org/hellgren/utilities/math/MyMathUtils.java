@@ -11,6 +11,17 @@ import java.util.stream.Collectors;
 @Log
 public final class MyMathUtils {
 
+    /**
+     * Clips a given variable to a specified range.
+     *
+     * This method ensures that the variable is within the range defined by minValue and maxValue.
+     * If the variable is less than minValue, it is set to minValue. If it is greater than maxValue, it is set to maxValue.
+     *
+     * @param variable the value to be clipped
+     * @param minValue the minimum allowed value
+     * @param maxValue the maximum allowed value
+     * @return the clipped value
+     */
     public static double clip(double variable, double minValue, double maxValue) {
         double lowerThanMax= Math.min(variable, maxValue);
         return Math.max(lowerThanMax, minValue);

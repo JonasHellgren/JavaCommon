@@ -41,4 +41,15 @@ public final class NormalDistributionGradientCalculator {
         return Pair.create(gradMean, gradLogStd);
     }
 
+    public double gradientMean(double action, double mean, double std) {
+        double denom = Math.max(sqr2.apply(std), smallestDenom);
+        return  1 / denom * (action - mean);
+    }
+
+    public double gradientLogStd(double action, double mean, double logStd) {
+        double denom = Math.max(Math.exp(2*logStd), smallestDenom);
+        return sqr2.apply(action - mean) /denom - 1d;
+    }
+
+
 }

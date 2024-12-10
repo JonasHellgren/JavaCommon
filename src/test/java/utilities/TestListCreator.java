@@ -94,13 +94,22 @@ class TestListCreator {
          }
      }
 
+    @Test
+    void testCreateFromStartToEndWithNofItems0to1_MultipleItems() {
+        double start = 0.0;
+        double end = 1.0;
+        int nItems = 10;
+        List<Double> result = ListCreator.createFromStartToEndWithNofItems(start, end, nItems);
+        assertEquals(nItems, result.size());
+    }
+
+
      @Test
       void testCreateFromStartToEndWithNofItems_StartEqualsEnd() {
          double start = 5.0;
          double end = 5.0;
          int nItems = 5;
          List<Double> result = ListCreator.createFromStartToEndWithNofItems(start, end, nItems);
-         System.out.println("result.size() = " + result.size());
          assertEquals(nItems, result.size());
          for (int i = 0; i < result.size(); i++) {
              assertEquals(start, result.get(i), 0.01);
@@ -113,6 +122,7 @@ class TestListCreator {
          double end = -10.0;
          int nItems = 5;
          List<Double> result = ListCreator.createFromStartToEndWithNofItems(start, end, nItems);
+         System.out.println("result = " + result);
          assertEquals(nItems, result.size());
          assertEquals(start, result.get(0), 0.01);
          assertEquals(end, result.get(result.size() - 1), 0.01);

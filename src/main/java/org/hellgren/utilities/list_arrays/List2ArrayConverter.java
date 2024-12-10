@@ -29,4 +29,20 @@ public class List2ArrayConverter {
         }
         return outArray;
     }
+
+    /**
+     * Converts a list of Double objects to an array of String objects.
+     *
+     * This method uses Java 8's Stream API to map each Double object to its String representation,
+     * and then collects the results into an array.
+     *
+     * @param doubleList The list of Double objects to be converted.
+     * @param decimalPlaces The number of decimal places to format the strings to.
+     * @return An array of String objects representing the input Double objects.
+     */
+    public static String[] convertListToStringArr(List<Double> doubleList, int decimalPlaces) {
+        return doubleList.stream()
+                .map(d -> String.format("%." + decimalPlaces + "f", d))
+                .toArray(String[]::new);
+    }
 }
