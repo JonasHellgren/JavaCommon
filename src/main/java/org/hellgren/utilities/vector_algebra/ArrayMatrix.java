@@ -27,6 +27,21 @@ public class ArrayMatrix {
         return transposedMatrix;
     }
 
+    public static double[][] transposeMatrix(double[][] matrix) {
+        if (matrix.length == 0 || matrix[0].length == 0) {
+            return new double[0][0];
+        }
+        int numRows = matrix.length; // Original number of rows
+        int numCols = matrix[0].length; // Original number of columns
+        double[][] transposedMatrix = new double[numCols][numRows];
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
+                transposedMatrix[j][i] = matrix[i][j]; // Swap the row and column indices for the transposition
+            }
+        }
+        return transposedMatrix;
+    }
+
     /**
      * Returns the dimensions of a given 2D matrix.
      *
@@ -42,5 +57,22 @@ public class ArrayMatrix {
         int numberOfColumns = data[0].length; // Assuming a rectangular matrix
         return new Pair<>(numberOfRows, numberOfColumns);
     }
+
+    public static Pair<Integer, Integer> getDimensions(double[][] data) {
+        var intData = doubleToInt(data);
+        return getDimensions(intData);
+    }
+
+    public static int[][] doubleToInt(double[][] data) {
+        int[][] intData = new int[data.length][data[0].length];
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                intData[i][j] = (int) data[i][j];
+            }
+        }
+        return intData;
+    }
+
+
 
 }

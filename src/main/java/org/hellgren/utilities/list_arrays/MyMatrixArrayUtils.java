@@ -26,7 +26,7 @@ public class MyMatrixArrayUtils {
         return matrix;
     }
 
-    public static double findMin(int[][] data) {
+    public static double findMin(double[][] data) {
         double min = Double.POSITIVE_INFINITY;
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[i].length; j++) {
@@ -38,7 +38,9 @@ public class MyMatrixArrayUtils {
         return min;
     }
 
-    public static double findMax(int[][] data) {
+
+
+    public static double findMax(double[][] data) {
         double max = Double.NEGATIVE_INFINITY;
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[i].length; j++) {

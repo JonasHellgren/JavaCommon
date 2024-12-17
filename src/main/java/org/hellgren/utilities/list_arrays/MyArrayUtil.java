@@ -188,4 +188,17 @@ public class MyArrayUtil {
         return Arrays.stream(minInputValues).max().getAsDouble();
     }
 
+    /**
+     * Converts an array of doubles to an array of integers.
+     *
+     * @param xData The array of doubles to convert.
+     * @return The array of integers.
+     */
+    public static int[] doubleToInteger(double[] xData) {
+        int[] result = new int[xData.length];
+        for (int i = 0; i < xData.length; i++) {
+            result[i] = (int) xData[i];
+        }
+        return result;
+    }
 }

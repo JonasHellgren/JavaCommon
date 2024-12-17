@@ -1,27 +1,58 @@
 package runners;
 
 import org.hellgren.plotters.plotting_2d.HeatMapChartCreator;
+import org.hellgren.utilities.list_arrays.ArrayCreator;
 import org.knowm.xchart.SwingWrapper;
 
 public class RunnerHeatMapChartCreator {
 
+    public static final int LENGTH = 50;
+    public static final double F_MAX = 100.0;
+
     public static void main(String[] args) {
-
         var data = getData();
-        var settings=HeatMapChartCreator.Settings.defaultBuilder().showDataValues(true).build();
-        var creator = HeatMapChartCreator.defaultSettings(data);
-        var chart = creator.create();
-        new SwingWrapper<>(chart).displayChart();
+        var settings = HeatMapChartCreator.Settings.defaultBuilder()
+                .title("Sample HeatMap").showDataValues(true).build();
+        var creator = HeatMapChartCreator.of(settings, data);
+        new SwingWrapper<>(creator.create()).displayChart();
 
+        var data1 = getData1();
+        settings = HeatMapChartCreator.Settings.defaultBuilder()
+                .title("Sample HeatMap").showDataValues(false)
+                .showAxisTicks(false).build();
+        creator = HeatMapChartCreator.of(settings, data1, getXData(),getYData());
+        new SwingWrapper<>(creator.create()).displayChart();
     }
 
-    private static int[][] getData() {
-        return new int[][]{
-                {0, 1, 50, 100, 10},  //(0,0), (1,0),...
-                {2, 3, 5, 3, 10},
+    private static double[][] getData() {
+        return new double[][]{
+                {0, 10, 50, 100, 10},  //(0,0), (1,0),...
+                {20, 30, 50, 30, 10},
                 {2, 4, 3, 2, 10},
                 {30, 2, 4, 3, -10}   //x(0,3), x(1,3),...
         };
     }
+
+    public static double[] getXData() {
+        return ArrayCreator.createArrayFromStartAndEnd(LENGTH,-3, 3);
+    }
+
+    public static double[] getYData() {
+        return ArrayCreator.createArrayFromStartAndEnd(LENGTH, 0, 7 );
+    }
+
+    private static double[][] getData1() {
+        double[][] data = new double[LENGTH][LENGTH];
+        for (int xi = 0; xi < getXData().length; xi++) {
+            for (int yi = 0; yi < getYData().length; yi++) {
+                double x = getXData()[xi];
+                double y = getYData()[yi];
+                double yMax=getYData()[getYData().length-1];
+                data[yi][xi] = F_MAX * Math.sin((Math.PI / 3) * x * (yMax-y)) ;
+            }
+        }
+        return data;
+    }
+
 
 }
