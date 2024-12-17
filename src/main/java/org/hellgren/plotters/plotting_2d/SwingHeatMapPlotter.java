@@ -41,6 +41,7 @@ public final class SwingHeatMapPlotter  {
     private BufferedImage createHeatMapImage(double[][] data, String title) {
         BufferedImage image = new BufferedImage(plotWidth, plotHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphics = image.createGraphics();
+        graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 
         int usableWidth = plotWidth - margin;
         int usableHeight = plotHeight - margin;

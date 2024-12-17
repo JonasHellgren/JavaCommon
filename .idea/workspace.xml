@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/table_saver/TableToImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pics/table.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/runners/RunnerSaveTableAsFigure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/TODO.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/HeatMapChartCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/runners/RunnerHeatMapChartCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/ParallelCoordinatesChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/parallel_coordinates/ParallelCoordinatesChartCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/conditionals/Counter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/file_io/PathAndFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/file_io/PathAndFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/NormalDistributionGradientCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/gradient/NormalDistributionGradientCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/LinearBatchFitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/linear_regression_batch_fitting/LinearBatchFitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyArrayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyArrayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingHeatMapPlotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingHeatMapPlotter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyMatrixArrayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/MyMatrixArrayUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
     "Application.HeatMapChartPlotterDouble.executor": "Run",
     "Application.HeatMapChartPlotterInt.executor": "Run",
     "Application.ParallelCoordinatesPlot.executor": "Run",
+    "Application.RunnerHeatMapChartCreator.executor": "Run",
     "Application.RunnerLinearBatchFitter.executor": "Run",
     "Application.RunnerMultiplePanelsTrajectory.executor": "Run",
     "Application.RunnerSaveTableAsFigure.executor": "Run",
@@ -136,6 +133,9 @@
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren" />
       <recent name="C:\JavaCode\JavaCommon\src\main\java\org\hellgren\utilities\list_arrays" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JavaCode\JavaCommon\src\main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="runners" />
     </key>
@@ -147,7 +147,49 @@
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunnerSaveTableAsFigure">
+  <component name="RunManager" selected="Application.RunnerHeatMapChartCreator">
+    <configuration name="HeatMapChartPlotterDouble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.HeatMapChartPlotterDouble" />
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plot_runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeatMapChartPlotterInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plot_runners.HeatMapChartPlotterInt" />
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plot_runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunnerHeatMapChartCreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners.RunnerHeatMapChartCreator" />
+      <module name="JavaCommon" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunnerSaveTableAsFigure" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="runners.RunnerSaveTableAsFigure" />
       <module name="JavaCommon" />
@@ -157,6 +199,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <shortenClasspath name="ARGS_FILE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,56 +225,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyMatrixArrayUtils.testCreateDiagonalMatrix_LargerMatrix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestMyMatrixArrayUtils" />
-      <option name="METHOD_NAME" value="testCreateDiagonalMatrix_LargerMatrix" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPropertiesReader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestPropertiesReader" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPropertiesReader.testGetProperties_HappyPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaCommon" />
-      <shortenClasspath name="ARGS_FILE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.TestPropertiesReader" />
-      <option name="METHOD_NAME" value="testGetProperties_HappyPath" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <shortenClasspath name="ARGS_FILE" />
       <option name="TEST_OBJECT" value="class" />
@@ -236,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunnerHeatMapChartCreator" />
+        <item itemvalue="Application.HeatMapChartPlotterDouble" />
+        <item itemvalue="Application.HeatMapChartPlotterInt" />
         <item itemvalue="Application.RunnerSaveTableAsFigure" />
         <item itemvalue="JUnit.TestMyMatrixArrayUtils" />
-        <item itemvalue="JUnit.TestMyMatrixArrayUtils.testCreateDiagonalMatrix_LargerMatrix" />
-        <item itemvalue="JUnit.TestPropertiesReader" />
-        <item itemvalue="JUnit.TestPropertiesReader.testGetProperties_HappyPath" />
       </list>
     </recent_temporary>
   </component>

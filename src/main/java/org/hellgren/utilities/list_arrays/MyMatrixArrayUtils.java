@@ -2,6 +2,8 @@ package org.hellgren.utilities.list_arrays;
 
 import com.google.common.base.Preconditions;
 
+import java.util.Arrays;
+
 public class MyMatrixArrayUtils {
 
     private MyMatrixArrayUtils() {
@@ -22,5 +24,29 @@ public class MyMatrixArrayUtils {
             matrix[i][i] = diagonalValues[i];
         }
         return matrix;
+    }
+
+    public static double findMin(int[][] data) {
+        double min = Double.POSITIVE_INFINITY;
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                if (data[i][j] < min) {
+                    min = data[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
+    public static double findMax(int[][] data) {
+        double max = Double.NEGATIVE_INFINITY;
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                if (data[i][j] > max) {
+                    max = data[i][j];
+                }
+            }
+        }
+        return max;
     }
 }
