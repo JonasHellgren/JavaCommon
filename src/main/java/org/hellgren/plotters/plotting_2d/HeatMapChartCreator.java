@@ -72,7 +72,6 @@ public class HeatMapChartCreator {
         public static Settings ofDefaults() {
             return defaultBuilder().build();
         }
-
     }
 
     private final Settings settings;
