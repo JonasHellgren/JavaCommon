@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 @Builder
-public final class SwingHeatMapPlotter  {
+public final class SwingHeatMapPlotter {
 
     private static final int MIN_DARKNESS = 100;
     @Builder.Default
@@ -51,7 +51,6 @@ public final class SwingHeatMapPlotter  {
         drawHeatMap(data, graphics, cellWidth, cellHeight);
         drawLabels(data, graphics, usableHeight, cellWidth, cellHeight);
         drawTitle(title, graphics);
-
         graphics.dispose();
         return image;
     }

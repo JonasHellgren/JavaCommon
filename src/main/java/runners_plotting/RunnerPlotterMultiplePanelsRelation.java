@@ -1,4 +1,4 @@
-package plot_runners;
+package runners_plotting;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.hellgren.plotters.plotting_2d.PlotterMultiplePanelsPairs;

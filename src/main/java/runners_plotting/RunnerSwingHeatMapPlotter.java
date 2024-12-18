@@ -1,9 +1,9 @@
-package plot_runners;
+package runners_plotting;
 
 
 import org.hellgren.plotters.plotting_2d.SwingHeatMapPlotter;
 
-public class HeatMapChartPlotterDouble {
+public class RunnerSwingHeatMapPlotter {
 
         public static void main(String[] args) {
             double[][] data = {  //[y][x]

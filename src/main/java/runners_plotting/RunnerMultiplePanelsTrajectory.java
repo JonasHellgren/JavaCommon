@@ -1,4 +1,4 @@
-package plot_runners;
+package runners_plotting;
 
 import org.hellgren.plotters.plotting_2d.PlotterMultiplePanelsTrajectory;
 

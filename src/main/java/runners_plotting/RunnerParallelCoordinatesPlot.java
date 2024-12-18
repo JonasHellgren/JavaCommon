@@ -1,4 +1,4 @@
-package plot_runners;
+package runners_plotting;
 
 import org.hellgren.plotters.parallel_coordinates.LineData;
 import org.hellgren.plotters.parallel_coordinates.NormalizeLineData;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
-public class ParallelCoordinatesPlot {
+public class RunnerParallelCoordinatesPlot {
     public static void main(String[] args) {
 
         // Prepare Data

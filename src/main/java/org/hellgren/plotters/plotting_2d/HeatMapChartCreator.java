@@ -14,6 +14,7 @@ import org.knowm.xchart.HeatMapChartBuilder;
 import java.awt.*;
 import java.util.stream.IntStream;
 import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
+import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterOneDigit;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMax;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
 
@@ -68,10 +69,10 @@ public class HeatMapChartCreator {
         }
     }
 
-    Settings settings;
-    double[][] data;  //looked up by data[y][x]
-    int[] xData0;
-    int[] yData0;
+    private final Settings settings;
+    private final double[][] data;  //looked up by data[y][x]
+    private final int[] xData0;
+    private final int[] yData0;
 
     public static HeatMapChartCreator defaultSettings(double[][] data) {
         return new HeatMapChartCreator(Settings.ofDefaults(), data,null,null);
@@ -109,8 +110,8 @@ public class HeatMapChartCreator {
                 .xAxisTitle(settings.xAxisLabel).yAxisTitle(settings.yAxisLabel)
                 .width(settings.width).height(settings.height)
                 .build();
-        double minValue = Double.parseDouble(NumberFormatterUtil.formatterOneDigit.format(findMin(data)));
-        double maxValue = Double.parseDouble(NumberFormatterUtil.formatterOneDigit.format(findMax(data)));
+        double minValue = Double.parseDouble(formatterOneDigit.format(findMin(data)));
+        double maxValue = Double.parseDouble(formatterOneDigit.format(findMax(data)));
         var styler = chart.getStyler();
         styler.setChartTitleVisible(true).setLegendVisible(settings.showLegend);
         styler.setAxisTicksVisible(settings.showAxisTicks);
@@ -137,6 +138,10 @@ public class HeatMapChartCreator {
 
     }
 
+    /**
+     * The scalers are needed to place the text in the right place, mid of the cells
+     */
+
     private void addCellText(HeatMapChart chart) {
         double minMargin = settings.minCellMargin();
         double maxMargin = settings.maxCellMargin();
@@ -149,7 +154,6 @@ public class HeatMapChartCreator {
             }
         }
     }
-
     private void addTextToChart(HeatMapChart chart, double xPos, double yPos, String text) {
         AnnotationText annotation = new AnnotationText(text, xPos, yPos, false);
         chart.addAnnotation(annotation);

@@ -1,4 +1,4 @@
-package plot_runners;
+package trash;
 
 import org.jetbrains.annotations.NotNull;
 import org.knowm.xchart.AnnotationText;

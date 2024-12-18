@@ -1,4 +1,4 @@
-package plot_runners;
+package runners_plotting;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.math3.ml.clustering.CentroidCluster;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-public class ClusterWithScatterPlot {
+public class RunnerClusterWithScatterPlot {
 
     public static final int MAX_X = 20;
     public static final int MAX_Y = 10;

@@ -1,4 +1,4 @@
-package runners;
+package runners_plotting;
 
 import org.hellgren.plotters.plotting_2d.HeatMapChartCreator;
 import org.hellgren.utilities.list_arrays.ArrayCreator;
@@ -6,7 +6,7 @@ import org.knowm.xchart.SwingWrapper;
 
 public class RunnerHeatMapChartCreator {
 
-    public static final int LENGTH = 50;
+    public static final int LENGTH = 100;
     public static final double F_MAX = 100.0;
 
     public static void main(String[] args) {

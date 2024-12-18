@@ -1,4 +1,4 @@
-package plot_runners;
+package runners_plotting;
 
 import lombok.SneakyThrows;
 import org.hellgren.plotters.table_shower.TableDataDouble;
@@ -9,7 +9,7 @@ import org.hellgren.plotters.table_shower.TableShower;
 import javax.swing.*;
 import java.util.Optional;
 
-public class RunnerShowTable {
+public class RunnerTableShower {
 
    // public static final String CHART_DIR = "src/main/java/common/plotters/table_shower";
 

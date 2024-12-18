@@ -4,3 +4,5 @@ HeatMapChartCreator x
 med complex function  x
 specific x y label text x
 
+städat plot runner namn
+ErrorChartCreator x
