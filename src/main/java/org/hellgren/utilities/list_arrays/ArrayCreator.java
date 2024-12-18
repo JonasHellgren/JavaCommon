@@ -47,6 +47,12 @@ public class ArrayCreator {
         return array;
     }
 
+    public static double[] createArrayFromStartAndEndWithNofItems(double start, double end, int length) {
+        Preconditions.checkArgument(length > 0);
+        return createArrayFromStartAndEnd(length, start, end);
+    }
+
+
     /**
      * Creates an array with elements ranging from a start value to an end value with a specified step.
      *
