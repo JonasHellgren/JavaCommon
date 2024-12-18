@@ -3,6 +3,8 @@ package org.hellgren.plotters.plotting_2d;
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.extern.java.Log;
+import org.hellgren.utilities.conditionals.Conditionals;
 import org.hellgren.utilities.formatting.NumberFormatterUtil;
 import org.hellgren.utilities.list_arrays.MyArrayUtil;
 import org.hellgren.utilities.math.ScalerLinear;
@@ -33,7 +35,10 @@ import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
  */
 
 @AllArgsConstructor
+@Log
 public class HeatMapChartCreator {
+    static final int MANY_ROWS = 10;
+    static final int MANY_COLS = 10;
 
     @Builder
     public record Settings(
@@ -67,6 +72,7 @@ public class HeatMapChartCreator {
         public static Settings ofDefaults() {
             return defaultBuilder().build();
         }
+
     }
 
     private final Settings settings;
@@ -96,12 +102,25 @@ public class HeatMapChartCreator {
      * @return The HeatMapChart.
      */
     public HeatMapChart create() {
-        Preconditions.checkArgument(nRows() > 0, "data must have at least one row");
-        Preconditions.checkArgument(nCols() > 0, "data must have at least one column");
+        validate();
         var chart = createChart();
         addData(chart);
         executeIfTrue(settings.showDataValues, () -> addCellText(chart));
         return chart;
+    }
+
+    private void validate() {
+        Preconditions.checkArgument(nRows() > 0, "data must have at least one row");
+        Preconditions.checkArgument(nCols() > 0, "data must have at least one column");
+        Conditionals.executeIfTrue(settings.showAxisTicks && manyRowsOrColumns(),() ->
+                log.warning("To many rows or columns for axis ticks "));
+        Conditionals.executeIfTrue(settings.showDataValues && manyRowsOrColumns(),() ->
+                log.warning("To many rows or columns for showing data values "));
+    }
+
+
+    private boolean manyRowsOrColumns() {
+        return nRows() > MANY_ROWS || nCols() > MANY_COLS;
     }
 
     private HeatMapChart createChart() {
