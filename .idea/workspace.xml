@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/HeatMapChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/HeatMapChartCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerErrorChartCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,7 @@
     "Application.HeatMapChartPlotterDouble.executor": "Run",
     "Application.HeatMapChartPlotterInt.executor": "Run",
     "Application.ParallelCoordinatesPlot.executor": "Run",
+    "Application.RunnerErrorChartCreator.executor": "Run",
     "Application.RunnerHeatMapChartCreator.executor": "Run",
     "Application.RunnerLinearBatchFitter.executor": "Run",
     "Application.RunnerMultiplePanelsTrajectory.executor": "Run",
@@ -145,9 +147,9 @@
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunnerHeatMapChartCreator">
-    <configuration name="RunnerHeatMapChartCreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="runners_plotting.RunnerHeatMapChartCreator" />
+  <component name="RunManager" selected="Application.RunnerErrorChartCreator">
+    <configuration name="RunnerErrorChartCreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners_plotting.RunnerErrorChartCreator" />
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -160,8 +162,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunnerParallelCoordinatesPlot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="runners_plotting.RunnerParallelCoordinatesPlot" />
+    <configuration name="RunnerHeatMapChartCreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners_plotting.RunnerHeatMapChartCreator" />
       <module name="JavaCommon" />
       <shortenClasspath name="ARGS_FILE" />
       <extension name="coverage">
@@ -231,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunnerErrorChartCreator" />
         <item itemvalue="Application.RunnerHeatMapChartCreator" />
         <item itemvalue="Application.RunnnerStairsChart" />
         <item itemvalue="Application.RunnerTableShower" />
         <item itemvalue="Application.RunnerPlotterMultiplePanelsRelation" />
-        <item itemvalue="Application.RunnerParallelCoordinatesPlot" />
       </list>
     </recent_temporary>
   </component>
