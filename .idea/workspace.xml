@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ArrayCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/utilities/list_arrays/ArrayCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerErrorBandCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerErrorBandCreator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
