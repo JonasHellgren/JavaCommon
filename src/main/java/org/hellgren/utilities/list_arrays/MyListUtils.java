@@ -86,11 +86,11 @@ public class MyListUtils {
                 .collect(Collectors.toList());
     }
 
-
-
-    public static List<Double> doublesStartEndStep(double start, double end, double step) {
-        return DoubleStream.iterate(start, d -> d <= end, d -> d + step)
-                .boxed().toList();
+    public static List<Double> elementSubtraction(List<Double> listA, List<Double> listB) {
+        return IntStream.range(0, listA.size())
+                .mapToDouble(i -> listB.get(i) - listA.get(i))
+                .boxed()
+                .toList();
     }
 
     public static double[] toArray(List<Double> list) {

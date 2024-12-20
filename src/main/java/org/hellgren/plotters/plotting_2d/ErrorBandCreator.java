@@ -3,6 +3,7 @@ package org.hellgren.plotters.plotting_2d;
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.With;
 import org.hellgren.utilities.conditionals.Conditionals;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -24,6 +25,7 @@ import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
 public class ErrorBandCreator {
 
     @Builder
+    @With
     public record Settings(
             String title,
             String xAxisLabel,
@@ -35,14 +37,20 @@ public class ErrorBandCreator {
             boolean showAxisTicks,
             Font textFont,
             Color bandFillColor,
-            Color lineColorDefault
+            Color lineColorDefault,
+            Paint plotBackGroundColor,
+            Paint gridLineColor
             ) {
+
+        public static final Color VERY_LIGHT_GREY = new Color(240, 240, 240);
         public static Settings.SettingsBuilder defaultBuilder() {
             return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
                     .width(500).height(300)
                     .showLegend(true).showTitle(false).showAxisTicks(true)
                     .textFont(new Font("Arial", Font.BOLD, 12))
-                    .bandFillColor(Color.GRAY).lineColorDefault(Color.BLACK);
+                    .bandFillColor(Color.GRAY).lineColorDefault(Color.BLACK)
+                    .plotBackGroundColor(Color.WHITE)
+                    .gridLineColor(Color.LIGHT_GRAY);
         }
         public static Settings ofDefaults() {
             return defaultBuilder().build();
@@ -101,6 +109,9 @@ public class ErrorBandCreator {
         XYPlot plot = chart.getXYPlot();
         plot.getDomainAxis().setLabelFont(settings.textFont);
         plot.getRangeAxis().setLabelFont(settings.textFont);
+        plot.setBackgroundPaint(settings.plotBackGroundColor);
+        plot.setRangeGridlinePaint(settings.gridLineColor);
+        plot.setDomainGridlinePaint(settings.gridLineColor);
         executeIfTrue(!settings.showAxisTicks, () ->  disableTickMarks(plot));
         executeIfTrue(!settings.showTitle, () -> chart.setTitle(""));
         DeviationRenderer renderer = new DeviationRenderer(true, true);
