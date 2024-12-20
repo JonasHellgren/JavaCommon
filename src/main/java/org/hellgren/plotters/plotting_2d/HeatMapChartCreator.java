@@ -9,13 +9,15 @@ import org.hellgren.utilities.formatting.NumberFormatterUtil;
 import org.hellgren.utilities.list_arrays.MyArrayUtil;
 import org.hellgren.utilities.math.ScalerLinear;
 import org.hellgren.utilities.vector_algebra.ArrayMatrix;
+import org.jetbrains.annotations.NotNull;
 import org.knowm.xchart.AnnotationText;
 import org.knowm.xchart.HeatMapChart;
 import org.knowm.xchart.HeatMapChartBuilder;
-
 import java.awt.*;
+import java.text.DecimalFormat;
 import java.util.stream.IntStream;
 import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
+import static org.hellgren.utilities.conditionals.Conditionals.secDoubleIfFalse;
 import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterOneDigit;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMax;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
@@ -29,7 +31,7 @@ import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
  * The addData() method is used to add the data to the HeatMapChart.
  * The addCellText() method is used to add the cell text to the HeatMapChart.
  * The addTextToChart() method is used to add the text to the HeatMapChart.
- *
+ * <p>
  * chart.addSeries only works with integer arrays, hence data must be converted to integer arrays.
  * Therefore, data shall be wide, for example is data between 0 and 1 not appropriate
  */
@@ -51,6 +53,7 @@ public class HeatMapChartCreator {
             boolean showLegend,
             boolean showDataValues,
             boolean showAxisTicks,
+            String axisTicksDecimalFormat,
             Font annotationTextFont,
             Color annotationTextFontColor,
             int nDigitsAnnotationText,
@@ -62,11 +65,12 @@ public class HeatMapChartCreator {
             return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
                     .colorRange(new Color[]{Color.BLACK, Color.WHITE})
                     .width(500).height(300)
-                    .showLegend(true).showDataValues(true).showAxisTicks(true)
+                    .showLegend(true).showDataValues(true)
+                    .showAxisTicks(true).axisTicksDecimalFormat("#")
                     .annotationTextFont(new Font("Arial", Font.BOLD, 12))
                     .annotationTextFontColor(Color.BLUE)
                     .nDigitsAnnotationText(0)
-                    .minCellMargin(-0.5).maxCellMargin(0.8);
+                    .minCellMargin(-0.5).maxCellMargin(0.5);
         }
 
         public static Settings ofDefaults() {
@@ -80,11 +84,11 @@ public class HeatMapChartCreator {
     private final int[] yData0;
 
     public static HeatMapChartCreator defaultSettings(double[][] data) {
-        return new HeatMapChartCreator(Settings.ofDefaults(), data,null,null);
+        return new HeatMapChartCreator(Settings.ofDefaults(), data, null, null);
     }
 
     public static HeatMapChartCreator of(Settings settings, double[][] data) {
-        return new HeatMapChartCreator(settings, data,null,null);
+        return new HeatMapChartCreator(settings, data, null, null);
     }
 
     public static HeatMapChartCreator of(Settings settings, double[][] data, double[] xData, double[] yData) {
@@ -111,9 +115,9 @@ public class HeatMapChartCreator {
     private void validate() {
         Preconditions.checkArgument(nRows() > 0, "data must have at least one row");
         Preconditions.checkArgument(nCols() > 0, "data must have at least one column");
-        Conditionals.executeIfTrue(settings.showAxisTicks && manyRowsOrColumns(),() ->
+        Conditionals.executeIfTrue(settings.showAxisTicks && manyRowsOrColumns(), () ->
                 log.warning("To many rows or columns for axis ticks "));
-        Conditionals.executeIfTrue(settings.showDataValues && manyRowsOrColumns(),() ->
+        Conditionals.executeIfTrue(settings.showDataValues && manyRowsOrColumns(), () ->
                 log.warning("To many rows or columns for showing data values "));
     }
 
@@ -136,24 +140,22 @@ public class HeatMapChartCreator {
         styler.setMin(minValue).setMax(maxValue).setRangeColors(settings.colorRange());
         styler.setAnnotationTextFontColor(settings.annotationTextFontColor);
         styler.setAnnotationTextFont(settings.annotationTextFont);
+        styler.setxAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
+        styler.setyAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
         return chart;
+    }
+
+    private String getFormattedAsString(Double value) {
+        DecimalFormat df = new DecimalFormat(settings.axisTicksDecimalFormat);
+        return df.format(value);
     }
 
     private void addData(HeatMapChart chart) {
         double[][] dataRot = ArrayMatrix.transposeMatrix(data);
         int[][] dataRotInt = ArrayMatrix.doubleToInt(dataRot);
-        int[] xData = (xData0 != null) ? xData0 : IntStream.rangeClosed(0, nCols() - 1).toArray();
-        int[] yData = (yData0 != null) ? yData0 : IntStream.rangeClosed(0, nRows() - 1).toArray();
+        int[] xData = getXData(xData0, nCols());
+        int[] yData = getYData(yData0, nRows());
         chart.addSeries("seriesname", xData, yData, dataRotInt);
-    }
-
-    private  int nRows() {
-        return ArrayMatrix.getDimensions(data).getFirst();
-    }
-
-    private int nCols() {
-        return ArrayMatrix.getDimensions(data).getSecond();
-
     }
 
     /**
@@ -163,8 +165,10 @@ public class HeatMapChartCreator {
     private void addCellText(HeatMapChart chart) {
         double minMargin = settings.minCellMargin();
         double maxMargin = settings.maxCellMargin();
-        var xScaler = new ScalerLinear(minMargin, nCols() + maxMargin, 0, nCols());
-        var yScaler = new ScalerLinear(minMargin, nRows() + maxMargin, 0, nRows());
+        int[] xData = getXData(xData0, nCols());
+        int[] yData = getYData(yData0, nRows());
+        var xScaler = new ScalerLinear(minMargin, nCols() - 1 + maxMargin, xData[0], xData[xData.length - 1]);
+        var yScaler = new ScalerLinear(minMargin, nRows() - 1 + maxMargin, yData[0], yData[yData.length - 1]);
         for (int y = 0; y < nRows(); y++) {
             for (int x = 0; x < nCols(); x++) {
                 String text = NumberFormatterUtil.getRoundedNumberAsString(data[y][x], settings.nDigitsAnnotationText());
@@ -172,10 +176,27 @@ public class HeatMapChartCreator {
             }
         }
     }
+
     private void addTextToChart(HeatMapChart chart, double xPos, double yPos, String text) {
         AnnotationText annotation = new AnnotationText(text, xPos, yPos, false);
         chart.addAnnotation(annotation);
     }
 
+    private int[] getYData(int[] yData0, int nRows) {
+        return (yData0 != null) ? yData0 : IntStream.rangeClosed(0, nRows - 1).toArray();
+    }
+
+    private int[] getXData(int[] xData0, int nCols) {
+        return (xData0 != null) ? xData0 : IntStream.rangeClosed(0, nCols - 1).toArray();
+    }
+
+    private int nRows() {
+        return ArrayMatrix.getDimensions(data).getFirst();
+    }
+
+    private int nCols() {
+        return ArrayMatrix.getDimensions(data).getSecond();
+
+    }
 
 }

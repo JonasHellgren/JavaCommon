@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/ErrorBandCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/ErrorBandCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/HeatMapChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/HeatMapChartCreator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +148,7 @@
       <recent name="org.hellgren.utilities.conditionals" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunnerErrorBandCreator">
+  <component name="RunManager" selected="Application.RunnerHeatMapChartCreator">
     <configuration name="RunnerErrorBandCreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="runners_plotting.RunnerErrorBandCreator" />
       <module name="JavaCommon" />
@@ -234,8 +234,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunnerErrorBandCreator" />
         <item itemvalue="Application.RunnerHeatMapChartCreator" />
+        <item itemvalue="Application.RunnerErrorBandCreator" />
         <item itemvalue="Application.RunnnerStairsChart" />
         <item itemvalue="Application.RunnerTableShower" />
         <item itemvalue="Application.RunnerPlotterMultiplePanelsRelation" />
