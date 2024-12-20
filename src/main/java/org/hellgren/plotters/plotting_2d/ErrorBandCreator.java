@@ -42,7 +42,6 @@ public class ErrorBandCreator {
             Paint gridLineColor
             ) {
 
-        public static final Color VERY_LIGHT_GREY = new Color(240, 240, 240);
         public static Settings.SettingsBuilder defaultBuilder() {
             return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
                     .width(500).height(300)
