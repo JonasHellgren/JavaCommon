@@ -1,6 +1,7 @@
 package org.hellgren.utilities.list_arrays;
 
 import com.google.common.base.Preconditions;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -91,6 +92,11 @@ public class MyListUtils {
                 .mapToDouble(i -> listB.get(i) - listA.get(i))
                 .boxed()
                 .toList();
+    }
+
+
+    public static List<Double> everyItemAbsolute(List<Double> errData) {
+        return errData.stream().map(Math::abs).toList();
     }
 
     public static double[] toArray(List<Double> list) {
