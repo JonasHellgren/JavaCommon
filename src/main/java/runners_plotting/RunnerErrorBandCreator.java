@@ -21,7 +21,7 @@ public class RunnerErrorBandCreator {
         creator.addErrorBand("1",xData1, yData1, errData1, Color.BLACK);
         creator.addErrorBand("2",xData2, yData2, errData2,Color.GRAY);
 
-        SwingUtilities.invokeLater(() -> creator.create().setVisible(true));
+        SwingUtilities.invokeLater(() -> creator.createFrame().setVisible(true));
     }
 
 

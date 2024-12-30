@@ -146,6 +146,12 @@ public class ListCreator {
         return result;
     }
 
-
-
+    /**
+     * Returns an empty list of Doubles.
+     *
+     * @return an empty ArrayList of Doubles
+     */
+    public static List<Double> emptyDouble() {
+        return new ArrayList<>();
+    }
 }

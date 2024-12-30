@@ -15,6 +15,15 @@ public class List2ArrayConverter {
         return outArray;
     }
 
+    public static double[] convertIntegerListToDoubleArr(List<Integer> inList) {
+        double[] outArray = new double[inList.size()];
+        for (int i = 0; i < inList.size(); i++) {
+            outArray[i] = inList.get(i); // Auto-unboxing converts Integer to double
+        }
+        return outArray;
+    }
+
+
         public static double[][] convertListWithListToDoubleMat(List<List<Double>> inList) {
         if (inList.isEmpty()) {
             return new double[0][0]; // Return an empty 2D array if the input list is empty

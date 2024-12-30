@@ -4,6 +4,8 @@ import org.hellgren.plotters.plotting_2d.HeatMapChartCreator;
 import org.hellgren.utilities.list_arrays.ArrayCreator;
 import org.knowm.xchart.SwingWrapper;
 
+import java.util.Arrays;
+
 public class RunnerHeatMapChartCreator {
 
     public static final int LENGTH = 100;
@@ -12,14 +14,14 @@ public class RunnerHeatMapChartCreator {
     public static void main(String[] args) {
         var data = getData();
         var settings = HeatMapChartCreator.Settings.defaultBuilder()
-                .title("Sample HeatMap").showDataValues(true).build();
+                .title("Sample HeatMap").showDataValues(true).showAxisTicks(true).build();
         var creator = HeatMapChartCreator.of(settings, data);
         new SwingWrapper<>(creator.create()).displayChart();
 
         var data1 = getData1();
         settings = HeatMapChartCreator.Settings.defaultBuilder()
                 .title("Sample HeatMap").showDataValues(false)
-                .showAxisTicks(false).build();
+                .showAxisTicks(true).build();
         creator = HeatMapChartCreator.of(settings, data1, getXData(),getYData());
         new SwingWrapper<>(creator.create()).displayChart();
     }

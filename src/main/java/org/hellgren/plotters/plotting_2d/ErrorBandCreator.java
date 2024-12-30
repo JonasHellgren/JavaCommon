@@ -3,19 +3,28 @@ package org.hellgren.plotters.plotting_2d;
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.SneakyThrows;
 import lombok.With;
-import org.hellgren.utilities.conditionals.Conditionals;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
+import org.deeplearning4j.ui.components.chart.Chart;
+import org.jetbrains.annotations.NotNull;
+import org.jfree.chart.*;
 import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.entity.StandardEntityCollection;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.DeviationRenderer;
 import org.jfree.data.xy.YIntervalSeries;
 import org.jfree.data.xy.YIntervalSeriesCollection;
+
+import javax.imageio.*;
+import javax.imageio.metadata.IIOMetadata;
+import javax.imageio.metadata.IIOMetadataNode;
+import javax.imageio.stream.ImageOutputStream;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,12 +93,25 @@ public class ErrorBandCreator {
         errorBands.add(new ErrorBand(title,xData,yData,errData,lineColor));
     }
 
-    public JFrame create() {
+    public JFrame createFrame() {
+        var chart = createChart();
+        return createFrame(chart);
+    }
+
+    @SneakyThrows
+    public void saveAsPicture(String path){
+        var chart = createChart();
+       ChartUtils.saveChartAsPNG(new File(path), chart, settings.width(), settings.height());
+    }
+
+
+    @NotNull
+    private JFreeChart createChart() {
         Preconditions.checkArgument(!errorBands.isEmpty(), "No error bands defined");
         var dataset = createDataset();
         var chart = createChart(dataset);
         setStyles(chart);
-        return createFrame(chart);
+        return chart;
     }
 
      JFrame createFrame(JFreeChart chart) {
@@ -111,6 +133,10 @@ public class ErrorBandCreator {
         plot.setBackgroundPaint(settings.plotBackGroundColor);
         plot.setRangeGridlinePaint(settings.gridLineColor);
         plot.setDomainGridlinePaint(settings.gridLineColor);
+        NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
+        NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
+        xAxis.setTickLabelFont(settings.textFont);
+        yAxis.setTickLabelFont(settings.textFont);
         executeIfTrue(!settings.showAxisTicks, () ->  disableTickMarks(plot));
         executeIfTrue(!settings.showTitle, () -> chart.setTitle(""));
         DeviationRenderer renderer = new DeviationRenderer(true, true);
@@ -122,7 +148,7 @@ public class ErrorBandCreator {
         plot.setRenderer(renderer);
     }
 
-    private static void disableTickMarks(XYPlot plot) {
+    private  void disableTickMarks(XYPlot plot) {
         NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
         NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
         xAxis.setTickMarksVisible(false); // Disable tick marks

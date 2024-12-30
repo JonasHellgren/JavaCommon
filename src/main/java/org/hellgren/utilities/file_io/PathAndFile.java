@@ -23,6 +23,10 @@ public record PathAndFile(
         return new PathAndFile(path,name,"csv");
     }
 
+    public static PathAndFile ofPng(String chartDir, String s) {
+        return new PathAndFile(chartDir,s,"png");
+    }
+
     public String fullName() {
         return path+name+"."+fileType;
     }

@@ -29,7 +29,10 @@ public class CpuTimer {
 
     public static CpuTimer newWithTimeBudgetInMilliSec(long timeBudgetMillis) {
         return new CpuTimer(timeBudgetMillis);
+    }
 
+    public static CpuTimer empty() {
+        return new CpuTimer();
     }
 
     public CpuTimer(long timeBudgetMillis) {
