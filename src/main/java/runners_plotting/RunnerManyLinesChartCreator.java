@@ -9,11 +9,11 @@ import org.knowm.xchart.SwingWrapper;
 public class RunnerManyLinesChartCreator {
 
     public static void main(String[] args) {
-        var xList = ListCreator.createFromStartWithStepWithNofItems(0d,10d,10);
-        var creator= ManyLinesChartCreator.defaultSettings(xList);
-        creator.addLine("line1", ListCreator.createFromStartWithStepWithNofItems(0d,1d,10));
+        var xList = ListCreator.createFromStartToEndWithNofItems(0d,10.1d,100);
+        var creator= ManyLinesChartCreator.of(ManyLinesChartCreator.Settings.ofDefaults()
+                .withWidth(300).withHeight(200),xList);
+        creator.addLine("line1", ListCreator.createFromStartToEndWithNofItems(0d,10.1d,100));
         var chart = creator.createChart();
-
         new SwingWrapper<>(chart).displayChart();
 
     }

@@ -9,12 +9,15 @@ import org.hellgren.utilities.list_arrays.MyMatrixListUtils;
 import org.knowm.xchart.XYChart;
 import org.knowm.xchart.XYChartBuilder;
 import org.knowm.xchart.XYSeries;
+import org.knowm.xchart.style.Styler;
 import org.knowm.xchart.style.XYStyler;
 import org.knowm.xchart.style.markers.SeriesMarkers;
 import java.awt.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.hellgren.plotters.shared.FormattedAsString.getFormattedAsString;
 
 @AllArgsConstructor
 public class ManyLinesChartCreator {
@@ -28,8 +31,10 @@ public class ManyLinesChartCreator {
             int width,
             int height,
             boolean showLegend,
+            Styler.LegendPosition legendPosition,
             boolean showAxisTicks,
             boolean showGridLines,
+            boolean showMarker,
             Color[] colorRangeSeries,
             String axisTicksDecimalFormat,
             Font axisTitleFont,
@@ -40,9 +45,10 @@ public class ManyLinesChartCreator {
         public static SettingsBuilder defaultBuilder() {
             return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
                     .width(500).height(300)
-                    .showLegend(true).showGridLines(true)
+                    .showLegend(true).legendPosition(Styler.LegendPosition.OutsideE)
+                    .showGridLines(true)
                     .colorRangeSeries(null)
-                    .showAxisTicks(true).axisTicksDecimalFormat("#")
+                    .showAxisTicks(true).axisTicksDecimalFormat("#").showMarker(false)
                     .axisTitleFont(new Font("Arial", Font.BOLD, 12))
                     .axisTicksFont(new Font("Arial", Font.PLAIN, 12));
         }
@@ -72,36 +78,32 @@ public class ManyLinesChartCreator {
     }
 
     public XYChart createChart() {
+        var s=settings;
         var chart = new XYChartBuilder()
-                .xAxisTitle(settings.xAxisLabel).yAxisTitle(settings.yAxisLabel)
-                .width(settings.width).height(settings.height).build();
+                .xAxisTitle(s.xAxisLabel).yAxisTitle(s.yAxisLabel)
+                .width(s.width).height(s.height).build();
         var styler = chart.getStyler();
         styler.setYAxisMin(MyMatrixListUtils.findMin(yData));
         styler.setYAxisMax(MyMatrixListUtils.findMax(yData));
-        styler.setChartTitleVisible(true).setLegendVisible(settings.showLegend);
-        styler.setAxisTicksVisible(settings.showAxisTicks);
-        styler.setPlotGridLinesVisible(settings.showGridLines);
-        styler.setAxisTitleFont(settings.axisTitleFont);
-        styler.setAxisTickLabelsFont(settings.axisTicksFont);
-        styler.setMarkerSize(5);
-        styler.setxAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
-        styler.setyAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
+        styler.setChartTitleVisible(true);
+        styler.setLegendVisible(s.showLegend).setLegendPosition(s.legendPosition);
+        styler.setAxisTicksVisible(s.showAxisTicks);
+        styler.setPlotGridLinesVisible(s.showGridLines);
+        styler.setAxisTitleFont(s.axisTitleFont);
+        styler.setAxisTickLabelsFont(s.axisTicksFont);
+        styler.setxAxisTickLabelsFormattingFunction(value ->
+                getFormattedAsString(value, settings.axisTicksDecimalFormat));
+        styler.setyAxisTickLabelsFormattingFunction(value ->
+                getFormattedAsString(value, settings.axisTicksDecimalFormat));
         styler.setChartBackgroundColor(Color.WHITE);
-        Conditionals.executeIfTrue(settings.colorRangeSeries != null, () ->
-                styler.setSeriesColors(settings.colorRangeSeries));
+        Conditionals.executeIfTrue(s.colorRangeSeries != null, () ->
+                styler.setSeriesColors(s.colorRangeSeries));
         for (String name : names) {
             int i = names.indexOf(name);
             XYSeries series = chart.addSeries(name, xList, yData.get(i));
-            series.setMarker(SeriesMarkers.NONE);
+            Conditionals.executeIfFalse(s.showMarker, () -> series.setMarker(SeriesMarkers.NONE));
         }
-
         return chart;
     }
-
-    private String getFormattedAsString(Double value) {
-        DecimalFormat df = new DecimalFormat(settings.axisTicksDecimalFormat);
-        return df.format(value);
-    }
-
 
 }
