@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33670237-e27f-4827-8fc6-9aa09ec0255b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/scatter/ScatterAndLineChartCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/shared/XYData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerScatterAndLineChartCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/many_lines/ManyLinesChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/many_lines/ManyLinesChartCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/PlotterScatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingHeatMapPlotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/three_dim/SwingHeatMapPlotter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/SwingShow2DArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/three_dim/SwingShow2DArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/HeatMapChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/plotting_2d/HeatMapChartCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/scatter/ScatterWithLineChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/scatter/ScatterWithLineChartCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/shared/XYData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hellgren/plotters/shared/XYData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerManyLinesChartCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerManyLinesChartCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerScatterPlotter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerSwingHeatMapPlotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/runners_plotting/RunnerSwingHeatMapPlotter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

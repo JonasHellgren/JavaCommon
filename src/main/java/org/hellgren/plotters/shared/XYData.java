@@ -20,4 +20,13 @@ public record XYData(List<Double> x, List<Double> y) {
     public boolean isEmpty() {
         return x.isEmpty() && y.isEmpty();
     }
+
+    @Override
+    public String toString() {
+        return "XYData{" +
+                "x=" + x + System.lineSeparator() +
+                ", y=" + y + System.lineSeparator() +
+                '}'+ System.lineSeparator();
+    }
+
 }

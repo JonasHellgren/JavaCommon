@@ -54,6 +54,7 @@ public class HeatMapChartCreator {
             boolean showDataValues,
             boolean showAxisTicks,
             String axisTicksDecimalFormat,
+            Font axistTicksTextFont,
             Font annotationTextFont,
             Color annotationTextFontColor,
             int nDigitsAnnotationText,
@@ -67,6 +68,7 @@ public class HeatMapChartCreator {
                     .width(500).height(300)
                     .showLegend(true).showDataValues(true)
                     .showAxisTicks(true).axisTicksDecimalFormat("#")
+                    .axistTicksTextFont(new Font("Arial", Font.PLAIN, 12))
                     .annotationTextFont(new Font("Arial", Font.BOLD, 12))
                     .annotationTextFontColor(Color.BLUE)
                     .nDigitsAnnotationText(0)
@@ -137,6 +139,7 @@ public class HeatMapChartCreator {
         var styler = chart.getStyler();
         styler.setChartTitleVisible(true).setLegendVisible(settings.showLegend);
         styler.setAxisTicksVisible(settings.showAxisTicks);
+        styler.setAxisTickLabelsFont(settings.axistTicksTextFont);
         styler.setMin(minValue).setMax(maxValue).setRangeColors(settings.colorRange());
         styler.setAnnotationTextFontColor(settings.annotationTextFontColor);
         styler.setAnnotationTextFont(settings.annotationTextFont);

@@ -23,6 +23,7 @@ import static org.hellgren.plotters.shared.FormattedAsString.getFormattedAsStrin
 @AllArgsConstructor
 public class ScatterWithLineChartCreator {
 
+
     @Builder
     @With
     public record Settings(
@@ -58,7 +59,11 @@ public class ScatterWithLineChartCreator {
     private XYData xyDataScatter, xyDataLine;
 
     public static ScatterWithLineChartCreator ofDefaults() {
-        return new ScatterWithLineChartCreator(Settings.ofDefaults(), XYData.empty(), XYData.empty());
+        return ScatterWithLineChartCreator.of(Settings.ofDefaults());
+    }
+
+    public static ScatterWithLineChartCreator of(Settings settings) {
+        return new ScatterWithLineChartCreator(settings, XYData.empty(), XYData.empty());
     }
 
 
@@ -82,8 +87,13 @@ public class ScatterWithLineChartCreator {
         this.xyDataLine = XYData.of(xListLine, yListLine);
     }
 
+
+    public void clear() {
+        xyDataScatter = xyDataLine = XYData.empty();
+    }
+
     public XYChart create() {
-        Preconditions.checkArgument(!xyDataScatter.isEmpty() && !xyDataLine.isEmpty()
+        Preconditions.checkArgument(!xyDataScatter.isEmpty() || !xyDataLine.isEmpty()
                 , "scatter and line should not both be empty");
         var chart = createChart(settings);
         addScatterData(chart);
@@ -106,6 +116,7 @@ public class ScatterWithLineChartCreator {
                 getFormattedAsString(value, settings.axisTicksDecimalFormat));
         styler.setLegendVisible(false);
         styler.setAxisTitleFont(s.axisTitleFont);
+        styler.setAxisTickLabelsFont(s.axisTicksFont);
         styler.setChartBackgroundColor(Color.WHITE);
         Conditionals.executeIfTrue(s.colorRangeSeries != null, () ->
                 styler.setSeriesColors(s.colorRangeSeries));
@@ -125,6 +136,14 @@ public class ScatterWithLineChartCreator {
             scatterSeries.setMarker(SeriesMarkers.CIRCLE);
             scatterSeries.setLineStyle(SeriesLines.NONE);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "ScatterWithLineChartCreator{" +
+                ", xyDataScatter=" + xyDataScatter +
+                ", xyDataLine=" + xyDataLine +
+                '}';
     }
 
 

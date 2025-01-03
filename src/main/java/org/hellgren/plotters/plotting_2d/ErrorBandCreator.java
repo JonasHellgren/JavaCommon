@@ -44,6 +44,7 @@ public class ErrorBandCreator {
             boolean showLegend,
             boolean showTitle,
             boolean showAxisTicks,
+            Font textTicksFont,
             Font textFont,
             Color bandFillColor,
             Color lineColorDefault,
@@ -55,6 +56,7 @@ public class ErrorBandCreator {
             return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
                     .width(500).height(300)
                     .showLegend(true).showTitle(false).showAxisTicks(true)
+                    .textTicksFont(new Font("Arial", Font.PLAIN, 12))
                     .textFont(new Font("Arial", Font.BOLD, 12))
                     .bandFillColor(Color.GRAY).lineColorDefault(Color.BLACK)
                     .plotBackGroundColor(Color.WHITE)
@@ -135,8 +137,8 @@ public class ErrorBandCreator {
         plot.setDomainGridlinePaint(settings.gridLineColor);
         NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
         NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
-        xAxis.setTickLabelFont(settings.textFont);
-        yAxis.setTickLabelFont(settings.textFont);
+        xAxis.setTickLabelFont(settings.textTicksFont);
+        yAxis.setTickLabelFont(settings.textTicksFont);
         executeIfTrue(!settings.showAxisTicks, () ->  disableTickMarks(plot));
         executeIfTrue(!settings.showTitle, () -> chart.setTitle(""));
         DeviationRenderer renderer = new DeviationRenderer(true, true);
