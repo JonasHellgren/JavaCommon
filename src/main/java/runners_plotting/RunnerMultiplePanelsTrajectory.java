@@ -1,6 +1,6 @@
 package runners_plotting;
 
-import org.hellgren.plotters.plotting_2d.PlotterMultiplePanelsTrajectory;
+import org.hellgren.plotters.deprecated.PlotterMultiplePanelsTrajectory;
 
 import java.util.ArrayList;
 import java.util.List;

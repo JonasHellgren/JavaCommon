@@ -1,23 +1,21 @@
-package org.hellgren.plotters.plotting_2d;
+package org.hellgren.plotters.plotting_3d;
 
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.extern.java.Log;
+import org.hellgren.plotters.shared.PlotSettings;
 import org.hellgren.utilities.conditionals.Conditionals;
 import org.hellgren.utilities.formatting.NumberFormatterUtil;
 import org.hellgren.utilities.list_arrays.MyArrayUtil;
 import org.hellgren.utilities.math.ScalerLinear;
 import org.hellgren.utilities.vector_algebra.ArrayMatrix;
-import org.jetbrains.annotations.NotNull;
 import org.knowm.xchart.AnnotationText;
 import org.knowm.xchart.HeatMapChart;
 import org.knowm.xchart.HeatMapChartBuilder;
-import java.awt.*;
+
 import java.text.DecimalFormat;
 import java.util.stream.IntStream;
 import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
-import static org.hellgren.utilities.conditionals.Conditionals.secDoubleIfFalse;
 import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterOneDigit;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMax;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
@@ -42,58 +40,20 @@ public class HeatMapChartCreator {
     static final int MANY_ROWS = 10;
     static final int MANY_COLS = 10;
 
-    @Builder
-    public record Settings(
-            String title,
-            String xAxisLabel,
-            String yAxisLabel,
-            Color[] colorRange,
-            int width,
-            int height,
-            boolean showLegend,
-            boolean showDataValues,
-            boolean showAxisTicks,
-            String axisTicksDecimalFormat,
-            Font axistTicksTextFont,
-            Font annotationTextFont,
-            Color annotationTextFontColor,
-            int nDigitsAnnotationText,
-            double minCellMargin,
-            double maxCellMargin
-    ) {
-
-        public static SettingsBuilder defaultBuilder() {
-            return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
-                    .colorRange(new Color[]{Color.BLACK, Color.WHITE})
-                    .width(500).height(300)
-                    .showLegend(true).showDataValues(true)
-                    .showAxisTicks(true).axisTicksDecimalFormat("#")
-                    .axistTicksTextFont(new Font("Arial", Font.PLAIN, 12))
-                    .annotationTextFont(new Font("Arial", Font.BOLD, 12))
-                    .annotationTextFontColor(Color.BLUE)
-                    .nDigitsAnnotationText(0)
-                    .minCellMargin(-0.5).maxCellMargin(0.5);
-        }
-
-        public static Settings ofDefaults() {
-            return defaultBuilder().build();
-        }
-    }
-
-    private final Settings settings;
+    private final PlotSettings settings;
     private final double[][] data;  //looked up by data[y][x]
     private final int[] xData0;
     private final int[] yData0;
 
     public static HeatMapChartCreator defaultSettings(double[][] data) {
-        return new HeatMapChartCreator(Settings.ofDefaults(), data, null, null);
+        return new HeatMapChartCreator(PlotSettings.ofDefaults(), data, null, null);
     }
 
-    public static HeatMapChartCreator of(Settings settings, double[][] data) {
+    public static HeatMapChartCreator of(PlotSettings settings, double[][] data) {
         return new HeatMapChartCreator(settings, data, null, null);
     }
 
-    public static HeatMapChartCreator of(Settings settings, double[][] data, double[] xData, double[] yData) {
+    public static HeatMapChartCreator of(PlotSettings settings, double[][] data, double[] xData, double[] yData) {
         return new HeatMapChartCreator(
                 settings,
                 data,
@@ -110,16 +70,16 @@ public class HeatMapChartCreator {
         validate();
         var chart = createChart();
         addData(chart);
-        executeIfTrue(settings.showDataValues, () -> addCellText(chart));
+        executeIfTrue(settings.showDataValues(), () -> addCellText(chart));
         return chart;
     }
 
     private void validate() {
         Preconditions.checkArgument(nRows() > 0, "data must have at least one row");
         Preconditions.checkArgument(nCols() > 0, "data must have at least one column");
-        Conditionals.executeIfTrue(settings.showAxisTicks && manyRowsOrColumns(), () ->
+        Conditionals.executeIfTrue(settings.showAxisTicks() && manyRowsOrColumns(), () ->
                 log.warning("To many rows or columns for axis ticks "));
-        Conditionals.executeIfTrue(settings.showDataValues && manyRowsOrColumns(), () ->
+        Conditionals.executeIfTrue(settings.showDataValues() && manyRowsOrColumns(), () ->
                 log.warning("To many rows or columns for showing data values "));
     }
 
@@ -130,26 +90,26 @@ public class HeatMapChartCreator {
 
     private HeatMapChart createChart() {
         var chart = new HeatMapChartBuilder()
-                .title(settings.title)
-                .xAxisTitle(settings.xAxisLabel).yAxisTitle(settings.yAxisLabel)
-                .width(settings.width).height(settings.height)
+                .title(settings.title())
+                .xAxisTitle(settings.xAxisLabel()).yAxisTitle(settings.yAxisLabel())
+                .width(settings.width()).height(settings.height())
                 .build();
         double minValue = Double.parseDouble(formatterOneDigit.format(findMin(data)));
         double maxValue = Double.parseDouble(formatterOneDigit.format(findMax(data)));
         var styler = chart.getStyler();
-        styler.setChartTitleVisible(true).setLegendVisible(settings.showLegend);
-        styler.setAxisTicksVisible(settings.showAxisTicks);
-        styler.setAxisTickLabelsFont(settings.axistTicksTextFont);
+        styler.setChartTitleVisible(true).setLegendVisible(settings.showLegend());
+        styler.setAxisTicksVisible(settings.showAxisTicks());
+        styler.setAxisTickLabelsFont(settings.axisTicksFont());
         styler.setMin(minValue).setMax(maxValue).setRangeColors(settings.colorRange());
-        styler.setAnnotationTextFontColor(settings.annotationTextFontColor);
-        styler.setAnnotationTextFont(settings.annotationTextFont);
+        styler.setAnnotationTextFontColor(settings.annotationTextFontColor());
+        styler.setAnnotationTextFont(settings.annotationTextFont());
         styler.setxAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
         styler.setyAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
         return chart;
     }
 
     private String getFormattedAsString(Double value) {
-        DecimalFormat df = new DecimalFormat(settings.axisTicksDecimalFormat);
+        DecimalFormat df = new DecimalFormat(settings.axisTicksDecimalFormat());
         return df.format(value);
     }
 

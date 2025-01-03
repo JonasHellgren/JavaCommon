@@ -1,4 +1,4 @@
-package org.hellgren.plotters.plotting_2d;
+package org.hellgren.plotters.shared;
 
 import java.util.ArrayList;
 import java.util.List;

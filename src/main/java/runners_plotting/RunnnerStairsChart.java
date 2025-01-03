@@ -16,7 +16,8 @@ public class RunnnerStairsChart {
         var xyDataStair= StairDataGenerator.generateWithEndStep(Pair.create(xData,yData));
         System.out.println("xyDataStair = " + xyDataStair);
 
-        XYChart chart = new XYChartBuilder().width(800).height(600).title("Stairs Plot").xAxisTitle("X").yAxisTitle("Y").build();
+        XYChart chart = new XYChartBuilder()
+                .width(800).height(600).title("Stairs Plot").xAxisTitle("X").yAxisTitle("Y").build();
         chart.getStyler().setLegendVisible(false);
         chart.addSeries("Stairs", xyDataStair.getFirst(), xyDataStair.getSecond()).setMarker(SeriesMarkers.NONE);
         new SwingWrapper<>(chart).displayChart();

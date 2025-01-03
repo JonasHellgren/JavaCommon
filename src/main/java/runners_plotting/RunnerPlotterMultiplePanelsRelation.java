@@ -1,7 +1,7 @@
 package runners_plotting;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.hellgren.plotters.plotting_2d.PlotterMultiplePanelsPairs;
+import org.hellgren.plotters.deprecated.PlotterMultiplePanelsPairs;
 
 import java.util.List;
 

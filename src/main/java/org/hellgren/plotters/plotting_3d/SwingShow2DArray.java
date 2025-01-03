@@ -1,4 +1,4 @@
-package org.hellgren.plotters.three_dim;
+package org.hellgren.plotters.plotting_3d;
 
 import lombok.Builder;
 

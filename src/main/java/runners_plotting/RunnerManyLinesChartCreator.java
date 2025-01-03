@@ -1,6 +1,6 @@
 package runners_plotting;
 
-import org.hellgren.plotters.many_lines.ManyLinesChartCreator;
+import org.hellgren.plotters.plotting_2d.ManyLinesChartCreator;
 import org.hellgren.plotters.shared.PlotSettings;
 import org.hellgren.utilities.list_arrays.ListCreator;
 import org.knowm.xchart.SwingWrapper;

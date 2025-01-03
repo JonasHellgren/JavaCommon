@@ -1,7 +1,7 @@
 package runners_plotting;
 
 
-import org.hellgren.plotters.three_dim.SwingHeatMapPlotter;
+import org.hellgren.plotters.deprecated.SwingHeatMapPlotter;
 
 public class RunnerSwingHeatMapPlotter {
 

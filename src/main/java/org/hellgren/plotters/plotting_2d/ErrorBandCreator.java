@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.SneakyThrows;
 import lombok.With;
 import org.deeplearning4j.ui.components.chart.Chart;
+import org.hellgren.plotters.shared.PlotSettings;
 import org.jetbrains.annotations.NotNull;
 import org.jfree.chart.*;
 import org.jfree.chart.axis.NumberAxis;
@@ -33,40 +34,6 @@ import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
 @AllArgsConstructor
 public class ErrorBandCreator {
 
-    @Builder
-    @With
-    public record Settings(
-            String title,
-            String xAxisLabel,
-            String yAxisLabel,
-            int width,
-            int height,
-            boolean showLegend,
-            boolean showTitle,
-            boolean showAxisTicks,
-            Font textTicksFont,
-            Font textFont,
-            Color bandFillColor,
-            Color lineColorDefault,
-            Paint plotBackGroundColor,
-            Paint gridLineColor
-            ) {
-
-        public static Settings.SettingsBuilder defaultBuilder() {
-            return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
-                    .width(500).height(300)
-                    .showLegend(true).showTitle(false).showAxisTicks(true)
-                    .textTicksFont(new Font("Arial", Font.PLAIN, 12))
-                    .textFont(new Font("Arial", Font.BOLD, 12))
-                    .bandFillColor(Color.GRAY).lineColorDefault(Color.BLACK)
-                    .plotBackGroundColor(Color.WHITE)
-                    .gridLineColor(Color.LIGHT_GRAY);
-        }
-        public static Settings ofDefaults() {
-            return defaultBuilder().build();
-        }
-    }
-
     record ErrorBand(
             String title,
             double[] xData,
@@ -76,19 +43,19 @@ public class ErrorBandCreator {
     {   }
 
 
-    private final Settings settings;
+    private final PlotSettings settings;
     private final List<ErrorBand> errorBands;
 
     public static ErrorBandCreator newDefault() {
-        return newOfSettings(Settings.ofDefaults());
+        return newOfSettings(PlotSettings.ofDefaults());
     }
 
-    public static ErrorBandCreator newOfSettings(Settings settings) {
+    public static ErrorBandCreator newOfSettings(PlotSettings settings) {
         return new ErrorBandCreator(settings,new ArrayList<>());
     }
 
     public void addErrorBand(String title, double[] xData, double[] yData, double[] errData) {
-        addErrorBand(title,xData,yData,errData,settings.lineColorDefault);
+        addErrorBand(title,xData,yData,errData,settings.lineColorBand());
     }
 
     public void addErrorBand(String title, double[] xData, double[] yData, double[] errData, Color lineColor) {
@@ -122,28 +89,28 @@ public class ErrorBandCreator {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.add(chartPanel, BorderLayout.CENTER);
-        frame.setPreferredSize(new Dimension(settings.width, settings.height));
+        frame.setPreferredSize(new Dimension(settings.width(), settings.height()));
         frame.pack();
         return frame;
     }
 
     private void setStyles(JFreeChart chart) {
-        chart.getTitle().setFont(settings.textFont);
+        chart.getTitle().setFont(settings.axisTitleFont());
         XYPlot plot = chart.getXYPlot();
-        plot.getDomainAxis().setLabelFont(settings.textFont);
-        plot.getRangeAxis().setLabelFont(settings.textFont);
-        plot.setBackgroundPaint(settings.plotBackGroundColor);
-        plot.setRangeGridlinePaint(settings.gridLineColor);
-        plot.setDomainGridlinePaint(settings.gridLineColor);
+        plot.getDomainAxis().setLabelFont(settings.axisTitleFont());
+        plot.getRangeAxis().setLabelFont(settings.axisTitleFont());
+        plot.setBackgroundPaint(settings.bandPlotBackGroundColor());
+        plot.setRangeGridlinePaint(settings.gridLineColor());
+        plot.setDomainGridlinePaint(settings.gridLineColor());
         NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
         NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
-        xAxis.setTickLabelFont(settings.textTicksFont);
-        yAxis.setTickLabelFont(settings.textTicksFont);
-        executeIfTrue(!settings.showAxisTicks, () ->  disableTickMarks(plot));
-        executeIfTrue(!settings.showTitle, () -> chart.setTitle(""));
+        xAxis.setTickLabelFont(settings.axisTicksFont());
+        yAxis.setTickLabelFont(settings.axisTicksFont());
+        executeIfTrue(!settings.showAxisTicks(), () ->  disableTickMarks(plot));
+        //executeIfTrue(!settings.showTitle(), () -> chart.setTitle(""));
         DeviationRenderer renderer = new DeviationRenderer(true, true);
         for (int i = 0; i < errorBands.size() ; i++) {
-        renderer.setSeriesFillPaint(i, settings.bandFillColor); // Set color for error band
+        renderer.setSeriesFillPaint(i, settings.bandFillColor()); // Set color for error band
         renderer.setSeriesPaint(i, errorBands.get(i).lineColor); // Line color
         renderer.setSeriesShapesVisible(i, false); // Disable markers
         }
@@ -161,10 +128,10 @@ public class ErrorBandCreator {
 
     private JFreeChart createChart(YIntervalSeriesCollection dataset) {
         return ChartFactory.createScatterPlot(
-                settings.title,  settings.xAxisLabel, settings.yAxisLabel,
+                settings.title(),  settings.xAxisLabel(), settings.yAxisLabel(),
                 dataset,
                 PlotOrientation.VERTICAL,
-                settings.showLegend,true, false
+                settings.showLegend(),true, false
         );
     }
 

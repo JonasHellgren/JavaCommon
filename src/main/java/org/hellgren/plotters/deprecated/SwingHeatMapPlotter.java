@@ -1,4 +1,4 @@
-package org.hellgren.plotters.three_dim;
+package org.hellgren.plotters.deprecated;
 
 import lombok.Builder;
 import org.hellgren.utilities.math.MyMathUtils;

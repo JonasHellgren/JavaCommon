@@ -1,4 +1,4 @@
-package org.hellgren.plotters.many_lines;
+package org.hellgren.plotters.plotting_2d;
 
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;

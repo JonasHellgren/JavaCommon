@@ -1,9 +1,10 @@
-package org.hellgren.plotters.scatter;
+package org.hellgren.plotters.plotting_2d;
 
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.With;
+import org.hellgren.plotters.shared.PlotSettings;
 import org.hellgren.plotters.shared.XYData;
 import org.hellgren.utilities.conditionals.Conditionals;
 import org.knowm.xchart.XYChart;
@@ -23,46 +24,14 @@ import static org.hellgren.plotters.shared.FormattedAsString.getFormattedAsStrin
 @AllArgsConstructor
 public class ScatterWithLineChartCreator {
 
-
-    @Builder
-    @With
-    public record Settings(
-            String title,
-            String xAxisLabel,
-            String yAxisLabel,
-            int width,
-            int height,
-            boolean showGridLines,
-            Color[] colorRangeSeries,
-            String axisTicksDecimalFormat,
-            Font axisTitleFont,
-            Font axisTicksFont
-    ) {
-
-
-        public static Settings.SettingsBuilder defaultBuilder() {
-            return Settings.builder().title("title").xAxisLabel("x").yAxisLabel("y")
-                    .width(500).height(300)
-                    .showGridLines(true)
-                    .colorRangeSeries(new Color[]{Color.BLACK, Color.GRAY})
-                    .axisTicksDecimalFormat("#")
-                    .axisTitleFont(new Font("Arial", Font.BOLD, 12))
-                    .axisTicksFont(new Font("Arial", Font.PLAIN, 12));
-        }
-
-        public static Settings ofDefaults() {
-            return defaultBuilder().build();
-        }
-    }
-
-    private final Settings settings;
+    private final PlotSettings settings;
     private XYData xyDataScatter, xyDataLine;
 
     public static ScatterWithLineChartCreator ofDefaults() {
-        return ScatterWithLineChartCreator.of(Settings.ofDefaults());
+        return ScatterWithLineChartCreator.of(PlotSettings.ofDefaults());
     }
 
-    public static ScatterWithLineChartCreator of(Settings settings) {
+    public static ScatterWithLineChartCreator of(PlotSettings settings) {
         return new ScatterWithLineChartCreator(settings, XYData.empty(), XYData.empty());
     }
 
@@ -102,24 +71,24 @@ public class ScatterWithLineChartCreator {
         return chart;
     }
 
-    private static XYChart createChart(Settings s) {
+    private static XYChart createChart(PlotSettings s) {
         return new XYChartBuilder()
-                .xAxisTitle(s.xAxisLabel).yAxisTitle(s.yAxisLabel)
-                .width(s.width).height(s.height).build();
+                .xAxisTitle(s.xAxisLabel()).yAxisTitle(s.yAxisLabel())
+                .width(s.width()).height(s.height()).build();
     }
 
-    private void styleChart(XYChart chart, Settings s) {
+    private void styleChart(XYChart chart, PlotSettings s) {
         var styler = chart.getStyler();
         styler.setxAxisTickLabelsFormattingFunction(value ->
-                getFormattedAsString(value, settings.axisTicksDecimalFormat));
+                getFormattedAsString(value, settings.axisTicksDecimalFormat()));
         styler.setyAxisTickLabelsFormattingFunction(value ->
-                getFormattedAsString(value, settings.axisTicksDecimalFormat));
+                getFormattedAsString(value, settings.axisTicksDecimalFormat()));
         styler.setLegendVisible(false);
-        styler.setAxisTitleFont(s.axisTitleFont);
-        styler.setAxisTickLabelsFont(s.axisTicksFont);
+        styler.setAxisTitleFont(s.axisTitleFont());
+        styler.setAxisTickLabelsFont(s.axisTicksFont());
         styler.setChartBackgroundColor(Color.WHITE);
-        Conditionals.executeIfTrue(s.colorRangeSeries != null, () ->
-                styler.setSeriesColors(s.colorRangeSeries));
+        Conditionals.executeIfTrue(s.colorRangeSeries() != null, () ->
+                styler.setSeriesColors(s.colorRangeSeries()));
     }
 
     private void addLineData(XYChart chart) {

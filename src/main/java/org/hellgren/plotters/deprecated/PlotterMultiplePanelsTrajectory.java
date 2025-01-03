@@ -1,6 +1,7 @@
-package org.hellgren.plotters.plotting_2d;
+package org.hellgren.plotters.deprecated;
 
 import lombok.extern.java.Log;
+import org.hellgren.plotters.shared.PlotPanel;
 import org.jfree.data.xy.XYSeries;
 
 import javax.imageio.ImageIO;

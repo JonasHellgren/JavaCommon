@@ -1,4 +1,4 @@
-package org.hellgren.plotters.plotting_2d;
+package org.hellgren.plotters.shared;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
