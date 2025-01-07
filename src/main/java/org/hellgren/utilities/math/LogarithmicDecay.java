@@ -1,5 +1,7 @@
 package org.hellgren.utilities.math;
 
+import com.google.common.base.Preconditions;
+import lombok.Getter;
 import lombok.ToString;
 
 /***
@@ -12,30 +14,49 @@ import lombok.ToString;
  */
 
 @ToString
+@Getter
 public class LogarithmicDecay {
 
-    private final double outStart, outEnd, timeEnd;
+    public static final double SMALL = 1e-20;
+    private final double timeEnd;
     private double C, gamma;
 
     public LogarithmicDecay(double outStart, double outEnd, double timeEnd) {
-        this.outStart = outStart;
-        this.outEnd = outEnd;
-        this.timeEnd = timeEnd;
-        defineParameters();
+        this.timeEnd=timeEnd;
+        defineParameters(outStart, outEnd, timeEnd);
     }
 
-    private void defineParameters() {
+    public static LogarithmicDecay of(double outStart, double outEnd, double timeEnd) {
+        return new LogarithmicDecay(outStart, outEnd, timeEnd);
+    }
+
+    private void defineParameters(double outStart, double outEnd, double timeEnd) {
         this.C=Math.log(outStart);
-        double minusGammaTime=Math.log(Math.max(1e-20, outEnd)/Math.exp(C));
-        this.gamma=-minusGammaTime/this.timeEnd;
+        double minusGammaTime=Math.log(Math.max(SMALL, outEnd)/Math.exp(C));
+        this.gamma=-minusGammaTime/timeEnd;
     }
 
+    /**
+     * Calculates the output value at the specified time.
+     *
+     * This method delegates to the overloaded calcOut method that takes a double time parameter.
+     *
+     * @param time the time at which to calculate the output value
+     * @return the calculated output value
+     */
+    public double calcOut(int time) {
+        return calcOut((double)time);
+    }
+
+    /**
+     * Calculates the output value at the specified time using the exponential decay formula.
+     *
+     * @param time the time at which to calculate the output value
+     * @return the calculated output value
+     */
     public double calcOut(double time) {
-
-        if (time<0 || time>timeEnd) {
-            throw  new IllegalArgumentException("Time outside bounds, time = "+time);
-        }
-
+        Preconditions.checkArgument(time>=0, "Time must be positive");
+        Preconditions.checkArgument(time<=timeEnd, "Time must be less than timeEnd");
         return Math.exp(C)*Math.exp(-gamma*time);
     }
 

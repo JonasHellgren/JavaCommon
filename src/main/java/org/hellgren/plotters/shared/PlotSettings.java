@@ -43,7 +43,7 @@ public record PlotSettings (
 
     public static PlotSettings.PlotSettingsBuilder defaultBuilder() {
         return PlotSettings.builder()
-                .title("title").xAxisLabel("x").yAxisLabel("y")
+                .title("").xAxisLabel("x").yAxisLabel("y")
                 .width(500).height(300)
                 .showLegend(true).legendPosition(Styler.LegendPosition.OutsideE)
                 .legendTextFont(new Font("Arial", Font.PLAIN, 10))

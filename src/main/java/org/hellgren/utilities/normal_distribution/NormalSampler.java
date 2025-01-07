@@ -14,6 +14,10 @@ public class NormalSampler {
             this.random = new Random();
         }
 
+        public static NormalSampler of(double mean, double stdDev) {
+            return new NormalSampler(mean, stdDev);
+        }
+
         // Method to generate a single sample
         public double generateSample() {
             return mean + stdDev * random.nextGaussian();

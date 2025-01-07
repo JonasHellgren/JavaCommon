@@ -41,6 +41,10 @@ public final class Counter {
         return count>=maxCount;
     }
 
+    public boolean isNotExceeded() {
+        return !isExceeded();
+    }
+
     public boolean isBelowMinCount() {
         return count<minCount;
     }

@@ -38,6 +38,7 @@ public class ManyLinesChartCreator {
     public XYChart create() {
         var s=settings;
         var chart = new XYChartBuilder()
+                .title(s.title())
                 .xAxisTitle(s.xAxisLabel()).yAxisTitle(s.yAxisLabel())
                 .width(s.width()).height(s.height()).build();
         var styler = chart.getStyler();
