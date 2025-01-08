@@ -1,31 +1,20 @@
 package org.hellgren.utilities.list_arrays;
 
 import com.google.common.base.Preconditions;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 
 import java.util.Arrays;
 
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class MyMatrixArrayUtils {
 
-    private MyMatrixArrayUtils() {
-    }
-
     /**
-     * Creates a diagonal matrix from a given array of diagonal values.
+     * Finds the minimum value in a 2D array of doubles.
      *
-     * @param diagonalValues the array of values to be placed on the diagonal
-     * @return the resulting diagonal matrix
+     * @param data the 2D array of doubles
+     * @return the minimum value in the array
      */
-
-    public static double[][] createDiagonalMatrix(double[] diagonalValues) {
-        Preconditions.checkArgument(diagonalValues.length > 0, "Array must not be null or empty");
-        int nDim=diagonalValues.length;
-        double[][] matrix = new double[nDim][nDim];
-        for (int i = 0; i < nDim; i++) {
-            matrix[i][i] = diagonalValues[i];
-        }
-        return matrix;
-    }
-
     public static double findMin(double[][] data) {
         double min = Double.POSITIVE_INFINITY;
         for (int i = 0; i < data.length; i++) {
@@ -38,8 +27,12 @@ public class MyMatrixArrayUtils {
         return min;
     }
 
-
-
+    /**
+     * Finds the maximum value in a 2D array of doubles.
+     *
+     * @param data the 2D array of doubles
+     * @return the maximum value in the array
+     */
     public static double findMax(double[][] data) {
         double max = Double.NEGATIVE_INFINITY;
         for (int i = 0; i < data.length; i++) {

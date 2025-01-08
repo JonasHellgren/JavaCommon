@@ -1,11 +1,14 @@
 package org.hellgren.utilities.list_arrays;
 
 import com.google.common.base.Preconditions;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.stream.DoubleStream;
 
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class ArrayCreator {
 
     /**

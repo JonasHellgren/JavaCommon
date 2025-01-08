@@ -7,30 +7,62 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class TestMyMatrixArrayUtils {
-
-
-    @Test
-    public void testCreateDiagonalMatrix_SimpleCase() {
-        double[] diagonalValues = {1.0, 2.0, 3.0};
-        double[][] expectedMatrix = {
-                {1.0, 0.0, 0.0},
-                {0.0, 2.0, 0.0},
-                {0.0, 0.0, 3.0}
-        };
-
-        double[][] actualMatrix = MyMatrixArrayUtils.createDiagonalMatrix(diagonalValues);
-
-        assertArrayEquals(expectedMatrix, actualMatrix);
-    }
-
+ class TestMyMatrixArrayUtils {
 
     @Test
-    public void testCreateDiagonalMatrix_InvalidInput_NDimZero() {
-        double[] diagonalValues = {};
-
-        assertThrows(IllegalArgumentException.class, () -> MyMatrixArrayUtils.createDiagonalMatrix(diagonalValues));
+     void testFindMin() {
+        double[][] data = {{1.0, 2.0}, {3.0, 4.0}};
+        double expected = 1.0;
+        double actual = MyMatrixArrayUtils.findMin(data);
+        assertEquals(expected, actual, 0.01);
     }
+
+    @Test
+     void testFindMin_EmptyArray() {
+        double[][] data = {};
+        double expected = Double.POSITIVE_INFINITY;
+        double actual = MyMatrixArrayUtils.findMin(data);
+        assertEquals(expected, actual, 0.01);
+    }
+
+    @Test
+     void testFindMin_NullArray() {
+        double[][] data = null;
+        try {
+            MyMatrixArrayUtils.findMin(data);
+            assert false;
+        } catch (NullPointerException e) {
+            assert true;
+        }
+    }
+
+    @Test
+     void testFindMax() {
+        double[][] data = {{1.0, 2.0}, {3.0, 4.0}};
+        double expected = 4.0;
+        double actual = MyMatrixArrayUtils.findMax(data);
+        assertEquals(expected, actual, 0.01);
+    }
+
+    @Test
+     void testFindMax_EmptyArray() {
+        double[][] data = {};
+        double expected = Double.NEGATIVE_INFINITY;
+        double actual = MyMatrixArrayUtils.findMax(data);
+        assertEquals(expected, actual, 0.01);
+    }
+
+    @Test
+     void testFindMax_NullArray() {
+        double[][] data = null;
+        try {
+            MyMatrixArrayUtils.findMax(data);
+            assert false;
+        } catch (NullPointerException e) {
+            assert true;
+        }
+    }
+
 
 }
 

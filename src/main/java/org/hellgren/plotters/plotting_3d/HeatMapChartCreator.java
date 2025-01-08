@@ -2,6 +2,7 @@ package org.hellgren.plotters.plotting_3d;
 
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.extern.java.Log;
 import org.hellgren.plotters.shared.PlotSettings;
 import org.hellgren.utilities.conditionals.Conditionals;
@@ -36,6 +37,7 @@ import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
 
 @AllArgsConstructor
 @Log
+@Getter
 public class HeatMapChartCreator {
     static final int MANY_ROWS = 10;
     static final int MANY_COLS = 10;
@@ -74,7 +76,7 @@ public class HeatMapChartCreator {
         return chart;
     }
 
-    private void validate() {
+    protected void validate() {
         Preconditions.checkArgument(nRows() > 0, "data must have at least one row");
         Preconditions.checkArgument(nCols() > 0, "data must have at least one column");
         Conditionals.executeIfTrue(settings.showAxisTicks() && manyRowsOrColumns(), () ->
@@ -88,7 +90,7 @@ public class HeatMapChartCreator {
         return nRows() > MANY_ROWS || nCols() > MANY_COLS;
     }
 
-    private HeatMapChart createChart() {
+    protected HeatMapChart createChart() {
         var chart = new HeatMapChartBuilder()
                 .title(settings.title())
                 .xAxisTitle(settings.xAxisLabel()).yAxisTitle(settings.yAxisLabel())
@@ -113,7 +115,7 @@ public class HeatMapChartCreator {
         return df.format(value);
     }
 
-    private void addData(HeatMapChart chart) {
+    protected void addData(HeatMapChart chart) {
         double[][] dataRot = ArrayMatrix.transposeMatrix(data);
         int[][] dataRotInt = ArrayMatrix.doubleToInt(dataRot);
         int[] xData = getXData(xData0, nCols());
@@ -140,24 +142,24 @@ public class HeatMapChartCreator {
         }
     }
 
-    private void addTextToChart(HeatMapChart chart, double xPos, double yPos, String text) {
+    protected void addTextToChart(HeatMapChart chart, double xPos, double yPos, String text) {
         AnnotationText annotation = new AnnotationText(text, xPos, yPos, false);
         chart.addAnnotation(annotation);
     }
 
-    private int[] getYData(int[] yData0, int nRows) {
+    protected int[] getYData(int[] yData0, int nRows) {
         return (yData0 != null) ? yData0 : IntStream.rangeClosed(0, nRows - 1).toArray();
     }
 
-    private int[] getXData(int[] xData0, int nCols) {
+    protected int[] getXData(int[] xData0, int nCols) {
         return (xData0 != null) ? xData0 : IntStream.rangeClosed(0, nCols - 1).toArray();
     }
 
-    private int nRows() {
+    protected int nRows() {
         return ArrayMatrix.getDimensions(data).getFirst();
     }
 
-    private int nCols() {
+    protected int nCols() {
         return ArrayMatrix.getDimensions(data).getSecond();
 
     }
