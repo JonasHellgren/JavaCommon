@@ -52,7 +52,6 @@ public record PlotSettings (
                 .showAxisTicks(true).axisTicksDecimalFormat("#").showMarker(false)
                 .axisTitleFont(new Font("Arial", Font.BOLD, 12))
                 .axisTicksFont(new Font("Arial", Font.PLAIN, 12))
-
                 .colorRange(new Color[]{Color.BLACK, Color.WHITE})
                 .showDataValues(true)
                 .annotationTextFont(new Font("Arial", Font.BOLD, 12))
@@ -65,6 +64,15 @@ public record PlotSettings (
                 .bandFillColor(Color.LIGHT_GRAY)
                 ;
     }
+
+    public static PlotSettings stringTextInHeatMap() {
+        return defaultBuilder()
+                .title("")
+                .showDataValues(true).showLegend(false).showGridLines(false)
+                .colorRange(new Color[]{Color.WHITE}).annotationTextFontColor(Color.BLACK)
+                .showAxisTicks(true).build();
+    }
+
 
     public static PlotSettings ofDefaults() {
         return defaultBuilder().build();

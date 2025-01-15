@@ -63,7 +63,25 @@ public class ArrayMatrix {
         return getDimensions(intData);
     }
 
-    public static int[][] doubleToInt(double[][] data) {
+    /**
+     * Gets the dimensions of a 2D array.
+     *
+     * @param data the 2D array
+     * @return a pair containing the number of rows and columns
+     */
+    public static Pair<Integer, Integer> getDimensions(String[][] data) {
+        // Check if the input array is null or empty
+        if (data == null || data.length == 0) {
+            throw new IllegalArgumentException("Input array is empty");
+        }
+        int rows = data.length;
+        int cols = data[0].length;
+        return new Pair<>(rows, cols);
+    }
+
+
+
+        public static int[][] doubleToInt(double[][] data) {
         int[][] intData = new int[data.length][data[0].length];
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[i].length; j++) {

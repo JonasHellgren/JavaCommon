@@ -13,13 +13,14 @@ import org.hellgren.utilities.vector_algebra.ArrayMatrix;
 import org.knowm.xchart.AnnotationText;
 import org.knowm.xchart.HeatMapChart;
 import org.knowm.xchart.HeatMapChartBuilder;
-
 import java.text.DecimalFormat;
 import java.util.stream.IntStream;
 import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
 import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterOneDigit;
+import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterTwoDigits;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMax;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
+import static org.hellgren.utilities.math.MyMathUtils.getRoundedNumberAsString;
 
 /**
  * This class is used to create a HeatMapChart.
@@ -96,10 +97,12 @@ public class HeatMapChartCreator {
                 .xAxisTitle(settings.xAxisLabel()).yAxisTitle(settings.yAxisLabel())
                 .width(settings.width()).height(settings.height())
                 .build();
-        double minValue = Double.parseDouble(formatterOneDigit.format(findMin(data)));
-        double maxValue = Double.parseDouble(formatterOneDigit.format(findMax(data)));
+
+        double minValue = Double.parseDouble(formatterTwoDigits.format(findMin(data)));
+        double maxValue = Double.parseDouble(formatterTwoDigits.format(findMax(data)));
         var styler = chart.getStyler();
         styler.setChartTitleVisible(true).setLegendVisible(settings.showLegend());
+        styler.setPlotGridLinesVisible(settings.showGridLines());
         styler.setAxisTicksVisible(settings.showAxisTicks());
         styler.setAxisTickLabelsFont(settings.axisTicksFont());
         styler.setMin(minValue).setMax(maxValue).setRangeColors(settings.colorRange());
@@ -127,17 +130,29 @@ public class HeatMapChartCreator {
      * The scalers are needed to place the text in the right place, mid of the cells
      */
 
+    public record Scalers(ScalerLinear xScaler,ScalerLinear yScaler) {
+        public static Scalers of(PlotSettings settings, int[] xData, int[] yData,int nCols, int nRows) {
+            double minMargin = settings.minCellMargin();
+            double maxMargin = settings.maxCellMargin();
+            var xScaler = new ScalerLinear(minMargin, nCols - 1 + maxMargin, xData[0], xData[xData.length - 1]);
+            var yScaler = new ScalerLinear(minMargin, nRows - 1 + maxMargin, yData[0], yData[yData.length - 1]);
+            return new Scalers(xScaler, yScaler);
+        }
+
+    }
+
     private void addCellText(HeatMapChart chart) {
-        double minMargin = settings.minCellMargin();
-        double maxMargin = settings.maxCellMargin();
         int[] xData = getXData(xData0, nCols());
         int[] yData = getYData(yData0, nRows());
-        var xScaler = new ScalerLinear(minMargin, nCols() - 1 + maxMargin, xData[0], xData[xData.length - 1]);
-        var yScaler = new ScalerLinear(minMargin, nRows() - 1 + maxMargin, yData[0], yData[yData.length - 1]);
+        var scalers=Scalers.of(settings, xData, yData,nCols(), nRows());
         for (int y = 0; y < nRows(); y++) {
             for (int x = 0; x < nCols(); x++) {
-                String text = NumberFormatterUtil.getRoundedNumberAsString(data[y][x], settings.nDigitsAnnotationText());
-                addTextToChart(chart, xScaler.calcOutDouble(x), yScaler.calcOutDouble(y), text);
+                String text = getRoundedNumberAsString(data[y][x], settings.nDigitsAnnotationText());
+                addTextToChart(
+                        chart,
+                        scalers.xScaler.calcOutDouble(x),
+                        scalers.yScaler.calcOutDouble(y),
+                        text);
             }
         }
     }
@@ -161,7 +176,6 @@ public class HeatMapChartCreator {
 
     protected int nCols() {
         return ArrayMatrix.getDimensions(data).getSecond();
-
     }
 
 }
