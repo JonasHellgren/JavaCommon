@@ -1,4 +1,4 @@
-package org.hellgren.plotters.plotting_3d;
+package org.hellgren.plotters.deprecated;
 
 import lombok.Builder;
 

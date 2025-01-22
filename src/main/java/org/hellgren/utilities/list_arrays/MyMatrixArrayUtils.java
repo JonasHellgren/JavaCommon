@@ -5,6 +5,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class MyMatrixArrayUtils {
@@ -44,4 +45,36 @@ public class MyMatrixArrayUtils {
         }
         return max;
     }
+
+
+    /**
+     * Find the minimum value in a two-dimensional array of Doubles.
+     *
+     * @param data The two-dimensional array of Doubles.
+     * @return The minimum value in the array.
+     * @throws IllegalArgumentException If the array is null or empty.
+     */
+    public static Double findMin(Double[][] data) {
+        return Arrays.stream(data)
+                .flatMap(Arrays::stream)
+                .filter(n -> !Objects.isNull(n))
+                .min(Double::compareTo)
+                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
+    }
+
+    /**
+     * Find the maximum value in a two-dimensional array of Doubles.
+     *
+     * @param data The two-dimensional array of Doubles.
+     * @return The maximum value in the array.
+     * @throws IllegalArgumentException If the array is null or empty.
+     */
+    public static Double findMax(Double[][] data) {
+        return Arrays.stream(data)
+                .flatMap(Arrays::stream)
+                .filter(n -> !Objects.isNull(n))
+                .max(Double::compareTo)
+                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
+    }
+
 }

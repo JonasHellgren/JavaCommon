@@ -34,12 +34,21 @@ public class TestMyArrayUtil {
 
     @Test
     public void testFindMin() {
-        Double[][] data = {{1.0, 2.0}, {3.0, 4.0}};
+        double[] data = {1.0, 2.0, 3.0, 4.0};
         Double expected = 1.0;
         Double actual = MyArrayUtil.findMin(data);
         assertEquals(expected, actual);
     }
 
+
+
+    @Test
+    public void testFindMax() {
+        double[] data = {1.0, 2.0, 3.0, 4.0};
+        Double expected = 4.0;
+        Double actual = MyArrayUtil.findMax(data);
+        assertEquals(expected, actual);
+    }
 
 
     @Test

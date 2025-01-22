@@ -9,9 +9,10 @@ public class RunnerHeatMapWithStringAnnotationsCreator {
 
     public static void main(String[] args) {
         var data = getData();
-        var settings= PlotSettings.stringTextInHeatMap().withWidth(400).withHeight(200);
-        var creator = HeatMapWithStringTextInCellsCreator.ofStringData(settings,data, getXData(),getYData());
-        //var creator = HeatMapWithStringAnnotationsCreator.ofStringData(settings,data); //works as well
+        var settings= PlotSettings.stringTextInHeatMap().withWidth(200).withHeight(150)
+                .withMinCellMargin(0).withMaxCellMargin(0);
+        //var creator = HeatMapWithStringTextInCellsCreator.ofStringData(settings,data, getXData(),getYData());
+        var creator = HeatMapWithStringTextInCellsCreator.ofStringData(settings,data); //works as well
         new SwingWrapper<>(creator.create()).displayChart();
     }
 
@@ -25,11 +26,11 @@ public class RunnerHeatMapWithStringAnnotationsCreator {
     }
 
     public static double[] getXData() {
-        return ArrayCreator.createArrayFromStartAndEnd(5,0, 5);
+        return ArrayCreator.createArrayFromStartAndEnd(5,0.5, 5-1);
     }
 
     public static double[] getYData() {
-        return ArrayCreator.createArrayFromStartAndEnd(4, 0, 4);
+        return ArrayCreator.createArrayFromStartAndEnd(4, 0, 4-1);
     }
 
 }

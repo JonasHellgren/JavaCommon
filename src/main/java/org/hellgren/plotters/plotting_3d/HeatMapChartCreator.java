@@ -6,17 +6,17 @@ import lombok.Getter;
 import lombok.extern.java.Log;
 import org.hellgren.plotters.shared.PlotSettings;
 import org.hellgren.utilities.conditionals.Conditionals;
-import org.hellgren.utilities.formatting.NumberFormatterUtil;
 import org.hellgren.utilities.list_arrays.MyArrayUtil;
 import org.hellgren.utilities.math.ScalerLinear;
 import org.hellgren.utilities.vector_algebra.ArrayMatrix;
 import org.knowm.xchart.AnnotationText;
 import org.knowm.xchart.HeatMapChart;
 import org.knowm.xchart.HeatMapChartBuilder;
+
+import java.awt.*;
 import java.text.DecimalFormat;
 import java.util.stream.IntStream;
 import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
-import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterOneDigit;
 import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterTwoDigits;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMax;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMin;
@@ -40,8 +40,8 @@ import static org.hellgren.utilities.math.MyMathUtils.getRoundedNumberAsString;
 @Log
 @Getter
 public class HeatMapChartCreator {
-    static final int MANY_ROWS = 10;
-    static final int MANY_COLS = 10;
+    static final int MANY_ROWS = 20;
+    static final int MANY_COLS = 20;
 
     private final PlotSettings settings;
     private final double[][] data;  //looked up by data[y][x]
@@ -110,6 +110,7 @@ public class HeatMapChartCreator {
         styler.setAnnotationTextFont(settings.annotationTextFont());
         styler.setxAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
         styler.setyAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
+        styler.setChartBackgroundColor(Color.WHITE);
         return chart;
     }
 
@@ -167,6 +168,7 @@ public class HeatMapChartCreator {
     }
 
     protected int[] getXData(int[] xData0, int nCols) {
+        System.out.println("nCols = " + nCols);
         return (xData0 != null) ? xData0 : IntStream.rangeClosed(0, nCols - 1).toArray();
     }
 

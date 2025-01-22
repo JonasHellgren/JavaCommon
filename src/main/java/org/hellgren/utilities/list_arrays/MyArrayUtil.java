@@ -48,35 +48,55 @@ public class MyArrayUtil {
         return sum / array.length;
     }
 
+
     /**
-     * Find the minimum value in a two-dimensional array of Doubles.
+     * Finds the minimum value in a given array of doubles.
      *
-     * @param data The two-dimensional array of Doubles.
+     * @param array The array of doubles.
      * @return The minimum value in the array.
-     * @throws IllegalArgumentException If the array is null or empty.
+     * @throws IllegalArgumentException if the array is empty.
      */
-    public static Double findMin(Double[][] data) {
-        return Arrays.stream(data)
-                .flatMap(Arrays::stream)
-                .filter(n -> !Objects.isNull(n))
-                .min(Double::compareTo)
-                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
+    public static double findMin(double[] array) {
+        // Check if the array is empty
+        if (array.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        // Initialize the minimum value with the first element of the array
+        double min = array[0];
+        // Iterate over the array to find the minimum value
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        // Return the minimum value
+        return min;
     }
 
     /**
-     * Find the maximum value in a two-dimensional array of Doubles.
+     * Finds the maximum value in a given array of doubles.
      *
-     * @param data The two-dimensional array of Doubles.
+     * @param array The array of doubles.
      * @return The maximum value in the array.
-     * @throws IllegalArgumentException If the array is null or empty.
+     * @throws IllegalArgumentException if the array is empty.
      */
-    public static Double findMax(Double[][] data) {
-        return Arrays.stream(data)
-                .flatMap(Arrays::stream)
-                .filter(n -> !Objects.isNull(n))
-                .max(Double::compareTo)
-                .orElseThrow(() -> new IllegalArgumentException("The array must not be null or empty"));
+    public static double findMax(double[] array) {
+        // Check if the array is empty
+        if (array.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        // Initialize the maximum value with the first element of the array
+        double max = array[0];
+        // Iterate over the array to find the maximum value
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        // Return the maximum value
+        return max;
     }
+
 
     /**
      * Clip the values in the array between the given minimum and maximum values.

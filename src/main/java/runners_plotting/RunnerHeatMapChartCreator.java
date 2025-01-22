@@ -13,13 +13,13 @@ public class RunnerHeatMapChartCreator {
     public static void main(String[] args) {
         var data = getData();
         var settings = PlotSettings.defaultBuilder()
-                .title("Sample HeatMap").showDataValues(true).showAxisTicks(true).build();
+                .title("Small HeatMap").showDataValues(true).showAxisTicks(true).build();
         var creator = HeatMapChartCreator.of(settings, data);
         new SwingWrapper<>(creator.create()).displayChart();
 
         var data1 = getData1();
         settings = PlotSettings.defaultBuilder()
-                .title("Sample HeatMap").showDataValues(false)
+                .title("Larger HeatMap").showDataValues(false)
                 .showAxisTicks(true).build();
         creator = HeatMapChartCreator.of(settings, data1, getXData(),getYData());
         new SwingWrapper<>(creator.create()).displayChart();

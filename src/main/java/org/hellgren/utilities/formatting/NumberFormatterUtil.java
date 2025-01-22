@@ -13,6 +13,7 @@ public class NumberFormatterUtil {
     public static final DecimalFormatSymbols SYMBOLS = new DecimalFormatSymbols(Locale.US); //US <=> only dots
     public static final DecimalFormat formatterOneDigit = new DecimalFormat("#.#", SYMBOLS);
     public static final DecimalFormat formatterTwoDigits = new DecimalFormat("#.##", SYMBOLS);
+    public static final DecimalFormat formatterThreeDigits = new DecimalFormat("#.###", SYMBOLS);
 
     public static String getRoundedNumberAsString(Double value, int nofDigits)  {
         NumberFormat nf = NumberFormat.getNumberInstance(Locale.ENGLISH);  //ENGLISH => point

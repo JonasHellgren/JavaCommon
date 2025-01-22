@@ -50,9 +50,14 @@ public class HeatMapWithStringTextInCellsCreator extends HeatMapChartCreator {
     @Override
     public HeatMapChart create() {
         validate();
-        var chart = createChart();
-        addData(chart);
+        var chart = super.createChart();
+        super.addData(chart);
         executeIfTrue(getSettings().showDataValues(), () -> addStringDataText(chart));
+        var styler=chart.getStyler();
+        styler.setXAxisMin(-0.5d);
+        styler.setXAxisMax(nCols() - 0.5d);
+        styler.setYAxisMin(-0.5d);
+        styler.setYAxisMax(nRows() - 0.5d);
         return chart;
     }
 
