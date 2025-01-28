@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.extern.java.Log;
 import org.hellgren.plotters.shared.PlotSettings;
 import org.hellgren.utilities.conditionals.Conditionals;
+import org.hellgren.utilities.list_arrays.ArrayCreator;
 import org.hellgren.utilities.list_arrays.MyArrayUtil;
 import org.hellgren.utilities.math.ScalerLinear;
 import org.hellgren.utilities.vector_algebra.ArrayMatrix;
@@ -15,7 +16,9 @@ import org.knowm.xchart.HeatMapChartBuilder;
 
 import java.awt.*;
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.stream.IntStream;
+
 import static org.hellgren.utilities.conditionals.Conditionals.executeIfTrue;
 import static org.hellgren.utilities.formatting.NumberFormatterUtil.formatterTwoDigits;
 import static org.hellgren.utilities.list_arrays.MyMatrixArrayUtils.findMax;
@@ -111,7 +114,21 @@ public class HeatMapChartCreator {
         styler.setxAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
         styler.setyAxisTickLabelsFormattingFunction(value -> getFormattedAsString(value));
         styler.setChartBackgroundColor(Color.WHITE);
+        //below line are to get correct x and y range in plot
+        double[] xDataExt = getDataExt(getXData(xData0, nCols()));
+        styler.setXAxisMin(xDataExt[0]).setXAxisMax(xDataExt[xDataExt.length-1]);
+        double[] yDataExt = getDataExt(getYData(yData0, nRows()));
+        styler.setYAxisMin(xDataExt[0]).setYAxisMax(yDataExt[yDataExt.length-1]);
         return chart;
+    }
+
+    private static double[] getDataExt(int[] axisData) {
+        System.out.println("axisData = " + Arrays.toString(axisData));
+        int len=axisData.length;
+        int max = axisData[axisData.length - 1];
+        int min = axisData[0];
+        double step= (double) (max - min) /(len-1);
+        return ArrayCreator.createArrayInRange(min, step, max+step);
     }
 
     private String getFormattedAsString(Double value) {
@@ -168,7 +185,6 @@ public class HeatMapChartCreator {
     }
 
     protected int[] getXData(int[] xData0, int nCols) {
-        System.out.println("nCols = " + nCols);
         return (xData0 != null) ? xData0 : IntStream.rangeClosed(0, nCols - 1).toArray();
     }
 

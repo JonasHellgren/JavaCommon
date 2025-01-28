@@ -106,15 +106,29 @@ public class ListCreator {
     }
 
     /**
-     * Creates a list of integers starting from the specified start value, incrementing by the specified step,
-     * and containing the specified number of elements.
+     * Creates a list of doubles starting from 0 and ending at nItems-1,
+     * containing the specified number of elements.
      *
-     * @param start    the starting value of the list
-     * @param step     the increment between each element
-     * @param nItems   the number of elements to generate
-     * @return a list of integers starting from the specified start value, incrementing by the specified step,
-     *         and containing the specified number of elements
+     * This method is a convenience wrapper around createFromStartToEndWithNofItems.
+     *
+     * @param nItems the number of elements to generate
+     * @return a list of doubles starting from 0 and ending at nItems-1
      */
+    public static List<Double> createFromZeroToNofItems(int nItems) {
+        return createFromStartToEndWithNofItems(0, nItems-1d, nItems);
+    }
+
+
+        /**
+         * Creates a list of integers starting from the specified start value, incrementing by the specified step,
+         * and containing the specified number of elements.
+         *
+         * @param start    the starting value of the list
+         * @param step     the increment between each element
+         * @param nItems   the number of elements to generate
+         * @return a list of integers starting from the specified start value, incrementing by the specified step,
+         *         and containing the specified number of elements
+         */
     public static List<Integer> createFromStartWithStepWithNofItems(int start, int step, int nItems) {
         if (nItems == 0) {
             return Collections.emptyList();

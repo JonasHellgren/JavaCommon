@@ -53,44 +53,44 @@ public class TestBucketFinder {
     }
 
     @Test
-    public void testGetBucketHalfSizeAbove_ValueWithinRange_ReturnsBucketIndex() {
+    public void testGetBucketHalfSizeAbove_ValueWithinRange_ReturnsBucketIndexBucket() {
         var range = Range.closedOpen(0.0, 2.0);
         double bucketSize = 1.0;
         var bucketFinder = BucketFinder.of(range, bucketSize);
         double value = 0.1;
-        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfSizeAbove(value);
+        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfBucketSizeAbove(value);
         assertTrue(bucketIndex.isPresent());
         assertEquals(0, bucketIndex.get());
     }
 
     @Test
-    public void testGetBucketHalfSizeAbove_ValueOutsideRange_ReturnsEmpty() {
+    public void testGetBucketHalfBucketSizeAbove_ValueOutsideRange_ReturnsEmpty() {
         var range = Range.closedOpen(0.0, 2.0);
         double bucketSize = 1.0;
         var bucketFinder = BucketFinder.of(range, bucketSize);
         double value = 2.0;
-        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfSizeAbove(value);
+        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfBucketSizeAbove(value);
         assertFalse(bucketIndex.isPresent());
     }
 
     @Test
-    public void testGetBucketHalfSizeAbove_ValueAtLowerEndpoint_ReturnsBucketIndex() {
+    public void testGetBucketHalfSizeAbove_ValueAtLowerEndpoint_ReturnsBucketIndexBucket() {
         var range = Range.closedOpen(0.0, 2.0);
         double bucketSize = 1.0;
         var bucketFinder = BucketFinder.of(range, bucketSize);
         double value = 0.0;
-        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfSizeAbove(value);
+        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfBucketSizeAbove(value);
         assertTrue(bucketIndex.isPresent());
         assertEquals(0, bucketIndex.get());
     }
 
     @Test
-    public void testGetBucketHalfSizeAbove_ValueAtUpperEndpoint_ReturnsEmpty() {
+    public void testGetBucketHalfBucketSizeAbove_ValueAtUpperEndpoint_ReturnsEmpty() {
         var range = Range.closedOpen(0.0, 2.0);
         double bucketSize = 1.0;
         var bucketFinder = BucketFinder.of(range, bucketSize);
         double value = 2.0;
-        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfSizeAbove(value);
+        Optional<Integer> bucketIndex = bucketFinder.getBucketHalfBucketSizeAbove(value);
         assertFalse(bucketIndex.isPresent());
     }
 

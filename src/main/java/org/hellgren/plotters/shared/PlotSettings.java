@@ -57,12 +57,11 @@ public record PlotSettings (
                 .annotationTextFont(new Font("Arial", Font.BOLD, 12))
                 .annotationTextFontColor(Color.BLUE)
                 .nDigitsAnnotationText(0)
-                .minCellMargin(-0.5).maxCellMargin(0.5)
+                .minCellMargin(-0.25).maxCellMargin(-0.25)
                 .bandPlotBackGroundColor(Color.WHITE)
                 .gridLineColor(Color.GRAY)
                 .lineColorBand(Color.BLACK)
-                .bandFillColor(Color.LIGHT_GRAY)
-                ;
+                .bandFillColor(Color.LIGHT_GRAY);
     }
 
     public static PlotSettings stringTextInHeatMap() {

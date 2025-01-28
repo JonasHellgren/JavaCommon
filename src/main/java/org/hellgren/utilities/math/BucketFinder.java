@@ -2,8 +2,8 @@ package org.hellgren.utilities.math;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Range;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-
 import java.util.Optional;
 
 /**
@@ -38,7 +38,7 @@ import java.util.Optional;
  * Each bucket size is determined by the given `bucketSize`, and the range is defined by a `Range` object.
  */
 
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class BucketFinder {
 
     private Range<Double> range;
@@ -69,7 +69,7 @@ public class BucketFinder {
      * @param value The input value to adjust and map into a bucket.
      * @return An Optional containing the bucket index, or an empty Optional if the adjusted value is outside the range.
      */
-    public Optional<Integer> getBucketHalfSizeAbove(double value) {
+    public Optional<Integer> getBucketHalfBucketSizeAbove(double value) {
         double adjustedValue = value + (bucketSize / 2);
 
         if (!range.contains(adjustedValue)) {
