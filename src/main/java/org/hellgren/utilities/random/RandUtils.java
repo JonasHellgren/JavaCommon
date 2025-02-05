@@ -17,8 +17,9 @@ public class RandUtils<T> {
     }
 
 
-    public  T getRandomItemFromList(List<T> list) {
-        return list.get(getRandomIntNumber(0,list.size()));
+    public  T  getRandomItemFromList(List<T> list) {
+        int randomIntNumber = getRandomIntNumber(0, list.size());
+        return list.get(randomIntNumber);
     }
 
     public static int getRandomIntNumber(int minInclusive, int maxExclusive) {

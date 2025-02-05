@@ -4,7 +4,9 @@ import org.hellgren.utilities.set_utlis.SetUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -75,5 +77,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
         assertEquals(expected, SetUtils.intersection(list1, list2));
     }
+
+     @Test
+     public void testGetAnyFromSet_MultipleElementSet_ReturnsRandomElement() {
+         Set<String> multipleElementSet = new HashSet<>();
+         multipleElementSet.add("Test Element 1");
+         multipleElementSet.add("Test Element 2");
+         multipleElementSet.add("Test Element 3");
+
+         String result = SetUtils.getAnyFromSet(multipleElementSet);
+         assertTrue(multipleElementSet.contains(result));
+     }
 
 }

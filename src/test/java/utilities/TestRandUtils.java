@@ -4,6 +4,7 @@ import org.hellgren.utilities.random.RandUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -29,16 +30,24 @@ public class TestRandUtils {
         list.add("banana");
         list.add("cherry");
         var rand=new RandUtils<String>();
-        String randomItem = rand.getRandomItemFromList(list);
-        assertTrue(list.contains(randomItem));
+
+        Set<String> selected = new HashSet<>();
+
+        for (int i = 0; i < 100 ; i++) {
+            String randomItem = rand.getRandomItemFromList(list);
+            selected.add(randomItem);
+        }
+
+        assertTrue(selected.size() == list.size());
     }
 
     @Test
     public void testGetRandomIntNumber() {
-        int min = 1;
-        int max = 10;
-        int randomInt = RandUtils.getRandomIntNumber(min, max);
-        assertTrue(randomInt >= min && randomInt < max);
+        int min = 0;
+        int maxExcl = 2;
+        int randomInt = RandUtils.getRandomIntNumber(min, maxExcl);
+        assertTrue(randomInt >= min && randomInt < maxExcl);
+        assertTrue(randomInt != maxExcl);
     }
 
     @Test

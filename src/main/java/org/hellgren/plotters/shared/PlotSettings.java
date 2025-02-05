@@ -26,6 +26,7 @@ public record PlotSettings (
         boolean showMarker,
         Color[] colorRangeSeries,
         String axisTicksDecimalFormat,
+        Double spaceBetweenXTicks,
         Font axisTitleFont,
         Font axisTicksFont,
         Color[] colorRange,  //this and below is specific for HeatMapChartCreator
@@ -49,7 +50,9 @@ public record PlotSettings (
                 .legendTextFont(new Font("Arial", Font.PLAIN, 10))
                 .showGridLines(true)
                 .colorRangeSeries(new Color[]{Color.BLACK, Color.GRAY})
-                .showAxisTicks(true).axisTicksDecimalFormat("#").showMarker(false)
+                .showAxisTicks(true).showMarker(false)
+                .axisTicksDecimalFormat("#")
+                .spaceBetweenXTicks(1.0)
                 .axisTitleFont(new Font("Arial", Font.BOLD, 12))
                 .axisTicksFont(new Font("Arial", Font.PLAIN, 12))
                 .colorRange(new Color[]{Color.BLACK, Color.WHITE})
