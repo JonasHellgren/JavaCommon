@@ -42,11 +42,17 @@ public class MyListUtils {
                 .sum();
     }
 
+    public static <T> boolean isNullOrEmpty(List<T> list) {
+        return list == null || list.isEmpty();
+    }
+
+    public static <T> Optional<T> findFirst(List<T> list) {
+        return list.isEmpty() ? Optional.empty() : Optional.of(list.get(0));
+    }
+
+
     public static <T> Optional<T> findEnd(List<T> list) {
-        if (list.isEmpty()) {
-            return Optional.empty();
-        }
-        return Optional.of(list.get(list.size()-1));
+        return list.isEmpty() ? Optional.empty() : Optional.of(list.get(list.size() - 1));
     }
 
     public static List<Double> sumListElements(List<Double> listA, List<Double> listB) {
@@ -125,10 +131,6 @@ public class MyListUtils {
         return list;
     }
 
-    public static List<Double> arrayPrimitiveDoublesToList(double[] arr) {
-        return DoubleStream.of(arr).boxed().collect(Collectors.toList());
-    }
-
     public static OptionalInt findMinInt(List<Integer> list)  {
         return  list.stream().mapToInt(Integer::intValue)
                 .min();
@@ -157,9 +159,19 @@ public class MyListUtils {
                 .toList();
     }
 
+
+/*
+    public static List<Double> arrayPrimitiveDoublesToList(double[] arr) {
+        return DoubleStream.of(arr).boxed().collect(Collectors.toList());
+    }
+*/
+
+
+/*
     public static List<Double> createEqualElementValues(int len, double value) {
         return new ArrayList<>(Collections.nCopies(len,value));
     }
+*/
 
 
 }

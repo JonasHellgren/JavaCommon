@@ -26,6 +26,7 @@ public record PlotSettings (
         boolean showMarker,
         Color[] colorRangeSeries,
         String axisTicksDecimalFormat,
+        boolean isDefinedSpaceBetweenXTicks,
         Double spaceBetweenXTicks,
         Font axisTitleFont,
         Font axisTicksFont,
@@ -52,7 +53,7 @@ public record PlotSettings (
                 .colorRangeSeries(new Color[]{Color.BLACK, Color.GRAY})
                 .showAxisTicks(true).showMarker(false)
                 .axisTicksDecimalFormat("#")
-                .spaceBetweenXTicks(1.0)
+                .isDefinedSpaceBetweenXTicks(false).spaceBetweenXTicks(1.0)
                 .axisTitleFont(new Font("Arial", Font.BOLD, 12))
                 .axisTicksFont(new Font("Arial", Font.PLAIN, 12))
                 .colorRange(new Color[]{Color.BLACK, Color.WHITE})

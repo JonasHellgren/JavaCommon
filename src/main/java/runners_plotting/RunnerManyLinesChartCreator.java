@@ -14,7 +14,7 @@ public class RunnerManyLinesChartCreator {
         System.out.println("xList = " + xList);
         var creator = ManyLinesChartCreator.of(PlotSettings.ofDefaults()
                         .withWidth(300).withHeight(200)
-                        .withSpaceBetweenXTicks(10d)
+                .withDefinedSpaceBetweenXTicks(true).withSpaceBetweenXTicks(10d)
                 , xList);
         creator.addLine("line1", ListCreator.createFromStartToEndWithNofItems(0d, 10.1d, N_ITEMS));
         var chart = creator.create();

@@ -2,6 +2,7 @@ package org.hellgren.plotters.plotting_2d;
 
 import com.google.common.base.Preconditions;
 import lombok.AllArgsConstructor;
+import lombok.extern.java.Log;
 import org.hellgren.plotters.shared.PlotSettings;
 import org.hellgren.utilities.conditionals.Conditionals;
 import org.hellgren.utilities.list_arrays.MyMatrixListUtils;
@@ -9,6 +10,7 @@ import org.hellgren.utilities.math.MyMathUtils;
 import org.knowm.xchart.XYChart;
 import org.knowm.xchart.XYChartBuilder;
 import org.knowm.xchart.XYSeries;
+import org.knowm.xchart.style.XYStyler;
 import org.knowm.xchart.style.markers.SeriesMarkers;
 
 import java.awt.*;
@@ -20,6 +22,7 @@ import java.util.Map;
 import static org.hellgren.plotters.shared.FormattedAsString.getFormattedAsString;
 
 @AllArgsConstructor
+@Log
 public class ManyLinesChartCreator {
     private final PlotSettings settings;
     List<Double> xList;
@@ -33,13 +36,15 @@ public class ManyLinesChartCreator {
     public static ManyLinesChartCreator of(PlotSettings settings, List<Double> xData) {
         Preconditions.checkArgument(xData.size() > 1, "xData must have at least 2 elements");
         Preconditions.checkArgument(xData.get(1) > xData.get(0), "xData must be increasing");
-        Preconditions.checkArgument(xData.get(1) % 1 == 0, "xData must have even elements");
+        Conditionals.executeIfTrue(settings.isDefinedSpaceBetweenXTicks(), () ->
+                Preconditions.checkArgument(xData.get(1) % 1 == 0,
+                "xData must have even elements"));
         return new ManyLinesChartCreator(settings, xData, new ArrayList<>(), new ArrayList<>());
     }
 
     public void addLine(String name, List<Double> yList) {
-        Preconditions.checkArgument(yList.size() == xList.size(), "yList and xData should have same size."+
-                " Size y list = "+yList.size() + ", size x list = " + xList.size());
+        Preconditions.checkArgument(yList.size() == xList.size(), "yList and xData should have same size." +
+                " Size y list = " + yList.size() + ", size x list = " + xList.size());
         this.yData.add(yList);
         this.names.add(name);
     }
@@ -66,13 +71,7 @@ public class ManyLinesChartCreator {
         styler.setAxisTitleFont(s.axisTitleFont());
         styler.setAxisTickLabelsFont(s.axisTicksFont());
         styler.setChartBackgroundColor(Color.WHITE);
-        styler.setxAxisTickLabelsFormattingFunction(value ->
-            (MyMathUtils.isZero(value % settings.spaceBetweenXTicks())
-                ? getFormattedAsString(value, settings.axisTicksDecimalFormat())
-                : ""));
-        styler.setyAxisTickLabelsFormattingFunction(value ->
-                 getFormattedAsString(value, settings.axisTicksDecimalFormat()));
-
+        setAxisTicksFomratting(styler);
         Conditionals.executeIfTrue(s.colorRangeSeries() != null, () ->
                 styler.setSeriesColors(s.colorRangeSeries()));
         for (String name : names) {
@@ -81,6 +80,20 @@ public class ManyLinesChartCreator {
             Conditionals.executeIfFalse(s.showMarker(), () -> series.setMarker(SeriesMarkers.NONE));
         }
         return chart;
+    }
+
+    private void setAxisTicksFomratting(XYStyler styler) {
+        if (settings.isDefinedSpaceBetweenXTicks()) {
+            styler.setxAxisTickLabelsFormattingFunction(value ->
+                    (MyMathUtils.isZero(value % settings.spaceBetweenXTicks())
+                            ? getFormattedAsString(value, settings.axisTicksDecimalFormat())
+                            : ""));
+        } else {
+            styler.setxAxisTickLabelsFormattingFunction(value ->
+                    getFormattedAsString(value, settings.axisTicksDecimalFormat()));
+        }
+        styler.setyAxisTickLabelsFormattingFunction(value ->
+                getFormattedAsString(value, settings.axisTicksDecimalFormat()));
     }
 
 }
