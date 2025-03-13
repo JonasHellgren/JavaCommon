@@ -159,6 +159,9 @@ public class MyListUtils {
                 .toList();
     }
 
+    public static double sqrtOfSumOfSquares(List<Double> list) {
+        return Math.sqrt(MyListUtils.sumList(MyListUtils.elementProduct(list, list)));
+    }
 
 /*
     public static List<Double> arrayPrimitiveDoublesToList(double[] arr) {

@@ -15,9 +15,7 @@ import org.knowm.xchart.style.markers.SeriesMarkers;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.hellgren.plotters.shared.FormattedAsString.getFormattedAsString;
 
@@ -71,7 +69,7 @@ public class ManyLinesChartCreator {
         styler.setAxisTitleFont(s.axisTitleFont());
         styler.setAxisTickLabelsFont(s.axisTicksFont());
         styler.setChartBackgroundColor(Color.WHITE);
-        setAxisTicksFomratting(styler);
+        setAxisTicksFormatting(styler);
         Conditionals.executeIfTrue(s.colorRangeSeries() != null, () ->
                 styler.setSeriesColors(s.colorRangeSeries()));
         for (String name : names) {
@@ -82,7 +80,7 @@ public class ManyLinesChartCreator {
         return chart;
     }
 
-    private void setAxisTicksFomratting(XYStyler styler) {
+    private void setAxisTicksFormatting(XYStyler styler) {
         if (settings.isDefinedSpaceBetweenXTicks()) {
             styler.setxAxisTickLabelsFormattingFunction(value ->
                     (MyMathUtils.isZero(value % settings.spaceBetweenXTicks())

@@ -14,6 +14,7 @@ public class ChartSaver {
 
     @SneakyThrows
     public static void saveHeatMapChart(HeatMapChart chart, PathAndFile pathAndFile) {
+        System.out.println("pathAndFile = " + pathAndFile);
         saveBitmapWithDPI(chart, pathAndFile.fullName(), BitmapEncoder.BitmapFormat.PNG, DPI);
     }
 

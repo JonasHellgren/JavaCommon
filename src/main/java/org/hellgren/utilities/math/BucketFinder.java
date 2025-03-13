@@ -71,7 +71,6 @@ public class BucketFinder {
      */
     public Optional<Integer> getBucketHalfBucketSizeAbove(double value) {
         double adjustedValue = value + (bucketSize / 2);
-
         if (!range.contains(adjustedValue)) {
             return Optional.empty(); // Adjusted value is outside the range
         }
