@@ -118,7 +118,7 @@ public class HeatMapChartCreator {
         double[] xDataExt = getDataExt(getXData(xData0, nCols()));
         styler.setXAxisMin(xDataExt[0]).setXAxisMax(xDataExt[xDataExt.length-1]);
         double[] yDataExt = getDataExt(getYData(yData0, nRows()));
-        styler.setYAxisMin(xDataExt[0]).setYAxisMax(yDataExt[yDataExt.length-1]);
+        styler.setYAxisMin(yDataExt[0]).setYAxisMax(yDataExt[yDataExt.length-1]);
         return chart;
     }
 

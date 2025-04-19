@@ -9,9 +9,9 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestMyArrayUtil {
+ class TestMyArrayUtil {
     @Test
-    public void testSum() {
+     void testSum() {
         double[] array = {1, 2, 3, 4, 5};
         double expected = 15;
         double actual = MyArrayUtil.sum(array);
@@ -19,7 +19,7 @@ public class TestMyArrayUtil {
     }
 
     @Test
-    public void testAverage() {
+     void testAverage() {
         double[] array = {1, 2, 3, 4, 5};
         double expected = 3;
         double actual = MyArrayUtil.average(array);
@@ -27,13 +27,13 @@ public class TestMyArrayUtil {
     }
 
     @Test
-    public void testAverage_EmptyArray() {
+     void testAverage_EmptyArray() {
         double[] array = {};
         assertThrows(IllegalArgumentException.class, () -> MyArrayUtil.average(array));
     }
 
     @Test
-    public void testFindMin() {
+     void testFindMin() {
         double[] data = {1.0, 2.0, 3.0, 4.0};
         Double expected = 1.0;
         Double actual = MyArrayUtil.findMin(data);
@@ -43,7 +43,7 @@ public class TestMyArrayUtil {
 
 
     @Test
-    public void testFindMax() {
+     void testFindMax() {
         double[] data = {1.0, 2.0, 3.0, 4.0};
         Double expected = 4.0;
         Double actual = MyArrayUtil.findMax(data);
@@ -52,7 +52,7 @@ public class TestMyArrayUtil {
 
 
     @Test
-    public void testClip() {
+     void testClip() {
         double[] array = {1, 2, 3, 4, 5};
         double min = 2;
         double max = 4;
@@ -62,7 +62,7 @@ public class TestMyArrayUtil {
     }
 
     @Test
-    public void testIsDoubleArraysEqual() {
+     void testIsDoubleArraysEqual() {
         double[] array1 = {1, 2, 3};
         double[] array2 = {1, 2, 3};
         boolean expected = true;
@@ -71,7 +71,7 @@ public class TestMyArrayUtil {
     }
 
     @Test
-    public void testMultiplyWithValue() {
+     void testMultiplyWithValue() {
         double[] array = {1, 2, 3};
         double multiplier = 2;
         double[] expected = {2, 4, 6};
@@ -80,7 +80,7 @@ public class TestMyArrayUtil {
     }
 
     @Test
-    public void testNegate() {
+     void testNegate() {
         double[] array = {1, 2, 3};
         double[] expected = {-1, -2, -3};
         double[] actual = MyArrayUtil.negate(array);
@@ -88,7 +88,7 @@ public class TestMyArrayUtil {
     }
 
     @Test
-    public void testConvertMapToArrays() {
+     void testConvertMapToArrays() {
         Map<Double, Double> map = new HashMap<>();
         map.put(1.0, 2.0);
         map.put(3.0, 4.0);
@@ -97,5 +97,25 @@ public class TestMyArrayUtil {
         assertArrayEquals(expected.getFirst(), actual.getFirst());
         assertArrayEquals(expected.getSecond(), actual.getSecond());
     }
+
+    @Test
+     void testAdd_ArraysOfSameLength_NoException() {
+        double[] array1 = {1.0, 2.0, 3.0};
+        double[] array2 = {4.0, 5.0, 6.0};
+        double[] expected = {5.0, 7.0, 9.0};
+
+        double[] result = MyArrayUtil.add(array1, array2);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+     void testAdd_ArraysOfDifferentLength_ThrowsException() {
+        double[] array1 = {1.0, 2.0, 3.0};
+        double[] array2 = {4.0, 5.0};
+
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> MyArrayUtil.add(array1, array2));
+    }
+
+
 
 }

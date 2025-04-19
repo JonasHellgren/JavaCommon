@@ -7,6 +7,7 @@ import lombok.SneakyThrows;
 import lombok.With;
 import org.deeplearning4j.ui.components.chart.Chart;
 import org.hellgren.plotters.shared.PlotSettings;
+import org.hellgren.utilities.conditionals.Conditionals;
 import org.jetbrains.annotations.NotNull;
 import org.jfree.chart.*;
 import org.jfree.chart.axis.NumberAxis;
@@ -14,6 +15,7 @@ import org.jfree.chart.entity.StandardEntityCollection;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.DeviationRenderer;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.YIntervalSeries;
 import org.jfree.data.xy.YIntervalSeriesCollection;
 
@@ -39,8 +41,8 @@ public class ErrorBandCreator {
             double[] xData,
             double[] yData,
             double[] errData,
-            Color lineColor)
-    {   }
+            Color lineColor) {
+    }
 
 
     private final PlotSettings settings;
@@ -51,15 +53,15 @@ public class ErrorBandCreator {
     }
 
     public static ErrorBandCreator newOfSettings(PlotSettings settings) {
-        return new ErrorBandCreator(settings,new ArrayList<>());
+        return new ErrorBandCreator(settings, new ArrayList<>());
     }
 
     public void addErrorBand(String title, double[] xData, double[] yData, double[] errData) {
-        addErrorBand(title,xData,yData,errData,settings.lineColorBand());
+        addErrorBand(title, xData, yData, errData, settings.lineColorBand());
     }
 
     public void addErrorBand(String title, double[] xData, double[] yData, double[] errData, Color lineColor) {
-        errorBands.add(new ErrorBand(title,xData,yData,errData,lineColor));
+        errorBands.add(new ErrorBand(title, xData, yData, errData, lineColor));
     }
 
     public JFrame createFrame() {
@@ -68,9 +70,9 @@ public class ErrorBandCreator {
     }
 
     @SneakyThrows
-    public void saveAsPicture(String path){
+    public void saveAsPicture(String path) {
         var chart = createChart();
-       ChartUtils.saveChartAsPNG(new File(path), chart, settings.width(), settings.height());
+        ChartUtils.saveChartAsPNG(new File(path), chart, settings.width(), settings.height());
     }
 
 
@@ -83,7 +85,7 @@ public class ErrorBandCreator {
         return chart;
     }
 
-     JFrame createFrame(JFreeChart chart) {
+    JFrame createFrame(JFreeChart chart) {
         ChartPanel chartPanel = new ChartPanel(chart);
         JFrame frame = new JFrame("Error band plot");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -96,6 +98,8 @@ public class ErrorBandCreator {
 
     private void setStyles(JFreeChart chart) {
         chart.getTitle().setFont(settings.axisTitleFont());
+        Conditionals.executeIfTrue(settings.showLegend(), () ->
+        chart.getLegend().setItemFont(settings.legendTextFont()));
         XYPlot plot = chart.getXYPlot();
         plot.getDomainAxis().setLabelFont(settings.axisTitleFont());
         plot.getRangeAxis().setLabelFont(settings.axisTitleFont());
@@ -106,18 +110,20 @@ public class ErrorBandCreator {
         NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
         xAxis.setTickLabelFont(settings.axisTicksFont());
         yAxis.setTickLabelFont(settings.axisTicksFont());
-        executeIfTrue(!settings.showAxisTicks(), () ->  disableTickMarks(plot));
+        executeIfTrue(!settings.showAxisTicks(), () -> disableTickMarks(plot));
         //executeIfTrue(!settings.showTitle(), () -> chart.setTitle(""));
         DeviationRenderer renderer = new DeviationRenderer(true, true);
-        for (int i = 0; i < errorBands.size() ; i++) {
-        renderer.setSeriesFillPaint(i, settings.bandFillColor()); // Set color for error band
-        renderer.setSeriesPaint(i, errorBands.get(i).lineColor); // Line color
-        renderer.setSeriesShapesVisible(i, false); // Disable markers
+        for (int i = 0; i < errorBands.size(); i++) {
+            renderer.setSeriesFillPaint(i, settings.bandFillColor()); // Set color for error band
+            renderer.setSeriesPaint(i, errorBands.get(i).lineColor); // Line color
+            renderer.setSeriesShapesVisible(i, false); // Disable markers
+            renderer.setSeriesShapesVisible(i, settings.showMarker());
+            renderer.setSeriesStroke(i, new BasicStroke(settings.lineWidth()));
         }
         plot.setRenderer(renderer);
     }
 
-    private  void disableTickMarks(XYPlot plot) {
+    private void disableTickMarks(XYPlot plot) {
         NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
         NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
         xAxis.setTickMarksVisible(false); // Disable tick marks
@@ -128,16 +134,16 @@ public class ErrorBandCreator {
 
     private JFreeChart createChart(YIntervalSeriesCollection dataset) {
         return ChartFactory.createScatterPlot(
-                settings.title(),  settings.xAxisLabel(), settings.yAxisLabel(),
+                settings.title(), settings.xAxisLabel(), settings.yAxisLabel(),
                 dataset,
                 PlotOrientation.VERTICAL,
-                settings.showLegend(),true, false
+                settings.showLegend(), true, false
         );
     }
 
-    private  YIntervalSeriesCollection createDataset() {
+    private YIntervalSeriesCollection createDataset() {
         var dataset = new YIntervalSeriesCollection();
-        for (ErrorBand band:errorBands) {
+        for (ErrorBand band : errorBands) {
             YIntervalSeries series = new YIntervalSeries(band.title);
             for (int i = 0; i < band.xData.length; i++) {
                 double x = band.xData[i];

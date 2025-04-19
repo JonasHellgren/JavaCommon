@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class TestListCreator {
 
@@ -131,5 +130,58 @@ class TestListCreator {
              assertEquals(expectedValue, result.get(i), 0.01);
          }
      }
+
+    @Test
+     void testEmptyDouble() {
+        List<Double> emptyList = ListCreator.emptyDouble();
+        assertTrue(emptyList.isEmpty());
+    }
+
+    @Test
+     void testCreateListWithOneHot() {
+        int nofInputs = 5;
+        int hotIndex = 2;
+        List<Double> oneHotList = ListCreator.createListWithOneHot(nofInputs, hotIndex);
+        assertEquals(nofInputs, oneHotList.size());
+        for (int i = 0; i < nofInputs; i++) {
+            if (i == hotIndex) {
+                assertEquals(1.0, oneHotList.get(i), 0.01);
+            } else {
+                assertEquals(0.0, oneHotList.get(i), 0.01);
+            }
+        }
+    }
+
+    @Test
+     void testCreateListWithOneHotWithValue() {
+        int nofInputs = 5;
+        int hotIndex = 2;
+        double value = 3.5;
+        List<Double> oneHotList = ListCreator.createListWithOneHotWithValue(nofInputs, hotIndex, value);
+        assertEquals(nofInputs, oneHotList.size());
+        for (int i = 0; i < nofInputs; i++) {
+            if (i == hotIndex) {
+                assertEquals(value, oneHotList.get(i), 0.01);
+            } else {
+                assertEquals(0.0, oneHotList.get(i), 0.01);
+            }
+        }
+    }
+
+    @Test
+     void testCreateListWithOneHotWithValue_InvalidHotIndex() {
+        int nofInputs = 5;
+        int hotIndex = -1;
+        double value = 3.5;
+        assertThrows(IndexOutOfBoundsException.class, () -> ListCreator.createListWithOneHotWithValue(nofInputs, hotIndex, value));
+    }
+
+    @Test
+     void testCreateListWithOneHotWithValue_InvalidHotIndex2() {
+        int nofInputs = 5;
+        int hotIndex = 5;
+        double value = 3.5;
+        assertThrows(IndexOutOfBoundsException.class, () -> ListCreator.createListWithOneHotWithValue(nofInputs, hotIndex, value));
+    }
 
 }

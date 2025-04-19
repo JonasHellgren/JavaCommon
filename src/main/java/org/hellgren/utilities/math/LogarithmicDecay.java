@@ -2,7 +2,9 @@ package org.hellgren.utilities.math;
 
 import com.google.common.base.Preconditions;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.ToString;
+import org.apache.commons.math3.util.Pair;
 
 /***
  *
@@ -28,6 +30,10 @@ public class LogarithmicDecay {
 
     public static LogarithmicDecay of(double outStart, double outEnd, double timeEnd) {
         return new LogarithmicDecay(outStart, outEnd, timeEnd);
+    }
+
+    public static LogarithmicDecay of(@NonNull  Pair<Double, Double> outStartAndEnd, double timeEnd) {
+        return new LogarithmicDecay(outStartAndEnd.getFirst(), outStartAndEnd.getSecond(), timeEnd);
     }
 
     private void defineParameters(double outStart, double outEnd, double timeEnd) {

@@ -163,6 +163,7 @@ public class MyListUtils {
         return Math.sqrt(MyListUtils.sumList(MyListUtils.elementProduct(list, list)));
     }
 
+
 /*
     public static List<Double> arrayPrimitiveDoublesToList(double[] arr) {
         return DoubleStream.of(arr).boxed().collect(Collectors.toList());

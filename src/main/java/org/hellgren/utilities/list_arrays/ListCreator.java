@@ -168,4 +168,30 @@ public class ListCreator {
     public static List<Double> emptyDouble() {
         return new ArrayList<>();
     }
+
+    /**
+     * Creates a list representing a one-hot encoding with the specified number of inputs and hot index.
+     *
+     * @param nofInputs the total number of inputs in the one-hot encoding
+     * @param hotIndex  the index of the hot element (i.e., the element with value 1.0)
+     * @return a list of doubles representing the one-hot encoding
+     */
+    public static List<Double> createListWithOneHot(int nofInputs, int hotIndex) {
+        return createListWithOneHotWithValue(nofInputs, hotIndex, 1d);
+    }
+
+    /**
+     * Creates a list representing a one-hot encoding with the specified number of inputs, hot index, and value.
+     *
+     * @param nofInputs the total number of inputs in the one-hot encoding
+     * @param hotIndex  the index of the hot element
+     * @param v         the value of the hot element
+     * @return a list of doubles representing the one-hot encoding
+     */
+    public static List<Double> createListWithOneHotWithValue(int nofInputs, int hotIndex, double v) {
+        List<Double> onHot = ListCreator.createListWithEqualElementValues(nofInputs, 0d);
+        onHot.set(hotIndex, v);
+        return onHot;
+    }
+
 }

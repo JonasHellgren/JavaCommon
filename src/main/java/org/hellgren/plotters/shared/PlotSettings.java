@@ -18,6 +18,7 @@ public record PlotSettings (
         String yAxisLabel,
         int width,
         int height,
+        int lineWidth,
         boolean showLegend,
         Styler.LegendPosition legendPosition,
         Font legendTextFont,
@@ -46,7 +47,7 @@ public record PlotSettings (
     public static PlotSettings.PlotSettingsBuilder defaultBuilder() {
         return PlotSettings.builder()
                 .title("").xAxisLabel("x").yAxisLabel("y")
-                .width(500).height(300)
+                .width(500).height(300).lineWidth(2)
                 .showLegend(true).legendPosition(Styler.LegendPosition.OutsideE)
                 .legendTextFont(new Font("Arial", Font.PLAIN, 10))
                 .showGridLines(true)

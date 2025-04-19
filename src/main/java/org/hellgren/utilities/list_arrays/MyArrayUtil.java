@@ -6,6 +6,7 @@ import org.nd4j.shade.guava.base.Preconditions;
 
 import java.util.*;
 import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
 
 /**
  * Utility class for handling arrays.
@@ -221,4 +222,26 @@ public class MyArrayUtil {
         }
         return result;
     }
+
+    /**
+     * Adds two arrays of doubles element-wise.
+     *
+     * This method takes two arrays of doubles as input, adds corresponding elements together,
+     * and returns the resulting array.
+     *
+     * @param array1 the first array of doubles
+     * @param array2 the second array of doubles
+     * @return the resulting array of doubles
+     * @throws NullPointerException if either array is null
+     * @throws ArrayIndexOutOfBoundsException if the arrays are not the same length
+     */
+    public static double[] add(double[] array1, double[] array2) {
+        if (array1.length != array2.length) {
+            throw new ArrayIndexOutOfBoundsException("Arrays must be of the same length");
+        }
+        return IntStream.range(0, array1.length)
+                .mapToDouble(i -> array1[i] + array2[i])
+                .toArray();
+    }
+
 }
